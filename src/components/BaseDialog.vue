@@ -3,7 +3,8 @@ import { ref, watch, defineAsyncComponent } from 'vue'
 
 const components = {
   'AddCityForm': defineAsyncComponent(() => import('./forms/AddCityForm.vue')),
-  'EditRegionForm': defineAsyncComponent(() => import('./forms/EditRegionForm.vue'))
+  'AddShopForm': defineAsyncComponent(() => import('./forms/AddShopForm.vue')),
+  'EditRegionForm': defineAsyncComponent(() => import('./forms/EditRegionForm.vue')),
 }
 
 const props = defineProps({

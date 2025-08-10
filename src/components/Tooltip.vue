@@ -3,7 +3,7 @@ import { ref } from 'vue'
 // import ParkDialog from './ParkDialog.vue'
 
 defineProps(['currentCity', 'tooltipX', 'tooltipY', 'indexRepresentative'])
-defineEmits(['closeTooltip', 'addRepresentation'])
+defineEmits(['closeTooltip', 'addShop'])
 
 let dialogReport = ref (false)
 let dialogPark = ref (false)
@@ -172,7 +172,7 @@ const showRepresentative = (i, isActive) => {
     </div>
     <div v-else>
       Необходимо добавить<br />
-      представительство
+      магазин
       <img
         src="../images/close-tooltip.svg"
         class="tooltip__close"
@@ -182,7 +182,7 @@ const showRepresentative = (i, isActive) => {
         color="primary"
         class="modal__btn"
         text
-        @click="$emit('addRepresentation')"
+        @click="$emit('addShop')"
       >
         Добавить
       </v-btn>

@@ -13,7 +13,7 @@ import { localRegions } from '@/localData/regions.js'
 import { localCities } from '@/localData/cities.js'
 import { useMapClick } from '@/composables/useMapClick.js'
 
-const forms = [ 'EditRegionForm', 'AddCityForm']
+const forms = [ 'EditRegionForm', 'AddCityForm', 'AddShopForm']
 
 defineEmits(['closeModal', 'updateRegions', 'addCity'])
 
@@ -22,6 +22,7 @@ defineEmits(['closeModal', 'updateRegions', 'addCity'])
 //   AddCityForm: 'Введите данные адреса'
 // }
 
+let isDialogOpen = ref(false)
 let mode = ref('editRegion')
 
 // editRegion
@@ -38,22 +39,24 @@ const currentModal = ref(forms[0])
 
 const { clickCircle, currentCity, isTooltip, tooltipY, tooltipX } = useMapClick()
 
-const addRepresentation = () => {
-    console.log('addRepresentation')
-    console.log(currentCity.value)
-    const foundCity = cities.find(city => city.id === currentCity.value.id)
-    foundCity.shop.push(
-        {
-            id: 23,
-            name: 'магазин 132',
-            address: 'ул. Якутская, 12',
-            phone: '79564214531',
-            email: 'yak@mail.ru',
-        }
-    )
+const addShop = () => {
+  currentModal.value = forms[2]
+  console.log(currentCity.value)
+  isDialogOpen.value = true
+  const foundCity = cities.find(city => city.id === currentCity.value.id)
+  foundCity.shop.push(
+    {
+      id: 23,
+      name: 'магазин 132',
+      address: 'ул. Якутская, 12',
+      phone: '79564214531',
+      email: 'yak@mail.ru',
+    }
+  )
 }
 
 const clickRegion = (region, event) => {
+  if (isTooltip.value) return
   currentRegion.value = region
   if (mode.value === 'defineCoords') {
     console.log('mode:', mode)
@@ -108,8 +111,6 @@ const updateRegions = (formData) => {
   currentRegion.value.paths.map(p => p.fill = hex)
 }
 
-let isDialogOpen = ref(false)
-
 </script>
 
 <template>
@@ -131,7 +132,7 @@ let isDialogOpen = ref(false)
     :tooltipY="tooltipY"
     :tooltipX="tooltipX"
     :currentCity="currentCity"
-    @addRepresentation="addRepresentation"
+    @addShop="addShop"
     @closeTooltip="isTooltip = false"
   ></Tooltip>
 
