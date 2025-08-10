@@ -1,6 +1,3 @@
-// const url = '/api/city/'
-// const method = 'GET'
-// const payload = null
 export const localCities = [
 {
     id: 16,
@@ -11,10 +8,10 @@ export const localCities = [
     countryName: 'Russian Federation',
     rfId: 262,
     regionName: 'Приморский край',
-    representations: [
+    shop: [
         {
             id: 12,
-            name: "ПАО ААК-Прогресс",
+            name: 'Магазин - Прогресс',
             address: 'пл. Ленина',
             phone: '8785212',
             email: 'ars@mail.ru',
@@ -71,10 +68,10 @@ export const localCities = [
     countryName: 'Russian Federation',
     rfId: 262,
     regionName: 'Чукотский автономный округ',
-    representations: [
+    shop: [
         {
             id: 52,
-            name: 'в/ч 20202',
+            name: '205 Магазин',
             address: 'ул. Аянская',
             phone: '76555555',
             email: 'ss@mail.ru',
@@ -101,7 +98,7 @@ export const localCities = [
                     sector: null,
                     belonging: null,
                     representationId: 52,
-                    representationName: 'в/ч 20202'
+                    representationName: 'м-н Shop'
                 }
             ],
             fill: '#FFFF00'
@@ -119,10 +116,10 @@ export const localCities = [
     countryName: 'Egypt',
     rfId: null,
     regionName: null,
-    representations: [
+    shop: [
         {
             id: 2,
-            name: 'В/ч 44936',
+            name: 'м-н Ретро',
             address: 'Новочеркасский проезд',
             phone: '888',
             email: 'jas@mail.ru\n',
@@ -164,7 +161,7 @@ export const localCities = [
     countryName: 'Russian Federation',
     rfId: 262,
     regionName: 'Брянская область',
-    representations: [],
+    shop: [],
     fill: '',
     hidden: false
 },
@@ -177,7 +174,7 @@ export const localCities = [
     countryName: 'Russian Federation',
     rfId: 262,
     regionName: 'Ставропольский край',
-    representations: [],
+    shop: [],
     fill: '',
     hidden: false
 },
@@ -190,10 +187,10 @@ export const localCities = [
     countryName: 'Russian Federation',
     rfId: 262,
     regionName: 'Воронежская область',
-    representations: [
+    shop: [
         {
             id: 5,
-            name: "ПАО ВАСО",
+            name: 'ПАО ВАСО',
             address: 'test address',
             phone: '89876543210',
             email: 'p@mail.ru',
@@ -224,7 +221,7 @@ export const localCities = [
     countryName: 'India',
     rfId: null,
     regionName: null,
-    representations: [],
+    shop: [],
     fill: '',
     hidden: false
 },
@@ -237,10 +234,10 @@ export const localCities = [
     countryName: 'Russian Federation',
     rfId: 262,
     regionName: 'Республика Крым',
-    representations: [
+    shop: [
         {
             id: 4,
-            name: 'в/ч 46453',
+            name: 'м-н Фестиваль',
             address: 'ул. Маршала Блюхера',
             phone: '7956345213',
             email: 'dd@ss.ru',
@@ -267,7 +264,7 @@ export const localCities = [
                     sector: null,
                     belonging: null,
                     representationId: 4,
-                    representationName: 'в/ч 46453'
+                    representationName: 'м-н Фонд'
                 }
             ],
             fill: '#FFFF00'
@@ -285,7 +282,7 @@ export const localCities = [
     countryName: 'Russian Federation',
     rfId: 262,
     regionName: 'Республика Татарстан',
-    representations: [
+    shop: [
         {
             id: 55,
             name: 'АО2',
@@ -314,7 +311,7 @@ export const localCities = [
         },
         {
             id: 10,
-            name: "АО КВЗ",
+            name: 'АО КВЗ',
             address: 'ул. Мичурина 5',
             phone: '799887',
             email: 'ss@ss.sss',
@@ -357,7 +354,7 @@ export const localCities = [
                     sector: null,
                     belonging: null,
                     representationId: 10,
-                    representationName: "АО КВЗ"
+                    representationName: 'АО КВЗ'
                 },
                 {
                     id: 10,
@@ -370,7 +367,7 @@ export const localCities = [
                     sector: null,
                     belonging: null,
                     representationId: 10,
-                    representationName: "АО КВЗ"
+                    representationName: 'АО КВЗ'
                 }
             ],
             fill: '#008000'
@@ -388,10 +385,10 @@ export const localCities = [
     countryName: 'Russian Federation',
     rfId: 262,
     regionName: 'Краснодарский край',
-    representations: [
+    shop: [
         {
             id: 1,
-            name: 'в/ч 35666',
+            name: 'м-н 3366',
             address: 'test address',
             phone: '89876543210',
             email: 'p@mail.ru',
@@ -434,7 +431,7 @@ export const localCities = [
                     sector: null,
                     belonging: null,
                     representationId: 1,
-                    representationName: 'в/ч 35666'
+                    representationName: 'м-н 3'
                 },
                 {
                     id: 9,
@@ -447,7 +444,7 @@ export const localCities = [
                     sector: null,
                     belonging: null,
                     representationId: 1,
-                    representationName: 'в/ч 35666'
+                    representationName: 'м-н 15'
                 }
             ],
             fill: '#008000'
@@ -465,7 +462,7 @@ export const localCities = [
     countryName: 'Peru',
     rfId: null,
     regionName: null,
-    representations: [],
+    shop: [],
     fill: '',
     hidden: false
 },
@@ -478,7 +475,7 @@ export const localCities = [
     countryName: 'Colombia',
     rfId: null,
     regionName: null,
-    representations: [
+    shop: [
         {
             id: 53,
             name: 'НРТ',
@@ -532,10 +529,10 @@ export const localCities = [
     countryName: 'Russian Federation',
     rfId: 262,
     regionName: 'Москва',
-    representations: [
+    shop: [
         {
             id: 7,
-            name: "ФГБУ СЛО Россия",
+            name: 'ФГБУ СЛО Россия',
             address: 'ул. Мичурина',
             phone: '79988',
             email: 'ss@ss.ssss',
@@ -562,14 +559,14 @@ export const localCities = [
                     sector: null,
                     belonging: null,
                     representationId: 7,
-                    representationName: "ФГБУ СЛО Россия"
+                    representationName: 'ФГБУ СЛО Россия'
                 }
             ],
             fill: '#FFFF00'
         },
         {
             id: 8,
-            name: "АО РВС и в/ч 27237",
+            name: 'м-н Хозтовары',
             address: 'test address',
             phone: '89876543210',
             email: 'p@mail.ru',
@@ -600,7 +597,7 @@ export const localCities = [
     countryName: 'Norway',
     rfId: null,
     regionName: null,
-    representations: [],
+    shop: [],
     fill: '',
     hidden: false
 },
@@ -613,10 +610,10 @@ export const localCities = [
     countryName: 'Russian Federation',
     rfId: 262,
     regionName: 'Ростовская область',
-    representations: [
+    shop: [
         {
             id: 3,
-            name: "АО Роствертол",
+            name: 'АО Роствертол',
             address: 'ул. Кировская',
             phone: '795412234521',
             email: 'dd@dd.ru',
@@ -643,7 +640,7 @@ export const localCities = [
                     sector: null,
                     belonging: null,
                     representationId: 3,
-                    representationName: "АО Роствертол"
+                    representationName: 'АО Роствертол'
                 },
                 {
                     id: 3,
@@ -656,7 +653,7 @@ export const localCities = [
                     sector: null,
                     belonging: null,
                     representationId: 3,
-                    representationName: "АО Роствертол"
+                    representationName: 'АО Роствертол'
                 }
             ],
             fill: '#008000'
@@ -674,10 +671,10 @@ export const localCities = [
     countryName: 'Russian Federation',
     rfId: 262,
     regionName: 'Алтайский край',
-    representations: [
+    shop: [
         {
             id: 6,
-            name: "АО НЦВ Миль и Камов",
+            name: 'АО НЦВ Миль и Камов',
             address: 'ул. Пушкина',
             phone: '79998886621',
             email: '22@www.wq',
@@ -710,7 +707,7 @@ export const localCities = [
                     sector: null,
                     belonging: null,
                     representationId: 6,
-                    representationName: "АО НЦВ Миль и Камов"
+                    representationName: 'АО НЦВ Миль и Камов'
                 },
                 {
                     id: 1,
@@ -723,7 +720,7 @@ export const localCities = [
                     sector: null,
                     belonging: null,
                     representationId: 6,
-                    representationName: "АО НЦВ Миль и Камов"
+                    representationName: 'АО НЦВ Миль и Камов'
                 }
             ],
             fill: '#FFFF00'
@@ -741,10 +738,10 @@ export const localCities = [
     countryName: 'Russian Federation',
     rfId: 262,
     regionName: 'Республика Бурятия',
-    representations: [
+    shop: [
         {
             id: 11,
-            name: "АО У-УАЗ",
+            name: 'АО У-УАЗ',
             address: 'ул. Курская',
             phone: '5879654321',
             email: 'as@ss.ru',
@@ -775,10 +772,10 @@ export const localCities = [
     countryName: 'Russian Federation',
     rfId: 262,
     regionName: 'Хабаровский край',
-    representations: [
+    shop: [
         {
             id: 9,
-            name: 'в/ч 424838',
+            name: 'м-н Хеллоу',
             address: 'test address',
             phone: '89876543210',
             email: 'p@mail.ru',
@@ -809,10 +806,10 @@ export const localCities = [
     countryName: 'Zimbabwe',
     rfId: null,
     regionName: null,
-    representations: [
+    shop: [
         {
             id: 51,
-            name: 'в/ч 1214',
+            name: 'м-н 777',
             address: 'ул. Зимбабве',
             phone: '789365431',
             email: 'zim@mail.ru',
@@ -843,7 +840,7 @@ export const localCities = [
     countryName: 'Russian Federation',
     rfId: 262,
     regionName: 'Чукотский автономный округ',
-    representations: [],
+    shop: [],
     fill: '',
     hidden: false
 },
@@ -856,7 +853,7 @@ export const localCities = [
     countryName: 'Russian Federation',
     rfId: 262,
     regionName: 'Забайкальский край',
-    representations: [],
+    shop: [],
     fill: '',
     hidden: false
 },
@@ -869,7 +866,7 @@ export const localCities = [
     countryName: 'Russian Federation',
     rfId: 262,
     regionName: 'Чукотский автономный округ',
-    representations: [],
+    shop: [],
     fill: '',
     hidden: false
 },
@@ -882,7 +879,7 @@ export const localCities = [
     countryName: 'India',
     rfId: null,
     regionName: null,
-    representations: [],
+    shop: [],
     fill: '',
     hidden: false
 },
@@ -895,10 +892,10 @@ export const localCities = [
     countryName: 'Russian Federation',
     rfId: 262,
     regionName: 'Республика Саха (Якутия)',
-    representations: [
+    shop: [
         {
             id: 23,
-            name: 'в/ч 1212',
+            name: 'м-н Хорошего понемножку',
             address: 'ул. Якутская, 12',
             phone: '79564214531',
             email: 'yak@mail.ru',
@@ -925,7 +922,7 @@ export const localCities = [
                     sector: null,
                     belonging: null,
                     representationId: 23,
-                    representationName: 'в/ч 1212'
+                    representationName: 'м-н Тест'
                 }
             ],
             fill: '#FFFF00'

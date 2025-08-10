@@ -42,10 +42,10 @@ const addRepresentation = () => {
     console.log('addRepresentation')
     console.log(currentCity.value)
     const foundCity = cities.find(city => city.id === currentCity.value.id)
-    foundCity.representations.push(
+    foundCity.shop.push(
         {
             id: 23,
-            name: 'в/ч 1212',
+            name: 'магазин 132',
             address: 'ул. Якутская, 12',
             phone: '79564214531',
             email: 'yak@mail.ru',

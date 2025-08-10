@@ -28,16 +28,16 @@ const showRepresentative = (i, isActive) => {
     class="tooltip"
     :style="{ top: tooltipX + 'px', left: tooltipY + 'px' }"
   >
-    <div v-if="currentCity.representations.length">
+    <div v-if="currentCity.shop.length">
       <div
         class="tooltip-wrp"
         :style="{
           borderBottom:
-            index + 1 === currentCity.representations.length
+            index + 1 === currentCity.shop.length
               ? '0px'
               : '1px solid rgba(10, 11, 46, 0.1)',
         }"
-        v-for="(home, index) in currentCity.representations"
+        v-for="(home, index) in currentCity.shop"
         :key="`city-${home.id}`"
       >
         <div class="tooltip-header">

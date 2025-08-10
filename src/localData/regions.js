@@ -23,7 +23,7 @@ export const localRegions = [
             countryName: 'Russian Federation',
             rfId: null,
             regionName: 'Алтайский край',
-            representations: [
+            shop: [
                 {
                     id: 6,
                     name: 'АО \'НЦВ Миль и Камов\'',
@@ -47,7 +47,6 @@ export const localRegions = [
                     necessaryRepresentativeCount: 2,
                     activeRepresentativeCount: 1,
                     currentRepresentativeCount: 2,
-                    link: 'https://millandkamov.ru',
                     representatives: [
                         {
                             id: 2,
@@ -311,7 +310,7 @@ export const localRegions = [
             countryName: 'Russian Federation',
             rfId: null,
             regionName: 'Брянская область',
-            representations: [],
+            shop: [],
             fill: '',
             hidden: false
         }
@@ -385,7 +384,7 @@ export const localRegions = [
             countryName: 'Russian Federation',
             rfId: null,
             regionName: 'Воронежская область',
-            representations: [
+            shop: [
                 {
                     id: 5,
                     name: 'ПАО \'ВАСО\'',
@@ -403,7 +402,6 @@ export const localRegions = [
                     necessaryRepresentativeCount: 1,
                     activeRepresentativeCount: 0,
                     currentRepresentativeCount: 0,
-                    link: 'https://vaco.ru',
                     representatives: [],
                     fill: '#FF0033'
                 }
@@ -451,7 +449,7 @@ export const localRegions = [
             countryName: 'Russian Federation',
             rfId: null,
             regionName: 'Забайкальский край',
-            representations: [],
+            shop: [],
             fill: '',
             hidden: false
         }
@@ -660,7 +658,7 @@ export const localRegions = [
             countryName: 'Russian Federation',
             rfId: null,
             regionName: 'Краснодарский край',
-            representations: [
+            shop: [
                 {
                     id: 1,
                     name: 'в/ч 35666',
@@ -694,7 +692,6 @@ export const localRegions = [
                     necessaryRepresentativeCount: 2,
                     activeRepresentativeCount: 2,
                     currentRepresentativeCount: 2,
-                    link: 'https://vc35666.ru',
                     representatives: [
                         {
                             id: 8,
@@ -940,7 +937,7 @@ export const localRegions = [
             countryName: 'Russian Federation',
             rfId: null,
             regionName: 'Москва',
-            representations: [
+            shop: [
                 {
                     id: 7,
                     name: 'ФГБУ СЛО \'Россия\'',
@@ -958,7 +955,6 @@ export const localRegions = [
                     necessaryRepresentativeCount: 3,
                     activeRepresentativeCount: 1,
                     currentRepresentativeCount: 1,
-                    link: 'https://rossia.ru',
                     representatives: [
                         {
                             id: 5,
@@ -993,7 +989,6 @@ export const localRegions = [
                     necessaryRepresentativeCount: 1,
                     activeRepresentativeCount: 0,
                     currentRepresentativeCount: 0,
-                    link: 'https://vc424838.ru',
                     representatives: [],
                     fill: '#FF0033'
                 }
@@ -1203,7 +1198,7 @@ export const localRegions = [
             countryName: 'Russian Federation',
             rfId: null,
             regionName: 'Приморский край',
-            representations: [
+            shop: [
                 {
                     id: 12,
                     name: 'ПАО \'ААК-Прогресс\'',
@@ -1221,7 +1216,6 @@ export const localRegions = [
                     necessaryRepresentativeCount: 0,
                     activeRepresentativeCount: 0,
                     currentRepresentativeCount: 0,
-                    link: null,
                     representatives: [],
                     fill: '#FF0033'
                 },
@@ -1248,7 +1242,6 @@ export const localRegions = [
                     necessaryRepresentativeCount: 1,
                     activeRepresentativeCount: 0,
                     currentRepresentativeCount: 0,
-                    link: '123.com',
                     representatives: [],
                     fill: '#FF0033'
                 }
@@ -1341,7 +1334,7 @@ export const localRegions = [
             countryName: 'Russian Federation',
             rfId: null,
             regionName: 'Республика Бурятия',
-            representations: [
+            shop: [
                 {
                     id: 11,
                     name: 'АО \'У-УАЗ\'',
@@ -1359,7 +1352,6 @@ export const localRegions = [
                     necessaryRepresentativeCount: 2,
                     activeRepresentativeCount: 0,
                     currentRepresentativeCount: 0,
-                    link: null,
                     representatives: [],
                     fill: '#FF0033'
                 }
@@ -1467,7 +1459,7 @@ export const localRegions = [
             countryName: 'Russian Federation',
             rfId: null,
             regionName: 'Республика Крым',
-            representations: [
+            shop: [
                 {
                     id: 4,
                     name: 'в/ч 46453',
@@ -1485,7 +1477,6 @@ export const localRegions = [
                     necessaryRepresentativeCount: 2,
                     activeRepresentativeCount: 1,
                     currentRepresentativeCount: 1,
-                    link: 'https://vc46453.ru',
                     representatives: [
                         {
                             id: 4,
@@ -1610,7 +1601,7 @@ export const localRegions = [
             countryName: 'Russian Federation',
             rfId: null,
             regionName: 'Республика Саха (Якутия)',
-            representations: [
+            shop: [
                 {
                     id: 23,
                     name: 'в/ч 1212',
@@ -1628,7 +1619,6 @@ export const localRegions = [
                     necessaryRepresentativeCount: 5,
                     activeRepresentativeCount: 1,
                     currentRepresentativeCount: 1,
-                    link: 'https://yak.ru',
                     representatives: [
                         {
                             id: 12,
@@ -1690,7 +1680,7 @@ export const localRegions = [
             countryName: 'Russian Federation',
             rfId: null,
             regionName: 'Республика Татарстан',
-            representations: [
+            shop: [
                 {
                     id: 55,
                     name: 'АО2',
@@ -1714,7 +1704,6 @@ export const localRegions = [
                     necessaryRepresentativeCount: 2,
                     activeRepresentativeCount: 0,
                     currentRepresentativeCount: 0,
-                    link: null,
                     representatives: [],
                     fill: '#FF0033'
                 },
@@ -1751,7 +1740,6 @@ export const localRegions = [
                     necessaryRepresentativeCount: 2,
                     activeRepresentativeCount: 2,
                     currentRepresentativeCount: 2,
-                    link: null,
                     representatives: [
                         {
                             id: 7,
@@ -1841,7 +1829,7 @@ export const localRegions = [
             countryName: 'Russian Federation',
             rfId: null,
             regionName: 'Ростовская область',
-            representations: [
+            shop: [
                 {
                     id: 3,
                     name: 'АО \'Роствертол\'',
@@ -1859,7 +1847,6 @@ export const localRegions = [
                     necessaryRepresentativeCount: 2,
                     activeRepresentativeCount: 2,
                     currentRepresentativeCount: 2,
-                    link: 'https://rostvertol.ru',
                     representatives: [
                         {
                             id: 11,
@@ -2060,7 +2047,7 @@ export const localRegions = [
             countryName: 'Russian Federation',
             rfId: null,
             regionName: 'Ставропольский край',
-            representations: [],
+            shop: [],
             fill: '',
             hidden: false
         }
@@ -2200,7 +2187,7 @@ export const localRegions = [
             countryName: 'Russian Federation',
             rfId: null,
             regionName: 'Хабаровский край',
-            representations: [
+            shop: [
                 {
                     id: 9,
                     name: 'в/ч 424838',
@@ -2218,7 +2205,6 @@ export const localRegions = [
                     necessaryRepresentativeCount: 1,
                     activeRepresentativeCount: 0,
                     currentRepresentativeCount: 0,
-                    link: 'https://vc424838',
                     representatives: [],
                     fill: '#FF0033'
                 }
@@ -2317,7 +2303,7 @@ export const localRegions = [
             countryName: 'Russian Federation',
             rfId: null,
             regionName: 'Чукотский автономный округ',
-            representations: [
+            shop: [
                 {
                     id: 52,
                     name: 'в/ч 20202',
@@ -2335,7 +2321,6 @@ export const localRegions = [
                     necessaryRepresentativeCount: 5,
                     activeRepresentativeCount: 1,
                     currentRepresentativeCount: 1,
-                    link: 'https://ayanka.ru',
                     representatives: [
                         {
                             id: 6,
@@ -2366,7 +2351,7 @@ export const localRegions = [
             countryName: 'Russian Federation',
             rfId: null,
             regionName: 'Чукотский автономный округ',
-            representations: [],
+            shop: [],
             fill: '',
             hidden: false
         },
@@ -2379,7 +2364,7 @@ export const localRegions = [
             countryName: 'Russian Federation',
             rfId: null,
             regionName: 'Чукотский автономный округ',
-            representations: [],
+            shop: [],
             fill: '',
             hidden: false
         }
