@@ -29,7 +29,6 @@ export const localCities = [
             necessaryRepresentativeCount: 0,
             activeRepresentativeCount: 0,
             currentRepresentativeCount: 0,
-            link: null,
             representatives: [],
             fill: '#FF0033'
         },
@@ -56,7 +55,6 @@ export const localCities = [
             necessaryRepresentativeCount: 1,
             activeRepresentativeCount: 0,
             currentRepresentativeCount: 0,
-            link: '123.com',
             representatives: [],
             fill: '#FF0033'
         }
@@ -91,7 +89,6 @@ export const localCities = [
             necessaryRepresentativeCount: 5,
             activeRepresentativeCount: 1,
             currentRepresentativeCount: 1,
-            link: 'https://ayanka.ru',
             representatives: [
                 {
                     id: 6,
@@ -151,7 +148,6 @@ export const localCities = [
             necessaryRepresentativeCount: 4,
             activeRepresentativeCount: 0,
             currentRepresentativeCount: 0,
-            link: 'https://vc44936.ru',
             representatives: [],
             fill: '#FF0033'
         }
@@ -212,7 +208,6 @@ export const localCities = [
             necessaryRepresentativeCount: 1,
             activeRepresentativeCount: 0,
             currentRepresentativeCount: 0,
-            link: 'https://vaco.ru',
             representatives: [],
             fill: '#FF0033'
         }
@@ -260,7 +255,6 @@ export const localCities = [
             necessaryRepresentativeCount: 2,
             activeRepresentativeCount: 1,
             currentRepresentativeCount: 1,
-            link: 'https://vc46453.ru',
             representatives: [
                 {
                     id: 4,
@@ -315,7 +309,6 @@ export const localCities = [
             necessaryRepresentativeCount: 2,
             activeRepresentativeCount: 0,
             currentRepresentativeCount: 0,
-            link: null,
             representatives: [],
             fill: '#FF0033'
         },
@@ -352,7 +345,6 @@ export const localCities = [
             necessaryRepresentativeCount: 2,
             activeRepresentativeCount: 2,
             currentRepresentativeCount: 2,
-            link: null,
             representatives: [
                 {
                     id: 7,
@@ -430,7 +422,6 @@ export const localCities = [
             necessaryRepresentativeCount: 2,
             activeRepresentativeCount: 2,
             currentRepresentativeCount: 2,
-            link: 'https://vc35666.ru',
             representatives: [
                 {
                     id: 8,
@@ -505,7 +496,6 @@ export const localCities = [
             necessaryRepresentativeCount: 1,
             activeRepresentativeCount: 0,
             currentRepresentativeCount: 0,
-            link: null,
             representatives: [],
             fill: '#FF0033'
         },
@@ -526,7 +516,6 @@ export const localCities = [
             necessaryRepresentativeCount: 1,
             activeRepresentativeCount: 0,
             currentRepresentativeCount: 0,
-            link: null,
             representatives: [],
             fill: '#FF0033'
         }
@@ -561,7 +550,6 @@ export const localCities = [
             necessaryRepresentativeCount: 3,
             activeRepresentativeCount: 1,
             currentRepresentativeCount: 1,
-            link: 'https://rossia.ru',
             representatives: [
                 {
                     id: 5,
@@ -596,7 +584,6 @@ export const localCities = [
             necessaryRepresentativeCount: 1,
             activeRepresentativeCount: 0,
             currentRepresentativeCount: 0,
-            link: 'https://vc424838.ru',
             representatives: [],
             fill: '#FF0033'
         }
@@ -644,7 +631,6 @@ export const localCities = [
             necessaryRepresentativeCount: 2,
             activeRepresentativeCount: 2,
             currentRepresentativeCount: 2,
-            link: 'https://rostvertol.ru',
             representatives: [
                 {
                     id: 11,
@@ -712,7 +698,6 @@ export const localCities = [
             necessaryRepresentativeCount: 2,
             activeRepresentativeCount: 1,
             currentRepresentativeCount: 2,
-            link: 'https://millandkamov.ru',
             representatives: [
                 {
                     id: 2,
@@ -774,7 +759,6 @@ export const localCities = [
             necessaryRepresentativeCount: 2,
             activeRepresentativeCount: 0,
             currentRepresentativeCount: 0,
-            link: null,
             representatives: [],
             fill: '#FF0033'
         }
@@ -809,7 +793,6 @@ export const localCities = [
             necessaryRepresentativeCount: 1,
             activeRepresentativeCount: 0,
             currentRepresentativeCount: 0,
-            link: 'https://vc424838',
             representatives: [],
             fill: '#FF0033'
         }
@@ -844,7 +827,6 @@ export const localCities = [
             necessaryRepresentativeCount: 2,
             activeRepresentativeCount: 0,
             currentRepresentativeCount: 0,
-            link: 'https://www.google.ru/',
             representatives: [],
             fill: '#FF0033'
         }
@@ -931,7 +913,6 @@ export const localCities = [
             necessaryRepresentativeCount: 5,
             activeRepresentativeCount: 1,
             currentRepresentativeCount: 1,
-            link: 'https://yak.ru',
             representatives: [
                 {
                     id: 12,
