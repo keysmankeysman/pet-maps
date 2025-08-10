@@ -123,6 +123,7 @@ const updateRegions = (formData) => {
   <creator-map
     :regions="regions"
     :cities="cities"
+    :mode="mode"
     @clickCircle="clickCircle"
     @clickRegion="clickRegion"
   ></creator-map>

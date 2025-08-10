@@ -1,13 +1,27 @@
 <script setup>
+import { ref, watch } from 'vue'
 import { usePrintMap } from '@/composables/usePrintMap.js'
 
-defineProps(['regions', 'cities'])
+const svgMap = ref(null)
+
+const props = defineProps(['regions', 'cities', 'mode'])
 const emits = defineEmits(['clickCircle', 'clickRegion'])
 
 const { printRegion, clearPrintRegion, regionHover } = usePrintMap()
 
+console.log(props.mode)
+
+watch(() => props.mode, (newVal) => {
+  console.log('мод поменялся', newVal)
+  if (newVal === 'defineCoords') {
+    svgMap.value.classList.add('edit-mode')
+  } else {
+    svgMap.value.classList.remove('edit-mode')
+  }
+})
+
 const clickRegion = (region, event) => {
-    emits('clickRegion', region, event)
+  emits('clickRegion', region, event)
 }
 
 </script>
@@ -19,6 +33,7 @@ const clickRegion = (region, event) => {
     width="100%"
     height="100%"
     viewBox="-60 0 970 460"
+    ref="svgMap"
   >
     <g
       v-for="region in regions" 
@@ -57,3 +72,11 @@ const clickRegion = (region, event) => {
     </g>
   </svg>
 </template>
+
+<style scoped>
+
+.edit-mode {
+  border: 3px solid red;
+}
+
+</style>
