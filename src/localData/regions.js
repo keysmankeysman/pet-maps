@@ -1,6 +1,8 @@
 export const localRegions = [
 {
     id: 34,
+    regionName: 'Алтайский край',
+    color: '#4131bd',
     paths: [
         {
             id: 1,
@@ -19,22 +21,13 @@ export const localRegions = [
             countryName: 'Russian Federation',
             rfId: null,
             regionName: 'Алтайский край',
-            shop: [
+            shops: [
                 {
                     id: 6,
                     name: 'АО \'НЦВ Миль и Камов\'',
                     address: 'ул. Пушкина',
                     phone: '79998886621',
                     email: '22@www.wq',
-                    productTypes: [
-                        {
-                            'productId': 6,
-                            name: 'Ка-50',
-                            'count': 10.0
-                        }
-                    ],
-                    sector: '2',
-                    belonging: 'RUSSIA',
                     cityName: 'Тестов',
                     cityId: 11,
                     active: true,
@@ -52,8 +45,6 @@ export const localRegions = [
                             phone: '3213-65-12312',
                             email: 'matt@mail.com',
                             active: true,
-                            sector: null,
-                            belonging: null,
                             representationId: 6,
                             representationName: 'АО \'НЦВ Миль и Камов\''
                         },
@@ -65,8 +56,6 @@ export const localRegions = [
                             phone: '218u78-236561',
                             email: 'james@mail.com',
                             active: false,
-                            sector: null,
-                            belonging: null,
                             representationId: 6,
                             representationName: 'АО \'НЦВ Миль и Камов\''
                         }
@@ -77,12 +66,12 @@ export const localRegions = [
             fill: '#FFFF00',
             hidden: false
         }
-    ],
-    color: '#4131bd',
-    regionName: 'Алтайский край'
+    ]
 },
 {
     id: 36,
+    regionName: 'Амурская область',
+    color: '#337AB7',
     paths: [
         {
             id: 1,
@@ -92,11 +81,11 @@ export const localRegions = [
         }
     ],
     cities: [],
-    color: '#337AB7',
-    regionName: 'Амурская область'
 },
 {
     id: 40,
+    regionName: 'Архангельская область',
+    color: '#337AB7',
     paths: [
         {
             id: 1,
@@ -249,12 +238,12 @@ export const localRegions = [
             d: 'M206.3,204.1l-2.2,2.2l-1.6,2v-2.8l1.8-1.8l-2.2-3.3l-1.5-1.5h-2.3l-3.4,1.1l-3-1.6l-3.7,1.4l-3.9-0.6l-0.1,4.4l-2.2,1.8l0.9,2.2l-1.1,1.1l-3.6-1.1l-1.4-2.9l-2.2-2.2l-0.7-3.7l-0.8-5.7h-2.2l-2.2,2.3v2.2l-0.3,2.8l1.6,1.6l-0.6,3.2l-3.2,2.3l-2.8-2.8l-2.6-2.6l-0.7,0.8l-1,1.5l-1.3-0.9l-0.6,0.6l-1-1.3l-0.8,0.9l0.1,2l-0.8,1.8l-1.6,0.8l-0.6,1.4l-0.3,3.2l2.4,2.4l-1,2.6l-2.1,0.6l0.3,1.7l-0.4,2l-2.5,2.5l-0.9,0.2l-1,1.1l-1.9,3.9l0.3,1.2l-1,1l0.7,3.5l1.5,0.9v1.6l2,1l0.5,1.3l0.8,0.5l1.2,1.2h1.3l1.1,1.1l0.5,1.4l2.5,0.1l1.9,0.5l0.9,0.9l1.6,0.4l0.6,1.6l1.5,1.5l1,0.7v1.3l1.1,0.4h2.2v-0.8l1,0.3h1.4v1.6l0.8,0.9h0.8v1l1.5,0.8l1,1l1.3-1.3l0.4-1.1l1.4,0.6l1,1.6l-1.1,1.1l1.5,0.8v0.8h1.1l1.4,0.6l-0.6,0.6l0.8,1.2l0.8,0.8l1.4-1.2l1,0.3l0.7,1.1l0.5,0.5l1.2,1.2l-0.4,1.4l1.1,0.6l1.6-0.4l-0.1-0.9l1.1,0.3h2l0.3,1l1.3,0.3l1.1-1.3l1.3-1l1.1-1.8l-1.4-1.4l1-1l1.5-1l0.2-1.1l2-1.2l1.7-1.7l1.1-0.5l1.6-1.6l-1.1-1.1L203,250l-1.3,0.6l-0.8-0.8h-1.1l-1.6,0.3l-0.7,1.6l-0.8-0.3l-1.1,1.6l-1.1-1.1l-1.2-0.4l-1.3-0.6l-0.2-2.2l1.5-0.8l-0.3-1.4l0.6-0.6l0.5-1.2l1.5-0.4l1.8,0.4l0.3-1.2l-0.3-2l-0.9-0.9l0.5-1.9l1.7-1.1v-1.8l0.5-1.8l-1.3-1.3l-1.3-1.9v-1.5l-0.3-1.7h1.6l1.8,1.3l1.5,0.5l1.1,1.1l2.2,0.4l1.8,1.1l2,2l0.4,2l1.5-0.8l1.7-0.6l1.3,0.8l1.6,0.4l1.6,1.3h1.1l0.8,0.8l1.1-1.1l1.1-2l-1-1l-0.4-1.7l0.8-1.7l-0.6-1.2l-1.4-1.4l-0.5-1.1l1.1-1.1l0.9-0.9v-0.9l0.9-0.9l0.7-1.9l1.4-1.4l-1-1l-2.4-1.1l-0.3,0.8l-2.2,0.8l-1.2-0.4l-1.5-1.8l-1.1-1.1l-0.5-2.2l-2-2l-1.1-1.5l-0.7-2.7l-1-2.1L206.3,204.1'
         }
     ],
-    cities: [],
-    color: '#337AB7',
-    regionName: 'Архангельская область'
+    cities: []
 },
 {
     id: 60,
+    regionName: 'Астраханская область',
+    color: '#337AB7',
     paths: [
         {
             id: 1,
@@ -264,8 +253,6 @@ export const localRegions = [
         }
     ],
     cities: [],
-    color: '#337AB7',
-    regionName: 'Астраханская область'
 },
 {
     id: 22,
@@ -301,7 +288,7 @@ export const localRegions = [
             countryName: 'Russian Federation',
             rfId: null,
             regionName: 'Брянская область',
-            shop: [],
+            shops: [],
             fill: '',
             hidden: false
         }
@@ -371,16 +358,13 @@ export const localRegions = [
             countryName: 'Russian Federation',
             rfId: null,
             regionName: 'Воронежская область',
-            shop: [
+            shops: [
                 {
                     id: 5,
                     name: 'ПАО \'ВАСО\'',
                     address: 'test address',
                     phone: '89876543210',
                     email: 'p@mail.ru',
-                    productTypes: [],
-                    sector: 's',
-                    belonging: 'RUSSIA',
                     cityName: 'Воронеж',
                     cityId: 17,
                     active: true,
@@ -434,7 +418,7 @@ export const localRegions = [
             countryName: 'Russian Federation',
             rfId: null,
             regionName: 'Забайкальский край',
-            shop: [],
+            shops: [],
             fill: '',
             hidden: false
         }
@@ -632,32 +616,13 @@ export const localRegions = [
             countryName: 'Russian Federation',
             rfId: null,
             regionName: 'Краснодарский край',
-            shop: [
+            shops: [
                 {
                     id: 1,
                     name: 'в/ч 35666',
                     address: 'test address',
                     phone: '89876543210',
                     email: 'p@mail.ru',
-                    productTypes: [
-                        {
-                            'productId': 12,
-                            name: 'МИ-35',
-                            'count': 15.0
-                        },
-                        {
-                            'productId': 29,
-                            name: '123',
-                            'count': 11.0
-                        },
-                        {
-                            'productId': 2,
-                            name: 'Ми-35М',
-                            'count': 30.0
-                        }
-                    ],
-                    sector: 'p@mail.ru',
-                    belonging: 'RUSSIA',
                     cityName: 'Кореновск',
                     cityId: 3,
                     active: true,
@@ -675,8 +640,6 @@ export const localRegions = [
                             phone: 'dd',
                             email: 'dd',
                             active: true,
-                            sector: null,
-                            belonging: null,
                             representationId: 1,
                             representationName: 'в/ч 35666'
                         },
@@ -688,8 +651,6 @@ export const localRegions = [
                             phone: '7954314753',
                             email: 'saa@aa.ss',
                             active: true,
-                            sector: null,
-                            belonging: null,
                             representationId: 1,
                             representationName: 'в/ч 35666'
                         }
@@ -904,16 +865,13 @@ export const localRegions = [
             countryName: 'Russian Federation',
             rfId: null,
             regionName: 'Москва',
-            shop: [
+            shops: [
                 {
                     id: 7,
                     name: 'ФГБУ СЛО \'Россия\'',
                     address: 'ул. Мичурина',
                     phone: '79988',
                     email: 'ss@ss.ssss',
-                    productTypes: [],
-                    sector: '3',
-                    belonging: 'RUSSIA',
                     cityName: 'Москва',
                     cityId: 4,
                     active: true,
@@ -931,8 +889,6 @@ export const localRegions = [
                             phone: '89876543222',
                             email: 'ivanov@mail.ru',
                             active: true,
-                            sector: null,
-                            belonging: null,
                             representationId: 7,
                             representationName: 'ФГБУ СЛО \'Россия\''
                         }
@@ -945,9 +901,6 @@ export const localRegions = [
                     address: 'test address',
                     phone: '89876543210',
                     email: 'p@mail.ru',
-                    productTypes: [],
-                    sector: 's55',
-                    belonging: 'RUSSIA',
                     cityName: 'Москва',
                     cityId: 4,
                     active: true,
@@ -1153,16 +1106,13 @@ export const localRegions = [
             countryName: 'Russian Federation',
             rfId: null,
             regionName: 'Приморский край',
-            shop: [
+            shops: [
                 {
                     id: 12,
                     name: 'ПАО \'ААК-Прогресс\'',
                     address: 'пл. Ленина',
                     phone: '8785212',
                     email: 'ars@mail.ru',
-                    productTypes: [],
-                    sector: '4',
-                    belonging: 'RUSSIA',
                     cityName: 'Арсеньев',
                     cityId: 16,
                     active: false,
@@ -1180,15 +1130,6 @@ export const localRegions = [
                     address: '123123123',
                     phone: '+79999999999',
                     email: '123@mail.ru',
-                    productTypes: [
-                        {
-                            'productId': 29,
-                            name: '123',
-                            'count': 10.0
-                        }
-                    ],
-                    sector: '1',
-                    belonging: 'RUSSIA',
                     cityName: 'Арсеньев',
                     cityId: 16,
                     active: true,
@@ -1284,16 +1225,13 @@ export const localRegions = [
             countryName: 'Russian Federation',
             rfId: null,
             regionName: 'Республика Бурятия',
-            shop: [
+            shops: [
                 {
                     id: 11,
                     name: 'АО \'У-УАЗ\'',
                     address: 'ул. Курская',
                     phone: '5879654321',
                     email: 'as@ss.ru',
-                    productTypes: [],
-                    sector: '5',
-                    belonging: 'RUSSIA',
                     cityName: 'Улан-Удэ',
                     cityId: 5,
                     active: true,
@@ -1403,16 +1341,13 @@ export const localRegions = [
             countryName: 'Russian Federation',
             rfId: null,
             regionName: 'Республика Крым',
-            shop: [
+            shops: [
                 {
                     id: 4,
                     name: 'в/ч 46453',
                     address: 'ул. Маршала Блюхера',
                     phone: '7956345213',
                     email: 'dd@ss.ru',
-                    productTypes: [],
-                    sector: '44',
-                    belonging: 'RUSSIA',
                     cityName: 'Джанкой',
                     cityId: 20,
                     active: true,
@@ -1430,8 +1365,6 @@ export const localRegions = [
                             phone: '0987-323-67',
                             email: 'kir@ya.ru',
                             active: true,
-                            sector: null,
-                            belonging: null,
                             representationId: 4,
                             representationName: 'в/ч 46453'
                         }
@@ -1542,16 +1475,13 @@ export const localRegions = [
             countryName: 'Russian Federation',
             rfId: null,
             regionName: 'Республика Саха (Якутия)',
-            shop: [
+            shops: [
                 {
                     id: 23,
                     name: 'в/ч 1212',
                     address: 'ул. Якутская, 12',
                     phone: '79564214531',
                     email: 'yak@mail.ru',
-                    productTypes: [],
-                    sector: 'd15',
-                    belonging: 'RUSSIA',
                     cityName: 'Якутск',
                     cityId: 27,
                     active: true,
@@ -1569,8 +1499,6 @@ export const localRegions = [
                             phone: '79635314521',
                             email: 'yavicktor@vicktor.ru',
                             active: true,
-                            sector: null,
-                            belonging: null,
                             representationId: 23,
                             representationName: 'в/ч 1212'
                         }
@@ -1619,22 +1547,13 @@ export const localRegions = [
             countryName: 'Russian Federation',
             rfId: null,
             regionName: 'Республика Татарстан',
-            shop: [
+            shops: [
                 {
                     id: 55,
                     name: 'АО2',
                     address: 'ул. Мичурина',
                     phone: '79988',
                     email: 'sm@ss.smss',
-                    productTypes: [
-                        {
-                            'productId': 9,
-                            name: 'МИ-8МТВ',
-                            'count': 1.0
-                        }
-                    ],
-                    sector: '3',
-                    belonging: 'RUSSIA',
                     cityName: 'Казань',
                     cityId: 15,
                     active: true,
@@ -1652,25 +1571,6 @@ export const localRegions = [
                     address: 'ул. Мичурина 5',
                     phone: '799887',
                     email: 'ss@ss.sss',
-                    productTypes: [
-                        {
-                            'productId': 9,
-                            name: 'МИ-8МТВ',
-                            'count': 17.0
-                        },
-                        {
-                            'productId': 29,
-                            name: '123',
-                            'count': 7.0
-                        },
-                        {
-                            'productId': 23,
-                            name: 'e',
-                            'count': 2.0
-                        }
-                    ],
-                    sector: '3',
-                    belonging: 'RUSSIA',
                     cityName: 'Казань',
                     cityId: 15,
                     active: true,
@@ -1688,8 +1588,6 @@ export const localRegions = [
                             phone: 'ii',
                             email: 'ii',
                             active: true,
-                            sector: null,
-                            belonging: null,
                             representationId: 10,
                             representationName: 'АО \'КВЗ\''
                         },
@@ -1701,8 +1599,6 @@ export const localRegions = [
                             phone: '798546321456',
                             email: 'aa@aa.ru',
                             active: true,
-                            sector: null,
-                            belonging: null,
                             representationId: 10,
                             representationName: 'АО \'КВЗ\''
                         }
@@ -1765,16 +1661,13 @@ export const localRegions = [
             countryName: 'Russian Federation',
             rfId: null,
             regionName: 'Ростовская область',
-            shop: [
+            shops: [
                 {
                     id: 3,
                     name: 'АО \'Роствертол\'',
                     address: 'ул. Кировская',
                     phone: '795412234521',
                     email: 'dd@dd.ru',
-                    productTypes: [],
-                    sector: '16',
-                    belonging: 'RUSSIA',
                     cityName: 'Ростов',
                     cityId: 1,
                     active: true,
@@ -1792,8 +1685,6 @@ export const localRegions = [
                             phone: '89876543210',
                             email: 'ivanov@mail.ru',
                             active: true,
-                            sector: null,
-                            belonging: null,
                             representationId: 3,
                             representationName: 'АО \'Роствертол\''
                         },
@@ -1805,8 +1696,6 @@ export const localRegions = [
                             phone: '9823-232-761',
                             email: 'art@ya.r',
                             active: true,
-                            sector: null,
-                            belonging: null,
                             representationId: 3,
                             representationName: 'АО \'Роствертол\''
                         }
@@ -1975,7 +1864,7 @@ export const localRegions = [
             countryName: 'Russian Federation',
             rfId: null,
             regionName: 'Ставропольский край',
-            shop: [],
+            shops: [],
             fill: '',
             hidden: false
         }
@@ -2107,16 +1996,13 @@ export const localRegions = [
             countryName: 'Russian Federation',
             rfId: null,
             regionName: 'Хабаровский край',
-            shop: [
+            shops: [
                 {
                     id: 9,
                     name: 'в/ч 424838',
                     address: 'test address',
                     phone: '89876543210',
                     email: 'p@mail.ru',
-                    productTypes: [],
-                    sector: 's22',
-                    belonging: 'RUSSIA',
                     cityName: 'Хабаровск',
                     cityId: 10,
                     active: true,
@@ -2218,16 +2104,13 @@ export const localRegions = [
             countryName: 'Russian Federation',
             rfId: null,
             regionName: 'Чукотский автономный округ',
-            shop: [
+            shops: [
                 {
                     id: 52,
                     name: 'в/ч 20202',
                     address: 'ул. Аянская',
                     phone: '76555555',
                     email: 'ss@mail.ru',
-                    productTypes: [],
-                    sector: '12',
-                    belonging: 'RUSSIA',
                     cityName: 'Аянка',
                     cityId: 9,
                     active: true,
@@ -2245,8 +2128,6 @@ export const localRegions = [
                             phone: '7655555',
                             email: 'sss@mail.ru',
                             active: true,
-                            sector: null,
-                            belonging: null,
                             representationId: 52,
                             representationName: 'в/ч 20202'
                         }
@@ -2266,7 +2147,7 @@ export const localRegions = [
             countryName: 'Russian Federation',
             rfId: null,
             regionName: 'Чукотский автономный округ',
-            shop: [],
+            shops: [],
             fill: '',
             hidden: false
         },
@@ -2279,7 +2160,7 @@ export const localRegions = [
             countryName: 'Russian Federation',
             rfId: null,
             regionName: 'Чукотский автономный округ',
-            shop: [],
+            shops: [],
             fill: '',
             hidden: false
         }
