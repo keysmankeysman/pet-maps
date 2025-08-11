@@ -84,6 +84,10 @@ const defineСoordinates = () => {
   mode.value = 'defineCoords'
 }
 
+const cancelDefineСoordinates = () => {
+  mode.value = 'editRegion'
+}
+
 const addCity = (formData) => {
   const { name, x, y } = formData
   currentRegion.value.cities.push({
@@ -98,6 +102,7 @@ const addCity = (formData) => {
     countryId: currentRegion.value.id,
   })
   isDialogOpen.value = false
+  mode.value = 'editRegion'
 }
 
 const closeDialog = () => {
@@ -105,10 +110,10 @@ const closeDialog = () => {
 }
 
 const updateRegions = (formData) => {
-  console.log(formData)
+  console.log('updateRegions !!!')
   const { hex } = formData
-  console.log(hex)
   currentRegion.value.paths.map(p => p.fill = hex)
+
 }
 
 </script>
@@ -118,6 +123,12 @@ const updateRegions = (formData) => {
     class="ms-auto"
     text="Добавить новый город"
     @click="defineСoordinates"
+  ></v-btn>
+  <v-btn
+    class="ms-auto"
+    text="отмена"
+    @click="cancelDefineСoordinates"
+    v-if="mode === 'defineCoords'"
   ></v-btn>
 
   <creator-map

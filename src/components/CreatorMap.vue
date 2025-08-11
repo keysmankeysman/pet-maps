@@ -9,8 +9,6 @@ const emits = defineEmits(['clickCircle', 'clickRegion'])
 
 const { printRegion, clearPrintRegion, regionHover } = usePrintMap()
 
-console.log(props.mode)
-
 watch(() => props.mode, (newVal) => {
   console.log('мод поменялся', newVal)
   if (newVal === 'defineCoords') {

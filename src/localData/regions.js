@@ -1,6 +1,3 @@
-// const url = '/api/region'
-// const method = 'GET'
-// const payload = null
 export const localRegions = [
 {
     id: 34,
