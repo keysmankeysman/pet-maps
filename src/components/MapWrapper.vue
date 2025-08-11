@@ -120,6 +120,7 @@ const updateRegions = (formData) => {
 
 <template>
   <v-btn
+    color="primary"
     class="ms-auto"
     text="Добавить новый город"
     @click="defineСoordinates"

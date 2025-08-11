@@ -73,8 +73,13 @@ const clickRegion = (region, event) => {
 
 <style scoped>
 
+#svg-map {
+  border: 3px solid white;
+}
+
 .edit-mode {
-  border: 3px solid red;
+  border: 3px solid red !important;
+  cursor: pointer;
 }
 
 </style>

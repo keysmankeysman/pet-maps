@@ -1,7 +1,6 @@
 export const localRegions = [
 {
     id: 34,
-    name: 'Russian Federation',
     paths: [
         {
             id: 1,
@@ -84,7 +83,6 @@ export const localRegions = [
 },
 {
     id: 36,
-    name: 'Russian Federation',
     paths: [
         {
             id: 1,
@@ -99,7 +97,6 @@ export const localRegions = [
 },
 {
     id: 40,
-    name: 'Russian Federation',
     paths: [
         {
             id: 1,
@@ -258,7 +255,6 @@ export const localRegions = [
 },
 {
     id: 60,
-    name: 'Russian Federation',
     paths: [
         {
             id: 1,
@@ -273,7 +269,6 @@ export const localRegions = [
 },
 {
     id: 22,
-    name: 'Russian Federation',
     paths: [
         {
             id: 1,
@@ -288,7 +283,6 @@ export const localRegions = [
 },
 {
     id: 20,
-    name: 'Russian Federation',
     paths: [
         {
             id: 1,
@@ -317,7 +311,6 @@ export const localRegions = [
 },
 {
     id: 76,
-    name: 'Russian Federation',
     paths: [
         {
             id: 1,
@@ -332,7 +325,6 @@ export const localRegions = [
 },
 {
     id: 57,
-    name: 'Russian Federation',
     paths: [
         {
             id: 1,
@@ -347,7 +339,6 @@ export const localRegions = [
 },
 {
     id: 58,
-    name: 'Russian Federation',
     paths: [
         {
             id: 1,
@@ -362,7 +353,6 @@ export const localRegions = [
 },
 {
     id: 23,
-    name: 'Russian Federation',
     paths: [
         {
             id: 1,
@@ -412,7 +402,6 @@ export const localRegions = [
 },
 {
     id: 37,
-    name: 'Russian Federation',
     paths: [
         {
             id: 1,
@@ -427,7 +416,6 @@ export const localRegions = [
 },
 {
     id: 86,
-    name: 'Russian Federation',
     paths: [
         {
             id: 1,
@@ -456,7 +444,6 @@ export const localRegions = [
 },
 {
     id: 75,
-    name: 'Russian Federation',
     paths: [
         {
             id: 1,
@@ -471,7 +458,6 @@ export const localRegions = [
 },
 {
     id: 87,
-    name: 'Russian Federation',
     paths: [
         {
             id: 1,
@@ -486,7 +472,6 @@ export const localRegions = [
 },
 {
     id: 56,
-    name: 'Russian Federation',
     paths: [
         {
             id: 1,
@@ -501,7 +486,6 @@ export const localRegions = [
 },
 {
     id: 44,
-    name: 'Russian Federation',
     paths: [
         {
             id: 1,
@@ -516,7 +500,6 @@ export const localRegions = [
 },
 {
     id: 45,
-    name: 'Russian Federation',
     paths: [
         {
             id: 1,
@@ -531,7 +514,6 @@ export const localRegions = [
 },
 {
     id: 42,
-    name: 'Russian Federation',
     paths: [
         {
             id: 1,
@@ -576,7 +558,6 @@ export const localRegions = [
 },
 {
     id: 24,
-    name: 'Russian Federation',
     paths: [
         {
             id: 1,
@@ -591,7 +572,6 @@ export const localRegions = [
 },
 {
     id: 93,
-    name: 'Russian Federation',
     paths: [
         {
             id: 1,
@@ -606,7 +586,6 @@ export const localRegions = [
 },
 {
     id: 79,
-    name: 'Russian Federation',
     paths: [
         {
             id: 1,
@@ -621,7 +600,6 @@ export const localRegions = [
 },
 {
     id: 74,
-    name: 'Russian Federation',
     paths: [
         {
             id: 1,
@@ -636,7 +614,6 @@ export const localRegions = [
 },
 {
     id: 53,
-    name: 'Russian Federation',
     paths: [
         {
             id: 1,
@@ -729,7 +706,6 @@ export const localRegions = [
 },
 {
     id: 91,
-    name: 'Russian Federation',
     paths: [
         {
             id: 1,
@@ -840,7 +816,6 @@ export const localRegions = [
 },
 {
     id: 71,
-    name: 'Russian Federation',
     paths: [
         {
             id: 1,
@@ -855,7 +830,6 @@ export const localRegions = [
 },
 {
     id: 21,
-    name: 'Russian Federation',
     paths: [
         {
             id: 1,
@@ -870,7 +844,6 @@ export const localRegions = [
 },
 {
     id: 97,
-    name: 'Russian Federation',
     paths: [
         {
             id: 1,
@@ -885,7 +858,6 @@ export const localRegions = [
 },
 {
     id: 62,
-    name: 'Russian Federation',
     paths: [
         {
             id: 1,
@@ -900,7 +872,6 @@ export const localRegions = [
 },
 {
     id: 39,
-    name: 'Russian Federation',
     paths: [
         {
             id: 1,
@@ -915,7 +886,6 @@ export const localRegions = [
 },
 {
     id: 49,
-    name: 'Russian Federation',
     paths: [
         {
             id: 1,
@@ -999,7 +969,6 @@ export const localRegions = [
 },
 {
     id: 48,
-    name: 'Russian Federation',
     paths: [
         {
             id: 1,
@@ -1014,7 +983,6 @@ export const localRegions = [
 },
 {
     id: 17,
-    name: 'Russian Federation',
     paths: [
         {
             id: 1,
@@ -1029,7 +997,6 @@ export const localRegions = [
 },
 {
     id: 50,
-    name: 'Russian Federation',
     paths: [
         {
             id: 1,
@@ -1056,7 +1023,6 @@ export const localRegions = [
 },
 {
     id: 77,
-    name: 'Russian Federation',
     paths: [
         {
             id: 1,
@@ -1071,7 +1037,6 @@ export const localRegions = [
 },
 {
     id: 46,
-    name: 'Russian Federation',
     paths: [
         {
             id: 1,
@@ -1086,7 +1051,6 @@ export const localRegions = [
 },
 {
     id: 32,
-    name: 'Russian Federation',
     paths: [
         {
             id: 1,
@@ -1101,7 +1065,6 @@ export const localRegions = [
 },
 {
     id: 31,
-    name: 'Russian Federation',
     paths: [
         {
             id: 1,
@@ -1116,7 +1079,6 @@ export const localRegions = [
 },
 {
     id: 29,
-    name: 'Russian Federation',
     paths: [
         {
             id: 1,
@@ -1131,7 +1093,6 @@ export const localRegions = [
 },
 {
     id: 61,
-    name: 'Russian Federation',
     paths: [
         {
             id: 1,
@@ -1146,7 +1107,6 @@ export const localRegions = [
 },
 {
     id: 67,
-    name: 'Russian Federation',
     paths: [
         {
             id: 1,
@@ -1161,7 +1121,6 @@ export const localRegions = [
 },
 {
     id: 84,
-    name: 'Russian Federation',
     paths: [
         {
             id: 1,
@@ -1176,7 +1135,6 @@ export const localRegions = [
 },
 {
     id: 38,
-    name: 'Russian Federation',
     paths: [
         {
             id: 1,
@@ -1252,7 +1210,6 @@ export const localRegions = [
 },
 {
     id: 18,
-    name: 'Russian Federation',
     paths: [
         {
             id: 1,
@@ -1267,7 +1224,6 @@ export const localRegions = [
 },
 {
     id: 95,
-    name: 'Russian Federation',
     paths: [
         {
             id: 1,
@@ -1282,7 +1238,6 @@ export const localRegions = [
 },
 {
     id: 33,
-    name: 'Russian Federation',
     paths: [
         {
             id: 1,
@@ -1297,7 +1252,6 @@ export const localRegions = [
 },
 {
     id: 72,
-    name: 'Russian Federation',
     paths: [
         {
             id: 1,
@@ -1312,7 +1266,6 @@ export const localRegions = [
 },
 {
     id: 85,
-    name: 'Russian Federation',
     paths: [
         {
             id: 1,
@@ -1362,7 +1315,6 @@ export const localRegions = [
 },
 {
     id: 27,
-    name: 'Russian Federation',
     paths: [
         {
             id: 1,
@@ -1377,7 +1329,6 @@ export const localRegions = [
 },
 {
     id: 26,
-    name: 'Russian Federation',
     paths: [
         {
             id: 1,
@@ -1392,7 +1343,6 @@ export const localRegions = [
 },
 {
     id: 28,
-    name: 'Russian Federation',
     paths: [
         {
             id: 1,
@@ -1407,7 +1357,6 @@ export const localRegions = [
 },
 {
     id: 98,
-    name: 'Russian Federation',
     paths: [
         {
             id: 1,
@@ -1422,7 +1371,6 @@ export const localRegions = [
 },
 {
     id: 83,
-    name: 'Russian Federation',
     paths: [
         {
             id: 1,
@@ -1437,7 +1385,6 @@ export const localRegions = [
 },
 {
     id: 16,
-    name: 'Russian Federation',
     paths: [
         {
             id: 1,
@@ -1501,7 +1448,6 @@ export const localRegions = [
 },
 {
     id: 80,
-    name: 'Russian Federation',
     paths: [
         {
             id: 1,
@@ -1516,7 +1462,6 @@ export const localRegions = [
 },
 {
     id: 66,
-    name: 'Russian Federation',
     paths: [
         {
             id: 1,
@@ -1531,7 +1476,6 @@ export const localRegions = [
 },
 {
     id: 96,
-    name: 'Russian Federation',
     paths: [
         {
             id: 1,
@@ -1643,7 +1587,6 @@ export const localRegions = [
 },
 {
     id: 25,
-    name: 'Russian Federation',
     paths: [
         {
             id: 1,
@@ -1658,7 +1601,6 @@ export const localRegions = [
 },
 {
     id: 81,
-    name: 'Russian Federation',
     paths: [
         {
             id: 1,
@@ -1777,7 +1719,6 @@ export const localRegions = [
 },
 {
     id: 35,
-    name: 'Russian Federation',
     paths: [
         {
             id: 1,
@@ -1792,7 +1733,6 @@ export const localRegions = [
 },
 {
     id: 94,
-    name: 'Russian Federation',
     paths: [
         {
             id: 1,
@@ -1807,7 +1747,6 @@ export const localRegions = [
 },
 {
     id: 59,
-    name: 'Russian Federation',
     paths: [
         {
             id: 1,
@@ -1884,7 +1823,6 @@ export const localRegions = [
 },
 {
     id: 64,
-    name: 'Russian Federation',
     paths: [
         {
             id: 1,
@@ -1899,7 +1837,6 @@ export const localRegions = [
 },
 {
     id: 70,
-    name: 'Russian Federation',
     paths: [
         {
             id: 1,
@@ -1914,7 +1851,6 @@ export const localRegions = [
 },
 {
     id: 99,
-    name: 'Russian Federation',
     paths: [
         {
             id: 1,
@@ -1929,7 +1865,6 @@ export const localRegions = [
 },
 {
     id: 68,
-    name: 'Russian Federation',
     paths: [
         {
             id: 1,
@@ -1944,7 +1879,6 @@ export const localRegions = [
 },
 {
     id: 41,
-    name: 'Russian Federation',
     paths: [
         {
             id: 1,
@@ -1995,7 +1929,6 @@ export const localRegions = [
 },
 {
     id: 89,
-    name: 'Russian Federation',
     paths: [
         {
             id: 1,
@@ -2010,7 +1943,6 @@ export const localRegions = [
 },
 {
     id: 19,
-    name: 'Russian Federation',
     paths: [
         {
             id: 1,
@@ -2025,7 +1957,6 @@ export const localRegions = [
 },
 {
     id: 54,
-    name: 'Russian Federation',
     paths: [
         {
             id: 1,
@@ -2054,7 +1985,6 @@ export const localRegions = [
 },
 {
     id: 65,
-    name: 'Russian Federation',
     paths: [
         {
             id: 1,
@@ -2069,7 +1999,6 @@ export const localRegions = [
 },
 {
     id: 47,
-    name: 'Russian Federation',
     paths: [
         {
             id: 1,
@@ -2084,7 +2013,6 @@ export const localRegions = [
 },
 {
     id: 92,
-    name: 'Russian Federation',
     paths: [
         {
             id: 1,
@@ -2099,7 +2027,6 @@ export const localRegions = [
 },
 {
     id: 63,
-    name: 'Russian Federation',
     paths: [
         {
             id: 1,
@@ -2114,7 +2041,6 @@ export const localRegions = [
 },
 {
     id: 88,
-    name: 'Russian Federation',
     paths: [
         {
             id: 1,
@@ -2129,7 +2055,6 @@ export const localRegions = [
 },
 {
     id: 82,
-    name: 'Russian Federation',
     paths: [
         {
             id: 1,
@@ -2144,7 +2069,6 @@ export const localRegions = [
 },
 {
     id: 69,
-    name: 'Russian Federation',
     paths: [
         {
             id: 1,
@@ -2159,7 +2083,6 @@ export const localRegions = [
 },
 {
     id: 52,
-    name: 'Russian Federation',
     paths: [
         {
             id: 1,
@@ -2215,7 +2138,6 @@ export const localRegions = [
 },
 {
     id: 90,
-    name: 'Russian Federation',
     paths: [
         {
             id: 1,
@@ -2230,7 +2152,6 @@ export const localRegions = [
 },
 {
     id: 30,
-    name: 'Russian Federation',
     paths: [
         {
             id: 1,
@@ -2245,7 +2166,6 @@ export const localRegions = [
 },
 {
     id: 55,
-    name: 'Russian Federation',
     paths: [
         {
             id: 1,
@@ -2260,7 +2180,6 @@ export const localRegions = [
 },
 {
     id: 78,
-    name: 'Russian Federation',
     paths: [
         {
             id: 1,
@@ -2275,7 +2194,6 @@ export const localRegions = [
 },
 {
     id: 43,
-    name: 'Russian Federation',
     paths: [
         {
             id: 1,
@@ -2371,7 +2289,6 @@ export const localRegions = [
 },
 {
     id: 51,
-    name: 'Russian Federation',
     paths: [
         {
             id: 1,
@@ -2404,7 +2321,6 @@ export const localRegions = [
 },
 {
     id: 73,
-    name: 'Russian Federation',
     paths: [
         {
             id: 1,
