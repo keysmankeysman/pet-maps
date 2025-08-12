@@ -45,18 +45,37 @@ const handleAddShop = () => {
   openDialog('AddShopForm')
 }
 
-const addShop = () => {
+const addShop = (formData) => {
+  const { name, address } = formData
+  console.log('addShop', name, address)
   const region = regions.find(region => region.id === currentRegion.value.id)
-  console.log(region)
   const foundCity = region.cities.find(city => city.id === currentCity.value.id)
   foundCity.shops.push(
     {
       id: 23,
-      name: 'магазин 132',
-      address: 'ул. Якутская, 12',
+      name,
+      address,
       phone: '79564214531',
     }
   )
+}
+
+const addCity = (formData) => {
+  const { name, x, y } = formData
+  currentRegionArea.value.cities.push({
+    id: 111,
+    name,
+    x,
+    y,
+    countryName: 'Russian Federation',
+    regionName: currentRegionArea.value.regionName,
+    fill: '#FFFF00',
+    hidden: false,
+    countryId: currentRegionArea.value.id,
+    shops: []
+  })
+  isDialogOpen.value = false
+  mode.value = 'editRegion'
 }
 
 const openDialog = (formName) => {
@@ -97,24 +116,6 @@ const defineСoordinates = () => {
 }
 
 const cancelDefineСoordinates = () => {
-  mode.value = 'editRegion'
-}
-
-const addCity = (formData) => {
-  const { name, x, y } = formData
-  currentRegionArea.value.cities.push({
-    id: 111,
-    name,
-    x,
-    y,
-    countryName: 'Russian Federation',
-    regionName: currentRegionArea.value.regionName,
-    fill: '#FFFF00',
-    hidden: false,
-    countryId: currentRegionArea.value.id,
-    shops: []
-  })
-  isDialogOpen.value = false
   mode.value = 'editRegion'
 }
 

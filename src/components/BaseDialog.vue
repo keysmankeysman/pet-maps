@@ -52,7 +52,6 @@ const closeDialog = () => {
 }
 
 const updateData = (newData) => {
-  console.log(formData.value)
   formData.value = newData
 }
 
