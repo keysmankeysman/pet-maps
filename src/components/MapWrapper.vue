@@ -55,7 +55,6 @@ const addShop = () => {
       name: 'магазин 132',
       address: 'ул. Якутская, 12',
       phone: '79564214531',
-      email: 'yak@mail.ru',
     }
   )
 }
