@@ -8,7 +8,7 @@ export const localCities = [
     countryName: 'Russian Federation',
     rfId: 262,
     regionName: 'Приморский край',
-    shop: [
+    shops: [
         {
             id: 12,
             name: 'Магазин - Прогресс',
@@ -68,7 +68,7 @@ export const localCities = [
     countryName: 'Russian Federation',
     rfId: 262,
     regionName: 'Чукотский автономный округ',
-    shop: [
+    shops: [
         {
             id: 52,
             name: '205 Магазин',
@@ -116,7 +116,7 @@ export const localCities = [
     countryName: 'Egypt',
     rfId: null,
     regionName: null,
-    shop: [
+    shops: [
         {
             id: 2,
             name: 'м-н Ретро',
@@ -161,7 +161,7 @@ export const localCities = [
     countryName: 'Russian Federation',
     rfId: 262,
     regionName: 'Брянская область',
-    shop: [],
+    shops: [],
     fill: '',
     hidden: false
 },
@@ -174,7 +174,7 @@ export const localCities = [
     countryName: 'Russian Federation',
     rfId: 262,
     regionName: 'Ставропольский край',
-    shop: [],
+    shops: [],
     fill: '',
     hidden: false
 },
@@ -187,7 +187,7 @@ export const localCities = [
     countryName: 'Russian Federation',
     rfId: 262,
     regionName: 'Воронежская область',
-    shop: [
+    shops: [
         {
             id: 5,
             name: 'ПАО ВАСО',
@@ -221,7 +221,7 @@ export const localCities = [
     countryName: 'India',
     rfId: null,
     regionName: null,
-    shop: [],
+    shops: [],
     fill: '',
     hidden: false
 },
@@ -234,7 +234,7 @@ export const localCities = [
     countryName: 'Russian Federation',
     rfId: 262,
     regionName: 'Республика Крым',
-    shop: [
+    shops: [
         {
             id: 4,
             name: 'м-н Фестиваль',
@@ -282,7 +282,7 @@ export const localCities = [
     countryName: 'Russian Federation',
     rfId: 262,
     regionName: 'Республика Татарстан',
-    shop: [
+    shops: [
         {
             id: 55,
             name: 'АО2',
@@ -385,7 +385,7 @@ export const localCities = [
     countryName: 'Russian Federation',
     rfId: 262,
     regionName: 'Краснодарский край',
-    shop: [
+    shops: [
         {
             id: 1,
             name: 'м-н 3366',
@@ -462,7 +462,7 @@ export const localCities = [
     countryName: 'Peru',
     rfId: null,
     regionName: null,
-    shop: [],
+    shops: [],
     fill: '',
     hidden: false
 },
@@ -475,7 +475,7 @@ export const localCities = [
     countryName: 'Colombia',
     rfId: null,
     regionName: null,
-    shop: [
+    shops: [
         {
             id: 53,
             name: 'НРТ',
@@ -529,7 +529,7 @@ export const localCities = [
     countryName: 'Russian Federation',
     rfId: 262,
     regionName: 'Москва',
-    shop: [
+    shops: [
         {
             id: 7,
             name: 'ФГБУ СЛО Россия',
@@ -597,7 +597,7 @@ export const localCities = [
     countryName: 'Norway',
     rfId: null,
     regionName: null,
-    shop: [],
+    shops: [],
     fill: '',
     hidden: false
 },
@@ -610,7 +610,7 @@ export const localCities = [
     countryName: 'Russian Federation',
     rfId: 262,
     regionName: 'Ростовская область',
-    shop: [
+    shops: [
         {
             id: 3,
             name: 'АО Роствертол',
@@ -671,7 +671,7 @@ export const localCities = [
     countryName: 'Russian Federation',
     rfId: 262,
     regionName: 'Алтайский край',
-    shop: [
+    shops: [
         {
             id: 6,
             name: 'АО НЦВ Миль и Камов',
@@ -738,7 +738,7 @@ export const localCities = [
     countryName: 'Russian Federation',
     rfId: 262,
     regionName: 'Республика Бурятия',
-    shop: [
+    shops: [
         {
             id: 11,
             name: 'АО У-УАЗ',
@@ -772,7 +772,7 @@ export const localCities = [
     countryName: 'Russian Federation',
     rfId: 262,
     regionName: 'Хабаровский край',
-    shop: [
+    shops: [
         {
             id: 9,
             name: 'м-н Хеллоу',
@@ -806,7 +806,7 @@ export const localCities = [
     countryName: 'Zimbabwe',
     rfId: null,
     regionName: null,
-    shop: [
+    shops: [
         {
             id: 51,
             name: 'м-н 777',
@@ -840,7 +840,7 @@ export const localCities = [
     countryName: 'Russian Federation',
     rfId: 262,
     regionName: 'Чукотский автономный округ',
-    shop: [],
+    shops: [],
     fill: '',
     hidden: false
 },
@@ -853,7 +853,7 @@ export const localCities = [
     countryName: 'Russian Federation',
     rfId: 262,
     regionName: 'Забайкальский край',
-    shop: [],
+    shops: [],
     fill: '',
     hidden: false
 },
@@ -866,7 +866,7 @@ export const localCities = [
     countryName: 'Russian Federation',
     rfId: 262,
     regionName: 'Чукотский автономный округ',
-    shop: [],
+    shops: [],
     fill: '',
     hidden: false
 },
@@ -879,7 +879,7 @@ export const localCities = [
     countryName: 'India',
     rfId: null,
     regionName: null,
-    shop: [],
+    shops: [],
     fill: '',
     hidden: false
 },
@@ -892,7 +892,7 @@ export const localCities = [
     countryName: 'Russian Federation',
     rfId: 262,
     regionName: 'Республика Саха (Якутия)',
-    shop: [
+    shops: [
         {
             id: 23,
             name: 'м-н Хорошего понемножку',

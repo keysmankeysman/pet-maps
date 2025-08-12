@@ -10,7 +10,7 @@ import Tooltip from './Tooltip.vue'
 import BaseDialog from './BaseDialog.vue'
 
 import { localRegions } from '@/localData/regions.js'
-import { localCities } from '@/localData/cities.js'
+// import { localCities } from '@/localData/cities.js'
 import { useMapClick } from '@/composables/useMapClick.js'
 
 const forms = [ 'EditRegionForm', 'AddCityForm', 'AddShopForm']
@@ -28,21 +28,25 @@ let mode = ref('editRegion')
 // editRegion
 // defineCoords
 
-const cities = reactive(localCities)
+// const cities = reactive(localCities)
 const regions = reactive(localRegions)
+const cities = regions.map(el => el.cities)
+
 
 let x = ref(0) 
 let y = ref(0) 
 
-const currentRegion = ref({})
+const currentRegionArea = ref({})
 const currentModal = ref(forms[0])
 
-const { clickCircle, currentCity, isTooltip, tooltipY, tooltipX } = useMapClick()
+const { clickCity, currentRegion, currentCity, isTooltip, tooltipY, tooltipX } = useMapClick()
 
 const addShop = () => {
   openDialog('AddShopForm')
-  const foundCity = cities.find(city => city.id === currentCity.value.id)
-  foundCity.shop.push(
+  const region = regions.find(region => region.id === currentRegion.value.id)
+  console.log(region)
+  const foundCity = region.cities.find(city => city.id === currentCity.value.id)
+  foundCity.shops.push(
     {
       id: 23,
       name: 'магазин 132',
@@ -60,7 +64,7 @@ const openDialog = (formName) => {
 
 const clickRegion = (region, event) => {
   if (isTooltip.value) return
-  currentRegion.value = region
+  currentRegionArea.value = region
   if (mode.value === 'defineCoords') {
     console.log('mode:', mode)
     const svgMap = document.getElementById('svg-map')
@@ -73,7 +77,6 @@ const clickRegion = (region, event) => {
     openCreateCityDialog()
     return 
   }
-  console.log('далее, открыть модалку')
   currentModal.value = forms[0]
   isDialogOpen.value = true
 }
@@ -93,16 +96,16 @@ const cancelDefineСoordinates = () => {
 
 const addCity = (formData) => {
   const { name, x, y } = formData
-  currentRegion.value.cities.push({
+  currentRegionArea.value.cities.push({
     id: 111,
     name,
     x,
     y,
     countryName: 'Russian Federation',
-    regionName: currentRegion.value.regionName,
+    regionName: currentRegionArea.value.regionName,
     fill: '#FFFF00',
     hidden: false,
-    countryId: currentRegion.value.id,
+    countryId: currentRegionArea.value.id,
   })
   isDialogOpen.value = false
   mode.value = 'editRegion'
@@ -115,7 +118,7 @@ const closeDialog = () => {
 const updateRegions = (formData) => {
   console.log('updateRegions !!!')
   const { hex } = formData
-  currentRegion.value.paths.map(p => p.fill = hex)
+  currentRegionArea.value.paths.map(p => p.fill = hex)
 
 }
 
@@ -137,9 +140,8 @@ const updateRegions = (formData) => {
 
   <creator-map
     :regions="regions"
-    :cities="cities"
     :mode="mode"
-    @clickCircle="clickCircle"
+    @clickCity="clickCity"
     @clickRegion="clickRegion"
   ></creator-map>
 
@@ -164,7 +166,7 @@ const updateRegions = (formData) => {
     :x="x"
     :y="y"
     @closeDialog="closeDialog"
-    :region="currentRegion"
+    :region="currentRegionArea"
     @updateRegions="updateRegions"
     @addCity="addCity"
   ></BaseDialog>

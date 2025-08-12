@@ -2,14 +2,15 @@ import { ref } from 'vue'
 
 export function useMapClick() {
 
+    let currentRegion = ref({})
     let currentCity = ref({})
     let isTooltip = ref(false)
 
     const tooltipX = ref()
     const tooltipY = ref()
 
-    const clickCircle = (obj) => {
-        const { city, $event } = obj
+    const clickCity = (regionInfo) => {
+        const { region, city, $event } = regionInfo
         const event = $event
         isTooltip.value = true
 
@@ -25,11 +26,13 @@ export function useMapClick() {
 
         tooltipY.value = event.offsetX + 20
 
+        currentRegion.value = region
         currentCity.value = city
     }
 
     return {
-        clickCircle,
+        clickCity,
+        currentRegion,
         currentCity,
         isTooltip,
         tooltipX,

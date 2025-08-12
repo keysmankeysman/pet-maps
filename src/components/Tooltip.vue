@@ -1,22 +1,21 @@
 <script setup>
 import { ref } from 'vue'
-// import ParkDialog from './ParkDialog.vue'
 
-defineProps(['currentCity', 'tooltipX', 'tooltipY', 'indexRepresentative'])
+defineProps(['currentCity', 'tooltipX', 'tooltipY'])
 defineEmits(['closeTooltip', 'addShop'])
 
 let dialogReport = ref (false)
 let dialogPark = ref (false)
 let selectedPark = ref (null)
 
-let indexRepresentative = ref(null)
+let indexStaff = ref(null)
 
-const showRepresentative = (i, isActive) => {
+const showStaff = (i, isActive) => {
   if (!isActive) return
-  if (i === this.indexRepresentative || i.active === false) {
-    indexRepresentative.value = null
+  if (i === this.indexStaff || i.active === false) {
+    indexStaff.value = null
   } else {
-    indexRepresentative.value = i
+    indexStaff.value = i
   }
 }
 
@@ -50,7 +49,7 @@ const showRepresentative = (i, isActive) => {
           <div class="tooltip-center__count">
             <span
               class="tooltip__active-representative"
-              @click="showRepresentative(index, shop.active)"
+              @click="showStaff(index, shop.active)"
               :class="{
                 nonRepresentative:
                   shop.activeRepresentativeCount == 0 || shop.active == false,
@@ -72,7 +71,7 @@ const showRepresentative = (i, isActive) => {
 
           <div
             class="tooltip__representative-list"
-            v-if="indexRepresentative == index"
+            v-if="indexStaff == index"
           >
             <div
               class="tooltip__representative-item"

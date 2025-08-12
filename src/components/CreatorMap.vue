@@ -4,13 +4,12 @@ import { usePrintMap } from '@/composables/usePrintMap.js'
 
 const svgMap = ref(null)
 
-const props = defineProps(['regions', 'cities', 'mode'])
-const emits = defineEmits(['clickCircle', 'clickRegion'])
+const props = defineProps(['regions', 'mode'])
+const emits = defineEmits(['clickCity', 'clickRegion'])
 
 const { printRegion, clearPrintRegion, regionHover } = usePrintMap()
 
 watch(() => props.mode, (newVal) => {
-  console.log('мод поменялся', newVal)
   if (newVal === 'defineCoords') {
     svgMap.value.classList.add('edit-mode')
   } else {
@@ -57,7 +56,7 @@ const clickRegion = (region, event) => {
       <g class="pins__cities" v-for="city in region.cities" :key="city.id">
         <title>{{ city.name }}, {{ city.regionName }}</title>
         <circle
-          @click="$emit('clickCircle', {city, $event})"
+          @click="$emit('clickCity', { region, city, $event })"
           class="circle"
           :cx="city.x"
           :cy="city.y"
