@@ -28,64 +28,46 @@ const showRepresentative = (i, isActive) => {
     class="tooltip"
     :style="{ top: tooltipX + 'px', left: tooltipY + 'px' }"
   >
-    <div v-if="currentCity.shop.length">
+    <div v-if="currentCity.shops.length">
       <div
         class="tooltip-wrp"
         :style="{
           borderBottom:
-            index + 1 === currentCity.shop.length
+            index + 1 === currentCity.shops.length
               ? '0px'
               : '1px solid rgba(10, 11, 46, 0.1)',
         }"
-        v-for="(home, index) in currentCity.shop"
-        :key="`city-${home.id}`"
+        v-for="(shop, index) in currentCity.shops"
+        :key="`city-${shop.id}`"
       >
         <div class="tooltip-header">
-          <b>{{ home.name }}</b> <br />
-          <i>г. {{ currentCity.name }},{{ home.address }}</i>
+          <b>{{ shop.name }}</b> <br />
+          <i>г. {{ currentCity.name }},{{ shop.address }}</i>
         </div>
 
         <div class="tooltip-center">
-          <div class="tooltip-center__products">
-            <span>Тип:</span>
-            <span
-              v-for="(product, i) in home.productTypes"
-              :key="`product-${product.productId}`"
-            >
-              {{
-                product.name +
-                " " +
-                (!!Boolean(product.count) ? product.count : "0") +
-                "шт"
-              }}{{ i !== home.productTypes.length - 1 ? ", " : "" }}
-            </span>
-          </div>
 
           <div class="tooltip-center__count">
             <span
               class="tooltip__active-representative"
-              @click="showRepresentative(index, home.active)"
+              @click="showRepresentative(index, shop.active)"
               :class="{
                 nonRepresentative:
-                  home.activeRepresentativeCount == 0 || home.active == false,
+                  shop.activeRepresentativeCount == 0 || shop.active == false,
               }"
             >
-              представители:
+              сотрудники:
               {{
-                home.active == false
-                  ? (home.activeRepresentativeCount = 0)
-                  : home.activeRepresentativeCount
+                shop.active == false
+                  ? (shop.activeRepresentativeCount = 0)
+                  : shop.activeRepresentativeCount
               }}</span
             >
-            <span> требуется: {{ home.necessaryRepresentativeCount }}</span>
+            <span> требуется: {{ shop.necessaryRepresentativeCount }}</span>
             <div
               class="tooltip-center__count--circle"
-              :style="{ background: home.fill }"
+              :style="{ background: shop.fill }"
             ></div>
-          </div>
-
-          <div class="tooltip-center__link-and-sector">
-            <span>Сектор: {{ home.sector }}</span>
           </div>
 
           <div
@@ -94,7 +76,7 @@ const showRepresentative = (i, isActive) => {
           >
             <div
               class="tooltip__representative-item"
-              v-for="(man, i) in home.representatives"
+              v-for="(man, i) in shop.representatives"
               :key="`man-${man.id}`"
             >
               <div v-if="man.active">

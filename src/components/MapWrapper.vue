@@ -40,9 +40,7 @@ const currentModal = ref(forms[0])
 const { clickCircle, currentCity, isTooltip, tooltipY, tooltipX } = useMapClick()
 
 const addShop = () => {
-  currentModal.value = forms[2]
-  console.log(currentCity.value)
-  isDialogOpen.value = true
+  openDialog('AddShopForm')
   const foundCity = cities.find(city => city.id === currentCity.value.id)
   foundCity.shop.push(
     {
@@ -53,6 +51,11 @@ const addShop = () => {
       email: 'yak@mail.ru',
     }
   )
+}
+
+const openDialog = (formName) => {
+  currentModal.value = formName
+  isDialogOpen.value = true
 }
 
 const clickRegion = (region, event) => {
