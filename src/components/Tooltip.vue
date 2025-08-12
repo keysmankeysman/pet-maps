@@ -50,19 +50,19 @@ const showStaff = (i, isActive) => {
             <span
               class="tooltip__active-representative"
               @click="showStaff(index, shop.active)"
+            >
+            <!-- <span
+              class="tooltip__active-representative"
+              @click="showStaff(index, shop.active)"
               :class="{
                 nonRepresentative:
-                  shop.activeRepresentativeCount == 0 || shop.active == false,
+                  shop.activeRepresentativeCount == 0,
               }"
-            >
+            > -->
               сотрудники:
-              {{
-                shop.active == false
-                  ? (shop.activeRepresentativeCount = 0)
-                  : shop.activeRepresentativeCount
-              }}</span
+              {{ shop.currentStaff }}</span
             >
-            <span> требуется: {{ shop.necessaryRepresentativeCount }}</span>
+            <span> требуется: {{ shop.neededStaff }}</span>
             <div
               class="tooltip-center__count--circle"
               :style="{ background: shop.fill }"

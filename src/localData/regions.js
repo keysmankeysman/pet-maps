@@ -29,12 +29,10 @@ export const localRegions = [
                     phone: '79998886621',
                     cityName: 'Тестов',
                     cityId: 11,
-                    active: true,
                     countryName: 'Russian Federation',
                     countryId: 34,
-                    necessaryRepresentativeCount: 2,
-                    activeRepresentativeCount: 1,
-                    currentRepresentativeCount: 2,
+                    neededStaff: 2,
+                    currentStaff: 2,
                     representatives: [
                         {
                             id: 2,
@@ -42,7 +40,6 @@ export const localRegions = [
                             lastName: 'Perry',
                             middleName: 'Meth',
                             phone: '3213-65-12312',
-                            active: true,
                             representationId: 6,
                             representationName: 'АО \'НЦВ Миль и Камов\''
                         },
@@ -363,12 +360,10 @@ export const localRegions = [
                     phone: '89876543210',
                     cityName: 'Воронеж',
                     cityId: 17,
-                    active: true,
                     countryName: 'Russian Federation',
                     countryId: 23,
-                    necessaryRepresentativeCount: 1,
-                    activeRepresentativeCount: 0,
-                    currentRepresentativeCount: 0,
+                    neededStaff: 1,
+                    currentStaff: 0,
                     representatives: [],
                     fill: '#FF0033'
                 }
@@ -620,20 +615,16 @@ export const localRegions = [
                     phone: '89876543210',
                     cityName: 'Кореновск',
                     cityId: 3,
-                    active: true,
                     countryName: 'Russian Federation',
                     countryId: 53,
-                    necessaryRepresentativeCount: 2,
-                    activeRepresentativeCount: 2,
-                    currentRepresentativeCount: 2,
+                    neededStaff: 2,
+                    currentStaff: 2,
                     representatives: [
                         {
                             id: 8,
                             firstName: 'dd',
                             lastName: 'sd',
                             middleName: 'dd',
-                            phone: 'dd',
-                            active: true,
                             representationId: 1,
                             representationName: 'в/ч 35666'
                         },
@@ -643,7 +634,6 @@ export const localRegions = [
                             lastName: 'Маликов',
                             middleName: 'Николаевич',
                             phone: '7954314753',
-                            active: true,
                             representationId: 1,
                             representationName: 'в/ч 35666'
                         }
@@ -660,6 +650,8 @@ export const localRegions = [
 },
 {
     id: 91,
+    regionName: 'Красноярский край',
+    color: '#337AB7',
     paths: [
         {
             id: 1,
@@ -765,8 +757,6 @@ export const localRegions = [
         }
     ],
     cities: [],
-    color: '#337AB7',
-    regionName: 'Красноярский край'
 },
 {
     id: 71,
@@ -866,20 +856,16 @@ export const localRegions = [
                     phone: '79988',
                     cityName: 'Москва',
                     cityId: 4,
-                    active: true,
                     countryName: 'Russian Federation',
                     countryId: 49,
-                    necessaryRepresentativeCount: 3,
-                    activeRepresentativeCount: 1,
-                    currentRepresentativeCount: 1,
+                    neededStaff: 3,
+                    currentStaff: 1,
                     representatives: [
                         {
                             id: 5,
                             firstName: 'Иванs',
                             lastName: 'Ивановs',
                             middleName: 'Ивановичs',
-                            phone: '89876543222',
-                            active: true,
                             representationId: 7,
                             representationName: 'ФГБУ СЛО \'Россия\''
                         }
@@ -893,12 +879,10 @@ export const localRegions = [
                     phone: '89876543210',
                     cityName: 'Москва',
                     cityId: 4,
-                    active: true,
                     countryName: 'Russian Federation',
                     countryId: 49,
-                    necessaryRepresentativeCount: 1,
-                    activeRepresentativeCount: 0,
-                    currentRepresentativeCount: 0,
+                    neededStaff: 1,
+                    currentStaff: 0,
                     representatives: [],
                     fill: '#FF0033'
                 }
@@ -1107,9 +1091,8 @@ export const localRegions = [
                     active: false,
                     countryName: 'Russian Federation',
                     countryId: 38,
-                    necessaryRepresentativeCount: 0,
-                    activeRepresentativeCount: 0,
-                    currentRepresentativeCount: 0,
+                    neededStaff: 0,
+                    currentStaff: 0,
                     representatives: [],
                     fill: '#FF0033'
                 },
@@ -1120,12 +1103,10 @@ export const localRegions = [
                     phone: '+79999999999',
                     cityName: 'Арсеньев',
                     cityId: 16,
-                    active: true,
                     countryName: 'Russian Federation',
                     countryId: 38,
-                    necessaryRepresentativeCount: 1,
-                    activeRepresentativeCount: 0,
-                    currentRepresentativeCount: 0,
+                    neededStaff: 1,
+                    currentStaff: 0,
                     representatives: [],
                     fill: '#FF0033'
                 }
@@ -1221,12 +1202,10 @@ export const localRegions = [
                     phone: '5879654321',
                     cityName: 'Улан-Удэ',
                     cityId: 5,
-                    active: true,
                     countryName: 'Russian Federation',
                     countryId: 85,
-                    necessaryRepresentativeCount: 2,
-                    activeRepresentativeCount: 0,
-                    currentRepresentativeCount: 0,
+                    neededStaff: 2,
+                    currentStaff: 0,
                     representatives: [],
                     fill: '#FF0033'
                 }
@@ -1336,12 +1315,10 @@ export const localRegions = [
                     phone: '7956345213',
                     cityName: 'Джанкой',
                     cityId: 20,
-                    active: true,
                     countryName: 'Russian Federation',
                     countryId: 16,
-                    necessaryRepresentativeCount: 2,
-                    activeRepresentativeCount: 1,
-                    currentRepresentativeCount: 1,
+                    neededStaff: 2,
+                    currentStaff: 1,
                     representatives: [
                         {
                             id: 4,
@@ -1349,7 +1326,6 @@ export const localRegions = [
                             lastName: 'Матвиенко',
                             middleName: 'Витальевич',
                             phone: '0987-323-67',
-                            active: true,
                             representationId: 4,
                             representationName: 'в/ч 46453'
                         }
@@ -1468,20 +1444,16 @@ export const localRegions = [
                     phone: '79564214531',
                     cityName: 'Якутск',
                     cityId: 27,
-                    active: true,
                     countryName: 'Russian Federation',
                     countryId: 96,
-                    necessaryRepresentativeCount: 5,
-                    activeRepresentativeCount: 1,
-                    currentRepresentativeCount: 1,
+                    neededStaff: 5,
+                    currentStaff: 1,
                     representatives: [
                         {
                             id: 12,
                             firstName: 'Виктор',
                             lastName: 'Викторов',
                             middleName: 'Викторович',
-                            phone: '79635314521',
-                            active: true,
                             representationId: 23,
                             representationName: 'в/ч 1212'
                         }
@@ -1538,12 +1510,10 @@ export const localRegions = [
                     phone: '79988',
                     cityName: 'Казань',
                     cityId: 15,
-                    active: true,
                     countryName: 'Russian Federation',
                     countryId: 81,
-                    necessaryRepresentativeCount: 2,
-                    activeRepresentativeCount: 0,
-                    currentRepresentativeCount: 0,
+                    neededStaff: 2,
+                    currentStaff: 0,
                     representatives: [],
                     fill: '#FF0033'
                 },
@@ -1554,20 +1524,16 @@ export const localRegions = [
                     phone: '799887',
                     cityName: 'Казань',
                     cityId: 15,
-                    active: true,
                     countryName: 'Russian Federation',
                     countryId: 81,
-                    necessaryRepresentativeCount: 2,
-                    activeRepresentativeCount: 2,
-                    currentRepresentativeCount: 2,
+                    neededStaff: 2,
+                    currentStaff: 2,
                     representatives: [
                         {
                             id: 7,
                             firstName: 'ii22',
                             lastName: 'ii',
                             middleName: 'ii',
-                            phone: 'ii',
-                            active: true,
                             representationId: 10,
                             representationName: 'АО \'КВЗ\''
                         },
@@ -1576,8 +1542,6 @@ export const localRegions = [
                             firstName: 'Сидр',
                             lastName: 'Сидоров',
                             middleName: 'Сидорович',
-                            phone: '798546321456',
-                            active: true,
                             representationId: 10,
                             representationName: 'АО \'КВЗ\''
                         }
@@ -1648,20 +1612,16 @@ export const localRegions = [
                     phone: '795412234521',
                     cityName: 'Ростов',
                     cityId: 1,
-                    active: true,
                     countryName: 'Russian Federation',
                     countryId: 59,
-                    necessaryRepresentativeCount: 2,
-                    activeRepresentativeCount: 2,
-                    currentRepresentativeCount: 2,
+                    neededStaff: 2,
+                    currentStaff: 2,
                     representatives: [
                         {
                             id: 11,
                             firstName: 'Иван',
                             lastName: 'Иванов',
                             middleName: 'Иванович',
-                            phone: '89876543210',
-                            active: true,
                             representationId: 3,
                             representationName: 'АО \'Роствертол\''
                         },
@@ -1670,8 +1630,6 @@ export const localRegions = [
                             firstName: 'Артем',
                             lastName: 'Ивнаов',
                             middleName: 'Иванович',
-                            phone: '9823-232-761',
-                            active: true,
                             representationId: 3,
                             representationName: 'АО \'Роствертол\''
                         }
@@ -1980,12 +1938,10 @@ export const localRegions = [
                     phone: '89876543210',
                     cityName: 'Хабаровск',
                     cityId: 10,
-                    active: true,
                     countryName: 'Russian Federation',
                     countryId: 52,
-                    necessaryRepresentativeCount: 1,
-                    activeRepresentativeCount: 0,
-                    currentRepresentativeCount: 0,
+                    neededStaff: 1,
+                    currentStaff: 0,
                     representatives: [],
                     fill: '#FF0033'
                 }
@@ -2087,20 +2043,16 @@ export const localRegions = [
                     phone: '76555555',
                     cityName: 'Аянка',
                     cityId: 9,
-                    active: true,
                     countryName: 'Russian Federation',
                     countryId: 43,
-                    necessaryRepresentativeCount: 5,
-                    activeRepresentativeCount: 1,
-                    currentRepresentativeCount: 1,
+                    neededStaff: 5,
+                    currentStaff: 1,
                     representatives: [
                         {
                             id: 6,
                             firstName: 'Иван',
                             lastName: 'Иванов',
                             middleName: 'Иванович',
-                            phone: '7655555',
-                            active: true,
                             representationId: 52,
                             representationName: 'в/ч 20202'
                         }

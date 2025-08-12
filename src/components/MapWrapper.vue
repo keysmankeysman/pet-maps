@@ -10,7 +10,6 @@ import Tooltip from './Tooltip.vue'
 import BaseDialog from './BaseDialog.vue'
 
 import { localRegions } from '@/localData/regions.js'
-// import { localCities } from '@/localData/cities.js'
 import { useMapClick } from '@/composables/useMapClick.js'
 
 const forms = [ 'EditRegionForm', 'AddCityForm', 'AddShopForm']
@@ -55,7 +54,6 @@ const addShop = (formData) => {
       id: 23,
       name,
       address,
-      phone: '79564214531',
     }
   )
 }
