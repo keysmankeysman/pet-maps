@@ -41,8 +41,11 @@ const currentModal = ref(forms[0])
 
 const { clickCity, currentRegion, currentCity, isTooltip, tooltipY, tooltipX } = useMapClick()
 
-const addShop = () => {
+const handleAddShop = () => {
   openDialog('AddShopForm')
+}
+
+const addShop = () => {
   const region = regions.find(region => region.id === currentRegion.value.id)
   console.log(region)
   const foundCity = region.cities.find(city => city.id === currentCity.value.id)
@@ -60,6 +63,10 @@ const addShop = () => {
 const openDialog = (formName) => {
   currentModal.value = formName
   isDialogOpen.value = true
+}
+
+const closeDialog = () => {
+  isDialogOpen.value = false
 }
 
 const clickRegion = (region, event) => {
@@ -106,20 +113,15 @@ const addCity = (formData) => {
     fill: '#FFFF00',
     hidden: false,
     countryId: currentRegionArea.value.id,
+    shops: []
   })
   isDialogOpen.value = false
   mode.value = 'editRegion'
 }
 
-const closeDialog = () => {
-  isDialogOpen.value = false
-}
-
 const updateRegions = (formData) => {
-  console.log('updateRegions !!!')
   const { hex } = formData
   currentRegionArea.value.paths.map(p => p.fill = hex)
-
 }
 
 </script>
@@ -150,24 +152,19 @@ const updateRegions = (formData) => {
     :tooltipY="tooltipY"
     :tooltipX="tooltipX"
     :currentCity="currentCity"
-    @addShop="addShop"
+    @handleAddShop="handleAddShop"
     @closeTooltip="isTooltip = false"
   ></Tooltip>
-
-  <!-- <MyDialog
-      :title="dialogTitle"
-      :message="dialogMessage"
-      :show-dialog="showDialog"
-    /> -->
 
   <BaseDialog
     :value="isDialogOpen"
     :nameForm="currentModal"
     :x="x"
     :y="y"
-    @closeDialog="closeDialog"
     :region="currentRegionArea"
     @updateRegions="updateRegions"
     @addCity="addCity"
+    @addShop="addShop"
+    @closeDialog="closeDialog"
   ></BaseDialog>
 </template>

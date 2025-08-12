@@ -23,10 +23,12 @@ watch(cityName, (newVal) => {
       ></v-text-field>
       <v-text-field
         v-model="x"
+        :disabled="true"
         label="Координата X"
       ></v-text-field>
       <v-text-field
         v-model="y"
+        :disabled="true"
         label="Координата Y"
       ></v-text-field>
     </v-form>

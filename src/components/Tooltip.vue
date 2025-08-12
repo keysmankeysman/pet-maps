@@ -2,7 +2,7 @@
 import { ref } from 'vue'
 
 defineProps(['currentCity', 'tooltipX', 'tooltipY'])
-defineEmits(['closeTooltip', 'addShop'])
+defineEmits(['closeTooltip', 'handleAddShop'])
 
 let dialogReport = ref (false)
 let dialogPark = ref (false)
@@ -163,7 +163,7 @@ const showStaff = (i, isActive) => {
         color="primary"
         class="modal__btn"
         text
-        @click="$emit('addShop')"
+        @click="$emit('handleAddShop')"
       >
         Добавить
       </v-btn>

@@ -33,7 +33,7 @@ const props = defineProps({
 let dialog = ref(props.value)
 let formData = ref({})
 
-const emits = defineEmits(['update', 'input', 'closeDialog', 'updateRegions', 'addCity'])
+const emits = defineEmits(['update', 'input', 'closeDialog', 'updateRegions', 'addCity', 'addShop'])
 
 watch(
   () => props.value,
@@ -57,12 +57,16 @@ const updateData = (newData) => {
 }
 
 const save = () => {
-  console.log('data.value:', formData.value)
-  if (props.nameForm === 'EditRegionForm') {
-    emits('updateRegions', formData.value )
-  } 
-  if (props.nameForm === 'AddCityForm') {
-    emits('addCity', formData.value )
+  switch (props.nameForm) {
+    case 'EditRegionForm':
+      emits('updateRegions', formData.value )
+    break;
+    case 'AddCityForm':
+      emits('addCity', formData.value )
+    break;
+    case 'AddShopForm':
+      emits('addShop', formData.value )
+    break;
   }
 
   closeDialog()
