@@ -71,14 +71,13 @@ const showStaff = (i, isActive) => {
 
           <div
             class="tooltip__representative-list"
-            v-if="indexStaff == index"
           >
             <div
               class="tooltip__representative-item"
               v-for="(man, i) in shop.representatives"
               :key="`man-${man.id}`"
             >
-              <div v-if="man.active">
+              <div>
                 {{ i + 1 }}. {{ man.lastName }} {{ man.firstName }}
                 {{ man.middleName }} <br />
                 тел: {{ man.phone }}
@@ -183,16 +182,12 @@ const showStaff = (i, isActive) => {
 }
 
 .circle {
-  /* box-shadow: 0px 5px 10px 2px rgba(34, 80, 41, 0.2); */
   filter: drop-shadow(2px 2px 1px rgba(0, 0, 0, 0.3));
-  /* filter: drop-shadow(5px 5px 15px #26263A); */
   transition: filter 0.3s;
 }
 
 .circle:hover {
-  /* box-shadow: 0px 5px 10px 2px rgba(34, 80, 41, 0.2); */
   filter: drop-shadow(2px 2px 1px rgba(0, 0, 0, 0.5));
-  /* filter: drop-shadow(5px 5px 15px #26263A); */
 }
 
 .block {
@@ -249,12 +244,6 @@ const showStaff = (i, isActive) => {
 
 .tooltip-header {
   margin-bottom: 10px;
-  /* border-top: 1px solid rgba(10, 11, 46, 0.1); */
-  /* border-bottom: 1px solid rgba(10, 11, 46, 0.1); */
-}
-
-.tooltip-center {
-  /* padding-bottom: 8px; */
 }
 
 .tooltip-center__products {

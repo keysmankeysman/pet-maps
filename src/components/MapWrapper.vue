@@ -67,7 +67,7 @@ const addCity = (formData) => {
     y,
     countryName: 'Russian Federation',
     regionName: currentRegionArea.value.regionName,
-    fill: '#FFFF00',
+    fill: '#000000',
     hidden: false,
     countryId: currentRegionArea.value.id,
     shops: []

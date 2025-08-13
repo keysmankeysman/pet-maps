@@ -24,7 +24,7 @@ export const localRegions = [
             shops: [
                 {
                     id: 6,
-                    name: 'АО \'НЦВ Миль и Камов\'',
+                    name: 'Магия Покупок',
                     address: 'ул. Пушкина',
                     phone: '79998886621',
                     cityName: 'Тестов',
@@ -355,7 +355,7 @@ export const localRegions = [
             shops: [
                 {
                     id: 5,
-                    name: 'ПАО \'ВАСО\'',
+                    name: 'м-н Уютный Уголок',
                     address: 'test address',
                     phone: '89876543210',
                     cityName: 'Воронеж',
@@ -610,7 +610,7 @@ export const localRegions = [
             shops: [
                 {
                     id: 1,
-                    name: 'в/ч 35666',
+                    name: 'Стиль и Комфорт',
                     address: 'test address',
                     phone: '89876543210',
                     cityName: 'Кореновск',
@@ -851,7 +851,7 @@ export const localRegions = [
             shops: [
                 {
                     id: 7,
-                    name: 'ФГБУ СЛО \'Россия\'',
+                    name: 'ЭкоМаг',
                     address: 'ул. Мичурина',
                     phone: '79988',
                     cityName: 'Москва',
