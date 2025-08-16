@@ -51,22 +51,43 @@ const addShop = (formData) => {
   const foundCity = region.cities.find(city => city.id === currentCity.value.id)
   
   // теперь у найденного города, нужно пробежаться по всем shops и найти кол-во сотрудников
+  console.log('foundCity', foundCity)
+  
+  let countEmployee = 0
+  foundCity.shops.forEach(shop => {
+    if (shop.employees.length > 0) {
+      countEmployee += shop.employees.length
+    }
+  })
+  console.log('кол-во представителей: ', countEmployee)
 
   // const shopInTheCity = region.cities.find(city => city.id === currentCity.value.id)
-  // regionCities.shops.push(
-  //   {
-  //     id: 23,
-  //     name,
-  //     address,
-  //   }
-  // )
+  foundCity.shops.push(
+    {
+      id: 23,
+      name,
+      address,
+      neededEmployee: 2,
+      countEmployee: 4,
+    }
+  )
+  
+  if (countEmployee > 2) {
+    fillCircleCity(foundCity, '#008000')
+  } else {
+    fillCircleCity(foundCity, '#FF0033')
+  }
 
-  // if (regionCities)
+
 
   // red - #FF0033 - в городе нет сотрудников
   // yellow - #FFFF00 - сотрудников не достаточно
   // green - #008000 - сотрудников достаточно
 
+}
+
+const fillCircleCity = (city, color) => {
+  city.fill = color
 }
 
 const addCity = (formData) => {

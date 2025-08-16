@@ -51,16 +51,8 @@ const showEmployee = (i, isActive) => {
               class="tooltip__active-representative"
               @click="showEmployee(index, shop.active)"
             >
-            <!-- <span
-              class="tooltip__active-representative"
-              @click="showEmployee(index, shop.active)"
-              :class="{
-                nonRepresentative:
-                  shop.activeRepresentativeCount == 0,
-              }"
-            > -->
               сотрудники:
-              {{ shop.currentEmployee }}</span
+              {{ shop.countEmployee }}</span
             >
             <span> требуется: {{ shop.neededEmployee }}</span>
             <div
@@ -85,7 +77,7 @@ const showEmployee = (i, isActive) => {
             </div>
           </div>
           <div>
-            <v-btn
+            <!-- <v-btn
               color="primary"
               class="ma-2"
               dark
@@ -110,9 +102,9 @@ const showEmployee = (i, isActive) => {
               "
             >
               Отчет
-            </v-btn>
+            </v-btn> -->
 
-            <v-dialog v-model="dialogReport" max-width="1200px">
+            <!-- <v-dialog v-model="dialogReport" max-width="1200px">
               <v-card style="height: 700px">
                 <v-card-title>
                   <span>Отчет</span>
@@ -139,7 +131,7 @@ const showEmployee = (i, isActive) => {
                   </v-btn>
                 </v-card-text>
               </v-card>
-            </v-dialog>
+            </v-dialog> -->
           </div>
         </div>
 
