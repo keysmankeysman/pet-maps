@@ -5,14 +5,24 @@ const emits = defineEmits(['update'])
 
 let shopName = ref('')
 let shopAddress = ref('')
+let neededEmployees = ref('')
 
-watch(shopName, (newVal) => {
-  emits('update', { name: newVal, address: shopAddress })
+const update = () => {
+  emits('update', { name: shopName, address: shopAddress, neededEmployees })
+}
+
+watch(shopName, () => {
+  update()
 }, { immediate: true })
 
-watch(shopAddress, (newVal) => {
-  emits('update', { name: shopName, address: newVal })
+watch(shopAddress, () => {
+  update()
 }, { immediate: true })
+
+watch(neededEmployees, () => {
+  update()
+}, { immediate: true })
+
 
 </script>
 
@@ -26,6 +36,11 @@ watch(shopAddress, (newVal) => {
       <v-text-field
         v-model="shopAddress"
         label="Адрес магазина"
+      ></v-text-field>
+      <v-text-field
+        type="number"
+        v-model="neededEmployees"
+        label="Сотрудников необходимо"
       ></v-text-field>
     </v-form>
   </v-sheet>

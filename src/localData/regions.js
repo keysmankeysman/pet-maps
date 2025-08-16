@@ -31,7 +31,7 @@ export const localRegions = [
                     cityId: 11,
                     countryName: 'Russian Federation',
                     countryId: 34,
-                    neededEmployee: 2,
+                    neededEmployees: 2,
                     countEmployee: 2,
                     employees: [
                         {
@@ -360,7 +360,7 @@ export const localRegions = [
                     cityId: 17,
                     countryName: 'Russian Federation',
                     countryId: 23,
-                    neededEmployee: 1,
+                    neededEmployees: 1,
                     countEmployee: 0,
                     employees: [],
                     fill: '#FF0033'
@@ -615,7 +615,7 @@ export const localRegions = [
                     cityId: 3,
                     countryName: 'Russian Federation',
                     countryId: 53,
-                    neededEmployee: 2,
+                    neededEmployees: 2,
                     countEmployee: 2,
                     employees: [
                         {
@@ -854,7 +854,7 @@ export const localRegions = [
                     cityId: 4,
                     countryName: 'Russian Federation',
                     countryId: 49,
-                    neededEmployee: 3,
+                    neededEmployees: 3,
                     countEmployee: 1,
                     employees: [
                         {
@@ -876,7 +876,7 @@ export const localRegions = [
                     cityId: 4,
                     countryName: 'Russian Federation',
                     countryId: 49,
-                    neededEmployee: 1,
+                    neededEmployees: 1,
                     countEmployee: 0,
                     employees: [],
                     fill: '#FF0033'
@@ -1086,7 +1086,7 @@ export const localRegions = [
                     active: false,
                     countryName: 'Russian Federation',
                     countryId: 38,
-                    neededEmployee: 0,
+                    neededEmployees: 0,
                     countEmployee: 0,
                     employees: [],
                     fill: '#FF0033'
@@ -1100,7 +1100,7 @@ export const localRegions = [
                     cityId: 16,
                     countryName: 'Russian Federation',
                     countryId: 38,
-                    neededEmployee: 1,
+                    neededEmployees: 1,
                     countEmployee: 0,
                     employees: [],
                     fill: '#FF0033'
@@ -1199,7 +1199,7 @@ export const localRegions = [
                     cityId: 5,
                     countryName: 'Russian Federation',
                     countryId: 85,
-                    neededEmployee: 2,
+                    neededEmployees: 2,
                     countEmployee: 0,
                     employees: [],
                     fill: '#FF0033'
@@ -1312,7 +1312,7 @@ export const localRegions = [
                     cityId: 20,
                     countryName: 'Russian Federation',
                     countryId: 16,
-                    neededEmployee: 2,
+                    neededEmployees: 2,
                     countEmployee: 1,
                     employees: [
                         {
@@ -1440,7 +1440,7 @@ export const localRegions = [
                     cityId: 27,
                     countryName: 'Russian Federation',
                     countryId: 96,
-                    neededEmployee: 5,
+                    neededEmployees: 5,
                     countEmployee: 1,
                     employees: [
                         {
@@ -1505,7 +1505,7 @@ export const localRegions = [
                     cityId: 15,
                     countryName: 'Russian Federation',
                     countryId: 81,
-                    neededEmployee: 2,
+                    neededEmployees: 2,
                     countEmployee: 0,
                     employees: [],
                     fill: '#FF0033'
@@ -1519,7 +1519,7 @@ export const localRegions = [
                     cityId: 15,
                     countryName: 'Russian Federation',
                     countryId: 81,
-                    neededEmployee: 2,
+                    neededEmployees: 2,
                     countEmployee: 2,
                     employees: [
                         {
@@ -1605,7 +1605,7 @@ export const localRegions = [
                     cityId: 1,
                     countryName: 'Russian Federation',
                     countryId: 59,
-                    neededEmployee: 2,
+                    neededEmployees: 2,
                     countEmployee: 2,
                     employees: [
                         {
@@ -1929,7 +1929,7 @@ export const localRegions = [
                     cityId: 10,
                     countryName: 'Russian Federation',
                     countryId: 52,
-                    neededEmployee: 1,
+                    neededEmployees: 1,
                     countEmployee: 0,
                     employees: [],
                     fill: '#FF0033'
@@ -2046,7 +2046,7 @@ export const localRegions = [
                     cityName: 'Аянка',
                     cityId: 9,
                     countryId: 43,
-                    neededEmployee: 5,
+                    neededEmployees: 5,
                     countEmployee: 0,
                     employees: [],
                 }
@@ -2071,7 +2071,7 @@ export const localRegions = [
                     cityName: 'Аянка',
                     cityId: 9,
                     countryId: 43,
-                    neededEmployee: 5,
+                    neededEmployees: 5,
                     countEmployee: 1,
                     employees: [
                         {
@@ -2099,21 +2099,85 @@ export const localRegions = [
             shops: [
                 {
                     id: 52,
-                    name: 'в/ч 20202',
+                    name: 'Продовольственный магазин',
                     address: 'ул. Аянская',
                     phone: '76555555',
                     cityName: 'Аянка',
                     cityId: 9,
                     countryName: 'Russian Federation',
                     countryId: 43,
-                    neededEmployee: 5,
-                    countEmployee: 1,
+                    neededEmployees: 4,
+                    countEmployee: 4,
                     employees: [
                         {
                             id: 6,
                             firstName: 'Иван',
                             lastName: 'Иванов',
                             middleName: 'Иванович',
+                            shopId: 52,
+                        },
+                        {
+                            id: 7,
+                            firstName: 'Максим',
+                            lastName: 'Максимов',
+                            middleName: 'Максимович',
+                            shopId: 52,
+                        },
+                        {
+                            id: 8,
+                            firstName: 'Игорь',
+                            lastName: 'Игорев',
+                            middleName: 'Игоревич',
+                            shopId: 52,
+                        },
+                        {
+                            id: 9,
+                            firstName: 'Султан',
+                            lastName: 'Султанов',
+                            middleName: 'Султанович',
+                            shopId: 52,
+                        }
+                    ],
+                    fill: '#FFFF00'
+                },
+                {
+                    id: 54,
+                    name: 'Рыблов',
+                    address: 'ул. Аянская',
+                    phone: '76555555',
+                    cityName: 'Аянка',
+                    cityId: 9,
+                    countryName: 'Russian Federation',
+                    countryId: 43,
+                    neededEmployees: 4,
+                    countEmployee: 4,
+                    employees: [
+                        {
+                            id: 6,
+                            firstName: 'Иван',
+                            lastName: 'Иванов',
+                            middleName: 'Иванович',
+                            shopId: 52,
+                        },
+                        {
+                            id: 7,
+                            firstName: 'Максим',
+                            lastName: 'Максимов',
+                            middleName: 'Максимович',
+                            shopId: 52,
+                        },
+                        {
+                            id: 8,
+                            firstName: 'Игорь',
+                            lastName: 'Игорев',
+                            middleName: 'Игоревич',
+                            shopId: 52,
+                        },
+                        {
+                            id: 9,
+                            firstName: 'Султан',
+                            lastName: 'Султанов',
+                            middleName: 'Султанович',
                             shopId: 52,
                         }
                     ],

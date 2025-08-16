@@ -54,7 +54,7 @@ const showEmployee = (i, isActive) => {
               сотрудники:
               {{ shop.countEmployee }}</span
             >
-            <span> требуется: {{ shop.neededEmployee }}</span>
+            <span> требуется: {{ shop.neededEmployees }}</span>
             <div
               class="tooltip-center__count--circle"
               :style="{ background: shop.fill }"

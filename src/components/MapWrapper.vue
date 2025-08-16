@@ -45,7 +45,7 @@ const handleAddShop = () => {
 }
 
 const addShop = (formData) => {
-  const { name, address } = formData
+  const { name, address, neededEmployees } = formData
   console.log('addShop', name, address)
   const region = regions.find(region => region.id === currentRegion.value.id)
   const foundCity = region.cities.find(city => city.id === currentCity.value.id)
@@ -67,8 +67,8 @@ const addShop = (formData) => {
       id: 23,
       name,
       address,
-      neededEmployee: 2,
-      countEmployee: 4,
+      neededEmployees,
+      countEmployee: 0,
     }
   )
   
