@@ -40,8 +40,7 @@ export const localRegions = [
                             lastName: 'Perry',
                             middleName: 'Meth',
                             phone: '3213-65-12312',
-                            representationId: 6,
-                            representationName: 'АО \'НЦВ Миль и Камов\''
+                            shopId: 6,
                         },
                         {
                             id: 1,
@@ -50,8 +49,7 @@ export const localRegions = [
                             middleName: 'Li',
                             phone: '218u78-236561',
                             active: false,
-                            representationId: 6,
-                            representationName: 'АО \'НЦВ Миль и Камов\''
+                            shopId: 6,
                         }
                     ],
                     fill: '#FFFF00'
@@ -625,8 +623,7 @@ export const localRegions = [
                             firstName: 'dd',
                             lastName: 'sd',
                             middleName: 'dd',
-                            representationId: 1,
-                            representationName: 'в/ч 35666'
+                            shopId: 1,
                         },
                         {
                             id: 9,
@@ -634,8 +631,7 @@ export const localRegions = [
                             lastName: 'Маликов',
                             middleName: 'Николаевич',
                             phone: '7954314753',
-                            representationId: 1,
-                            representationName: 'в/ч 35666'
+                            shopId: 1,
                         }
                     ],
                     fill: '#008000'
@@ -866,8 +862,7 @@ export const localRegions = [
                             firstName: 'Иванs',
                             lastName: 'Ивановs',
                             middleName: 'Ивановичs',
-                            representationId: 7,
-                            representationName: 'ФГБУ СЛО \'Россия\''
+                            shopId: 7,
                         }
                     ],
                     fill: '#FFFF00'
@@ -1326,8 +1321,7 @@ export const localRegions = [
                             lastName: 'Матвиенко',
                             middleName: 'Витальевич',
                             phone: '0987-323-67',
-                            representationId: 4,
-                            representationName: 'в/ч 46453'
+                            shopId: 4,
                         }
                     ],
                     fill: '#FFFF00'
@@ -1454,8 +1448,7 @@ export const localRegions = [
                             firstName: 'Виктор',
                             lastName: 'Викторов',
                             middleName: 'Викторович',
-                            representationId: 23,
-                            representationName: 'в/ч 1212'
+                            shopId: 23,
                         }
                     ],
                     fill: '#FFFF00'
@@ -1534,16 +1527,14 @@ export const localRegions = [
                             firstName: 'ii22',
                             lastName: 'ii',
                             middleName: 'ii',
-                            representationId: 10,
-                            representationName: 'АО \'КВЗ\''
+                            shopId: 10,
                         },
                         {
                             id: 10,
                             firstName: 'Сидр',
                             lastName: 'Сидоров',
                             middleName: 'Сидорович',
-                            representationId: 10,
-                            representationName: 'АО \'КВЗ\''
+                            shopId: 10,
                         }
                     ],
                     fill: '#008000'
@@ -1622,16 +1613,14 @@ export const localRegions = [
                             firstName: 'Иван',
                             lastName: 'Иванов',
                             middleName: 'Иванович',
-                            representationId: 3,
-                            representationName: 'АО \'Роствертол\''
+                            shopId: 3,
                         },
                         {
                             id: 3,
                             firstName: 'Артем',
                             lastName: 'Ивнаов',
                             middleName: 'Иванович',
-                            representationId: 3,
-                            representationName: 'АО \'Роствертол\''
+                            shopId: 3,
                         }
                     ],
                     fill: '#008000'
@@ -2049,7 +2038,19 @@ export const localRegions = [
             countryName: 'Russian Federation',
             rfId: null,
             regionName: 'Чукотский автономный округ',
-            shops: [],
+            shops: [
+                {
+                    id: 52,
+                    name: 'м-н Чукотский',
+                    address: 'ул. Аянская',
+                    cityName: 'Аянка',
+                    cityId: 9,
+                    countryId: 43,
+                    neededEmployee: 5,
+                    countEmployee: 0,
+                    employees: [],
+                }
+            ],
             fill: '#FF0033',
             hidden: false
         },
@@ -2062,7 +2063,27 @@ export const localRegions = [
             countryName: 'Russian Federation',
             rfId: null,
             regionName: 'Чукотский автономный округ',
-            shops: [],
+            shops: [
+                {
+                    id: 52,
+                    name: 'м-н Чукотский',
+                    address: 'ул. Аянская',
+                    cityName: 'Аянка',
+                    cityId: 9,
+                    countryId: 43,
+                    neededEmployee: 5,
+                    countEmployee: 1,
+                    employees: [
+                        {
+                            id: 6,
+                            firstName: 'Иван',
+                            lastName: 'Иванов',
+                            middleName: 'Иванович',
+                            shopId: 52,
+                        }
+                    ],
+                }
+            ],
             fill: '#FFFF00',
             hidden: false
         },
@@ -2093,8 +2114,7 @@ export const localRegions = [
                             firstName: 'Иван',
                             lastName: 'Иванов',
                             middleName: 'Иванович',
-                            representationId: 52,
-                            representationName: 'в/ч 20202'
+                            shopId: 52,
                         }
                     ],
                     fill: '#FFFF00'
