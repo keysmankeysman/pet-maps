@@ -2026,11 +2026,51 @@ export const localRegions = [
         }
     ],
     cities: [
+
         {
-            id: 9,
+            id: 1,
+            name: 'Хатырка',
+            x: '650',
+            y: '60',
+            countryId: 43,
+            countryName: 'Russian Federation',
+            rfId: null,
+            regionName: 'Чукотский автономный округ',
+            shops: [],
+            fill: '',
+            hidden: false
+        },
+        {
+            id: 2,
+            name: 'Чукотка',
+            x: '675',
+            y: '60',
+            countryId: 43,
+            countryName: 'Russian Federation',
+            rfId: null,
+            regionName: 'Чукотский автономный округ',
+            shops: [],
+            fill: '#FF0033',
+            hidden: false
+        },
+        {
+            id: 3,
+            name: 'Рыткучи',
+            countryId: 43,
+            x: '701',
+            y: '60',
+            countryName: 'Russian Federation',
+            rfId: null,
+            regionName: 'Чукотский автономный округ',
+            shops: [],
+            fill: '#FFFF00',
+            hidden: false
+        },
+        {
+            id: 4,
             name: 'Аянка',
-            x: '692',
-            y: '63',
+            x: '725',
+            y: '60',
             countryId: 43,
             countryName: 'Russian Federation',
             rfId: null,
@@ -2060,35 +2100,9 @@ export const localRegions = [
                     fill: '#FFFF00'
                 }
             ],
-            fill: '#FFFF00',
+            fill: '#008000',
             hidden: false
         },
-        {
-            id: 8,
-            name: 'Хатырка',
-            x: '701',
-            y: '55',
-            countryId: 43,
-            countryName: 'Russian Federation',
-            rfId: null,
-            regionName: 'Чукотский автономный округ',
-            shops: [],
-            fill: '',
-            hidden: false
-        },
-        {
-            id: 6,
-            name: 'Чукотка',
-            x: '650',
-            y: '55',
-            countryId: 43,
-            countryName: 'Russian Federation',
-            rfId: null,
-            regionName: 'Чукотский автономный округ',
-            shops: [],
-            fill: '',
-            hidden: false
-        }
     ],
     color: '#337AB7',
     regionName: 'Чукотский автономный округ'
