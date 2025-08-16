@@ -31,8 +31,8 @@ export const localRegions = [
                     cityId: 11,
                     countryName: 'Russian Federation',
                     countryId: 34,
-                    neededStaff: 2,
-                    currentStaff: 2,
+                    neededEmployee: 2,
+                    currentEmployee: 2,
                     representatives: [
                         {
                             id: 2,
@@ -362,8 +362,8 @@ export const localRegions = [
                     cityId: 17,
                     countryName: 'Russian Federation',
                     countryId: 23,
-                    neededStaff: 1,
-                    currentStaff: 0,
+                    neededEmployee: 1,
+                    currentEmployee: 0,
                     representatives: [],
                     fill: '#FF0033'
                 }
@@ -617,8 +617,8 @@ export const localRegions = [
                     cityId: 3,
                     countryName: 'Russian Federation',
                     countryId: 53,
-                    neededStaff: 2,
-                    currentStaff: 2,
+                    neededEmployee: 2,
+                    currentEmployee: 2,
                     representatives: [
                         {
                             id: 8,
@@ -858,8 +858,8 @@ export const localRegions = [
                     cityId: 4,
                     countryName: 'Russian Federation',
                     countryId: 49,
-                    neededStaff: 3,
-                    currentStaff: 1,
+                    neededEmployee: 3,
+                    currentEmployee: 1,
                     representatives: [
                         {
                             id: 5,
@@ -881,8 +881,8 @@ export const localRegions = [
                     cityId: 4,
                     countryName: 'Russian Federation',
                     countryId: 49,
-                    neededStaff: 1,
-                    currentStaff: 0,
+                    neededEmployee: 1,
+                    currentEmployee: 0,
                     representatives: [],
                     fill: '#FF0033'
                 }
@@ -1091,8 +1091,8 @@ export const localRegions = [
                     active: false,
                     countryName: 'Russian Federation',
                     countryId: 38,
-                    neededStaff: 0,
-                    currentStaff: 0,
+                    neededEmployee: 0,
+                    currentEmployee: 0,
                     representatives: [],
                     fill: '#FF0033'
                 },
@@ -1105,8 +1105,8 @@ export const localRegions = [
                     cityId: 16,
                     countryName: 'Russian Federation',
                     countryId: 38,
-                    neededStaff: 1,
-                    currentStaff: 0,
+                    neededEmployee: 1,
+                    currentEmployee: 0,
                     representatives: [],
                     fill: '#FF0033'
                 }
@@ -1204,8 +1204,8 @@ export const localRegions = [
                     cityId: 5,
                     countryName: 'Russian Federation',
                     countryId: 85,
-                    neededStaff: 2,
-                    currentStaff: 0,
+                    neededEmployee: 2,
+                    currentEmployee: 0,
                     representatives: [],
                     fill: '#FF0033'
                 }
@@ -1317,8 +1317,8 @@ export const localRegions = [
                     cityId: 20,
                     countryName: 'Russian Federation',
                     countryId: 16,
-                    neededStaff: 2,
-                    currentStaff: 1,
+                    neededEmployee: 2,
+                    currentEmployee: 1,
                     representatives: [
                         {
                             id: 4,
@@ -1446,8 +1446,8 @@ export const localRegions = [
                     cityId: 27,
                     countryName: 'Russian Federation',
                     countryId: 96,
-                    neededStaff: 5,
-                    currentStaff: 1,
+                    neededEmployee: 5,
+                    currentEmployee: 1,
                     representatives: [
                         {
                             id: 12,
@@ -1512,8 +1512,8 @@ export const localRegions = [
                     cityId: 15,
                     countryName: 'Russian Federation',
                     countryId: 81,
-                    neededStaff: 2,
-                    currentStaff: 0,
+                    neededEmployee: 2,
+                    currentEmployee: 0,
                     representatives: [],
                     fill: '#FF0033'
                 },
@@ -1526,8 +1526,8 @@ export const localRegions = [
                     cityId: 15,
                     countryName: 'Russian Federation',
                     countryId: 81,
-                    neededStaff: 2,
-                    currentStaff: 2,
+                    neededEmployee: 2,
+                    currentEmployee: 2,
                     representatives: [
                         {
                             id: 7,
@@ -1614,8 +1614,8 @@ export const localRegions = [
                     cityId: 1,
                     countryName: 'Russian Federation',
                     countryId: 59,
-                    neededStaff: 2,
-                    currentStaff: 2,
+                    neededEmployee: 2,
+                    currentEmployee: 2,
                     representatives: [
                         {
                             id: 11,
@@ -1940,8 +1940,8 @@ export const localRegions = [
                     cityId: 10,
                     countryName: 'Russian Federation',
                     countryId: 52,
-                    neededStaff: 1,
-                    currentStaff: 0,
+                    neededEmployee: 1,
+                    currentEmployee: 0,
                     representatives: [],
                     fill: '#FF0033'
                 }
@@ -2085,8 +2085,8 @@ export const localRegions = [
                     cityId: 9,
                     countryName: 'Russian Federation',
                     countryId: 43,
-                    neededStaff: 5,
-                    currentStaff: 1,
+                    neededEmployee: 5,
+                    currentEmployee: 1,
                     representatives: [
                         {
                             id: 6,

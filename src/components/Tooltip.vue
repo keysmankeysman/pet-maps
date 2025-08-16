@@ -8,14 +8,14 @@ let dialogReport = ref (false)
 let dialogPark = ref (false)
 let selectedPark = ref (null)
 
-let indexStaff = ref(null)
+let indexEmployee = ref(null)
 
-const showStaff = (i, isActive) => {
+const showEmployee = (i, isActive) => {
   if (!isActive) return
-  if (i === this.indexStaff || i.active === false) {
-    indexStaff.value = null
+  if (i === this.indexEmployee || i.active === false) {
+    indexEmployee.value = null
   } else {
-    indexStaff.value = i
+    indexEmployee.value = i
   }
 }
 
@@ -49,20 +49,20 @@ const showStaff = (i, isActive) => {
           <div class="tooltip-center__count">
             <span
               class="tooltip__active-representative"
-              @click="showStaff(index, shop.active)"
+              @click="showEmployee(index, shop.active)"
             >
             <!-- <span
               class="tooltip__active-representative"
-              @click="showStaff(index, shop.active)"
+              @click="showEmployee(index, shop.active)"
               :class="{
                 nonRepresentative:
                   shop.activeRepresentativeCount == 0,
               }"
             > -->
               сотрудники:
-              {{ shop.currentStaff }}</span
+              {{ shop.currentEmployee }}</span
             >
-            <span> требуется: {{ shop.neededStaff }}</span>
+            <span> требуется: {{ shop.neededEmployee }}</span>
             <div
               class="tooltip-center__count--circle"
               :style="{ background: shop.fill }"

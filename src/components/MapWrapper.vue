@@ -49,13 +49,24 @@ const addShop = (formData) => {
   console.log('addShop', name, address)
   const region = regions.find(region => region.id === currentRegion.value.id)
   const foundCity = region.cities.find(city => city.id === currentCity.value.id)
-  foundCity.shops.push(
-    {
-      id: 23,
-      name,
-      address,
-    }
-  )
+  
+  // теперь у найденного города, нужно пробежаться по всем shops и найти кол-во сотрудников
+
+  // const shopInTheCity = region.cities.find(city => city.id === currentCity.value.id)
+  // regionCities.shops.push(
+  //   {
+  //     id: 23,
+  //     name,
+  //     address,
+  //   }
+  // )
+
+  // if (regionCities)
+
+  // red - #FF0033 - в городе нет сотрудников
+  // yellow - #FFFF00 - сотрудников не достаточно
+  // green - #008000 - сотрудников достаточно
+
 }
 
 const addCity = (formData) => {
