@@ -2,7 +2,7 @@
 import { ref } from 'vue'
 
 defineProps(['currentCity', 'tooltipX', 'tooltipY'])
-const emits = defineEmits(['closeTooltip', 'handleAddShop', 'handleAddEmployee'])
+const emits = defineEmits(['closeTooltip', 'editTooltip', 'handleAddShop', 'handleAddEmployee'])
 
 let dialogReport = ref (false)
 let dialogPark = ref (false)
@@ -158,6 +158,11 @@ const addEmployee = () => {
         </div>
 
         <img
+          src="../images/edit-tooltip.png"
+          class="tooltip__edit"
+          @click="$emit('editTooltip')"
+        />
+        <img
           src="../images/close-tooltip.svg"
           class="tooltip__close"
           @click="$emit('closeTooltip')"
@@ -272,6 +277,15 @@ const addEmployee = () => {
   border-radius: 100%;
   top: 15px;
   left: 20px;
+}
+
+.tooltip__edit {
+  width: 14px;
+  height: 14px;
+  position: absolute;
+  top: 9px;
+  right: 30px;
+  border-radius: 100%;
 }
 
 .tooltip__close {

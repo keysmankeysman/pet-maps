@@ -5,6 +5,7 @@ const components = {
   'AddCityForm': defineAsyncComponent(() => import('./forms/AddCityForm.vue')),
   'AddShopForm': defineAsyncComponent(() => import('./forms/AddShopForm.vue')),
   'EditRegionForm': defineAsyncComponent(() => import('./forms/EditRegionForm.vue')),
+  'EditCityForm': defineAsyncComponent(() => import('./forms/EditCityForm.vue')),
   'AddEmployeerForm': defineAsyncComponent(() => import('./forms/AddEmployeerForm.vue')),
 }
 
@@ -27,6 +28,10 @@ const props = defineProps({
   },
   y: {
     type: Number,
+    required: false
+  },
+  city: {
+    type: Object,
     required: false
   },
 })
@@ -97,6 +102,7 @@ const save = () => {
           :region="region"
           :x="x"
           :y="y"
+          :city="city"
           @update="updateData"
         />
       </v-card-text>

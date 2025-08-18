@@ -40,7 +40,7 @@ watch(neededEmployees, () => {
       <v-text-field
         type="number"
         v-model="neededEmployees"
-        label="Сотрудников необходимо"
+        label="Требуется сотрудников"
       ></v-text-field>
     </v-form>
   </v-sheet>
