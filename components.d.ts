@@ -9,6 +9,7 @@ export {}
 declare module 'vue' {
   export interface GlobalComponents {
     AddCityForm: typeof import('./src/components/forms/AddCityForm.vue')['default']
+    AddEmployeerForm: typeof import('./src/components/forms/AddEmployeerForm.vue')['default']
     AddShopForm: typeof import('./src/components/forms/AddShopForm.vue')['default']
     BaseDialog: typeof import('./src/components/BaseDialog.vue')['default']
     BaseForm: typeof import('./src/components/BaseForm.vue')['default']

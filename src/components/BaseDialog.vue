@@ -5,6 +5,7 @@ const components = {
   'AddCityForm': defineAsyncComponent(() => import('./forms/AddCityForm.vue')),
   'AddShopForm': defineAsyncComponent(() => import('./forms/AddShopForm.vue')),
   'EditRegionForm': defineAsyncComponent(() => import('./forms/EditRegionForm.vue')),
+  'AddEmployeerForm': defineAsyncComponent(() => import('./forms/AddEmployeerForm.vue')),
 }
 
 const props = defineProps({

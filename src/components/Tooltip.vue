@@ -2,7 +2,7 @@
 import { ref } from 'vue'
 
 defineProps(['currentCity', 'tooltipX', 'tooltipY'])
-defineEmits(['closeTooltip', 'handleAddShop'])
+const emits = defineEmits(['closeTooltip', 'handleAddShop', 'handleAddEmployee'])
 
 let dialogReport = ref (false)
 let dialogPark = ref (false)
@@ -17,6 +17,10 @@ const showEmployee = (i, isActive) => {
   } else {
     indexEmployee.value = i
   }
+}
+
+const addEmployee = () => {
+  emits('handleAddEmployee')
 }
 
 </script>
@@ -66,7 +70,7 @@ const showEmployee = (i, isActive) => {
           >
             <div
               class="tooltip__representative-item"
-              v-for="(man, i) in shop.representatives"
+              v-for="(man, i) in shop.employees"
               :key="`man-${man.id}`"
             >
               <div>
@@ -74,6 +78,24 @@ const showEmployee = (i, isActive) => {
                 {{ man.middleName }} <br />
                 тел: {{ man.phone }}
               </div>
+              <v-row>
+                <v-btn
+                  color="error"
+                  class="ma-2"
+                  dark
+                  @click="addEmployee"
+                >
+                  Удалить
+                </v-btn>
+                <v-btn
+                  color="primary"
+                  class="ma-2"
+                  dark
+                  @click="addEmployee"
+                >
+                  Добавить
+                </v-btn>
+              </v-row>
             </div>
           </div>
           <div>
