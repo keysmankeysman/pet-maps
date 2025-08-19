@@ -14,7 +14,7 @@ import { useMapClick } from '@/composables/useMapClick.js'
 
 const forms = [ 'EditRegionForm', 'AddCityForm', 'AddShopForm', 'AddEmployeerForm', 'EditCityForm', 'EditEmployeerForm']
 
-defineEmits(['closeModal', 'updateRegions', 'addCity', 'addEmployeer'])
+defineEmits(['closeModal', 'updateRegions', 'addCity'])
 
 // const forms = {
 //   EditRegionForm: 'Контактные данные',
@@ -56,18 +56,6 @@ const handleAddEmployee = () => {
 const handleEditEmployee = (shop) => {
   currentShop.value = shop
   openDialog('EditEmployeerForm')
-}
-
-const addEmployeer = () => {
-  console.log('addEmployeer там')
-  currentShop.value.employees.push({
-    id: 20,
-    firstName: '',
-    lastName: '',
-    middleName: '',
-    phone: '',
-    shopId: currentShop.value.id,
-  })
 }
 
 const addShop = (formData) => {
@@ -227,7 +215,6 @@ const updateRegions = (formData) => {
     @updateRegions="updateRegions"
     @addCity="addCity"
     @addShop="addShop"
-    @addEmployeer="addEmployeer"
     @closeDialog="closeDialog"
   ></BaseDialog>
 </template>

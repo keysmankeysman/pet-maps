@@ -4,42 +4,63 @@ import { ref } from 'vue'
 const emits = defineEmits(['update', 'addEmployeer'])
 const props = defineProps(['shop'])
 
-// let shopAddress = ref('')
-// let neededEmployees = ref('')
+const formData = ref([])
+
+formData.value = [...props.shop.employees]
+console.log('formData.value', formData.value)
 
 // const update = () => {
 //   emits('update', { name: shopName, address: shopAddress, neededEmployees })
 // }
 
 const addEmployeer = () => {
-  emits('addEmployeer')
+  console.log('formData.value 2', formData.value)
+ formData.value.push({
+    id: 20,
+    firstName: '',
+    lastName: '',
+    middleName: '',
+    phone: '',
+    shopId: 15,
+ })
 }
+
+// const addEmployeer = () => {
+//   currentShop.value.employees.push({
+//     id: 20,
+//     firstName: '',
+//     lastName: '',
+//     middleName: '',
+//     phone: '',
+//     shopId: currentShop.value.id,
+//   })
+// }
 
 
 </script>
 
 <template>
   <v-sheet class="mx-auto" width="600">
-    <v-form v-if="shop.employees.length" fast-fail @submit.prevent>
-      <div v-for="employeer in shop.employees" :key="employeer.id">
+    <v-form v-if="formData.length" fast-fail @submit.prevent>
+      <div v-for="formData in formData" :key="formData.id">
         <v-row>
           <v-text-field
             class="mr-4"
-            v-model="employeer.firstName"
+            v-model="formData.firstName"
             label="Имя"
           ></v-text-field>
           <v-text-field
             class="mr-4"
-            v-model="employeer.lastName"
+            v-model="formData.lastName"
             label="Фамилия"
           ></v-text-field>
           <v-text-field
-            v-model="employeer.middleName"
+            v-model="formData.middleName"
             label="Отчество"
           ></v-text-field>
         </v-row>
         <v-text-field
-          v-model="employeer.phone"
+          v-model="formData.phone"
           label="Номер телефона"
         ></v-text-field>
       </div>
