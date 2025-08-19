@@ -17,6 +17,7 @@ declare module 'vue' {
     copy: typeof import('./src/components/forms/EditRegionForm copy.vue')['default']
     CreatorMap: typeof import('./src/components/CreatorMap.vue')['default']
     EditCityForm: typeof import('./src/components/forms/EditCityForm.vue')['default']
+    EditEmployeerForm: typeof import('./src/components/forms/EditEmployeerForm.vue')['default']
     EditRegionForm: typeof import('./src/components/forms/EditRegionForm.vue')['default']
     MapWrapper: typeof import('./src/components/MapWrapper.vue')['default']
     MyDialog: typeof import('./src/components/MyDialog.vue')['default']

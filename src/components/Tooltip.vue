@@ -2,7 +2,7 @@
 import { ref } from 'vue'
 
 defineProps(['currentCity', 'tooltipX', 'tooltipY'])
-const emits = defineEmits(['closeTooltip', 'editTooltip', 'handleAddShop', 'handleAddEmployee'])
+const emits = defineEmits(['closeTooltip', 'editTooltip', 'handleAddShop', 'handleAddEmployee', 'handleEditEmployee'])
 
 let dialogReport = ref (false)
 let dialogPark = ref (false)
@@ -10,13 +10,8 @@ let selectedPark = ref (null)
 
 let indexEmployee = ref(null)
 
-const showEmployee = (i, isActive) => {
-  if (!isActive) return
-  if (i === this.indexEmployee || i.active === false) {
-    indexEmployee.value = null
-  } else {
-    indexEmployee.value = i
-  }
+const editEmployee = (shop) => {
+  emits('handleEditEmployee', shop)
 }
 
 const addEmployee = () => {
@@ -53,7 +48,7 @@ const addEmployee = () => {
           <div class="tooltip-center__count">
             <span
               class="tooltip__active-representative"
-              @click="showEmployee(index, shop.active)"
+              @click="editEmployee(shop)"
             >
               сотрудники:
               {{ shop.countEmployee }}</span
@@ -78,24 +73,6 @@ const addEmployee = () => {
                 {{ man.middleName }} <br />
                 тел: {{ man.phone }}
               </div>
-              <v-row>
-                <v-btn
-                  color="error"
-                  class="ma-2"
-                  dark
-                  @click="addEmployee"
-                >
-                  Удалить
-                </v-btn>
-                <v-btn
-                  color="primary"
-                  class="ma-2"
-                  dark
-                  @click="addEmployee"
-                >
-                  Добавить
-                </v-btn>
-              </v-row>
             </div>
           </div>
           <div>

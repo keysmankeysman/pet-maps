@@ -12,7 +12,7 @@ import BaseDialog from './BaseDialog.vue'
 import { localRegions } from '@/localData/regions.js'
 import { useMapClick } from '@/composables/useMapClick.js'
 
-const forms = [ 'EditRegionForm', 'AddCityForm', 'AddShopForm', 'AddEmployeerForm', 'EditCityForm']
+const forms = [ 'EditRegionForm', 'AddCityForm', 'AddShopForm', 'AddEmployeerForm', 'EditCityForm', 'EditEmployeerForm']
 
 defineEmits(['closeModal', 'updateRegions', 'addCity'])
 
@@ -37,6 +37,7 @@ let y = ref(0)
 
 const currentRegionArea = ref({})
 const currentModal = ref(forms[0])
+const currentShop = ref({})
 
 const { clickCity, currentRegion, currentCity, isTooltip, tooltipY, tooltipX } = useMapClick()
 
@@ -50,6 +51,11 @@ const handleEditCity = () => {
 
 const handleAddEmployee = () => {
   openDialog('AddEmployeerForm')
+}
+
+const handleEditEmployee = (shop) => {
+  currentShop.value = shop
+  openDialog('EditEmployeerForm')
 }
 
 const addShop = (formData) => {
@@ -192,6 +198,7 @@ const updateRegions = (formData) => {
     :currentCity="currentCity"
     @handleAddShop="handleAddShop"
     @handleAddEmployee="handleAddEmployee"
+    @handleEditEmployee="handleEditEmployee"
     @editTooltip="handleEditCity"
     @closeTooltip="isTooltip = false"
   ></Tooltip>
@@ -203,6 +210,7 @@ const updateRegions = (formData) => {
     :y="y"
     :region="currentRegionArea"
     :city="currentCity"
+    :shop="currentShop"
     @updateRegions="updateRegions"
     @addCity="addCity"
     @addShop="addShop"
