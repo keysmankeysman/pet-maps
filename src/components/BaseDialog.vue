@@ -44,7 +44,7 @@ const props = defineProps({
 let dialog = ref(props.value)
 let formData = ref({})
 
-const emits = defineEmits(['update', 'input', 'closeDialog', 'updateRegions', 'addCity', 'addShop'])
+const emits = defineEmits(['update', 'input', 'closeDialog', 'updateRegions', 'addCity', 'addShop', 'addEmployeer'])
 
 watch(
   () => props.value,
@@ -110,6 +110,7 @@ const save = () => {
           :city="city"
           :shop="shop"
           @update="updateData"
+          @addEmployeer="emits('addEmployeer')"
         />
       </v-card-text>
 

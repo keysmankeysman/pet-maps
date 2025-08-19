@@ -30,6 +30,7 @@ const delEmployeer = () => {
         Магазин {{ index + 1 }}
         <v-row>
           <v-text-field
+            class="mr-4"
             v-model="city.name"
             label="Название магазина"
           ></v-text-field>
