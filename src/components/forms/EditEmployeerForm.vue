@@ -1,5 +1,5 @@
 <script setup>
-import { ref } from 'vue'
+import { ref, watch } from 'vue'
 
 const emits = defineEmits(['update', 'addEmployeer'])
 const props = defineProps(['shop'])
@@ -9,20 +9,25 @@ const formData = ref([])
 formData.value = [...props.shop.employees]
 console.log('formData.value', formData.value)
 
-// const update = () => {
-//   emits('update', { name: shopName, address: shopAddress, neededEmployees })
-// }
+const update = (formData) => {
+  emits('update', formData)
+}
+
+watch(formData, (newVal) => {
+  update(newVal)
+}, { immediate: true })
+
 
 const addEmployeer = () => {
   console.log('formData.value 2', formData.value)
- formData.value.push({
+  formData.value.push({
     id: 20,
     firstName: '',
     lastName: '',
     middleName: '',
     phone: '',
     shopId: 15,
- })
+  })
 }
 
 // const addEmployeer = () => {

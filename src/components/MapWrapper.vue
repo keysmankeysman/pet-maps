@@ -14,7 +14,7 @@ import { useMapClick } from '@/composables/useMapClick.js'
 
 const forms = [ 'EditRegionForm', 'AddCityForm', 'AddShopForm', 'AddEmployeerForm', 'EditCityForm', 'EditEmployeerForm']
 
-defineEmits(['closeModal', 'updateRegions', 'addCity'])
+defineEmits(['closeModal', 'updateRegions', 'addCity', 'updateEmployeer'])
 
 // const forms = {
 //   EditRegionForm: 'Контактные данные',
@@ -164,6 +164,11 @@ const cancelDefineСoordinates = () => {
   mode.value = 'editRegion'
 }
 
+const updateEmployeer = (formData) => {
+  currentShop.value.employees = formData 
+  currentShop.value.countEmployee = formData.length
+}
+
 const updateRegions = (formData) => {
   const { hex } = formData
   currentRegionArea.value.paths.map(p => p.fill = hex)
@@ -213,6 +218,7 @@ const updateRegions = (formData) => {
     :city="currentCity"
     :shop="currentShop"
     @updateRegions="updateRegions"
+    @updateEmployeer="updateEmployeer"
     @addCity="addCity"
     @addShop="addShop"
     @closeDialog="closeDialog"
