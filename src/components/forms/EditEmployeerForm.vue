@@ -25,11 +25,21 @@ const addEmployeer = () => {
     lastName: '',
     middleName: '',
     phone: '',
-    shopId: 15,
+    shopId: props.shop.id,
   })
 }
 
 const delEmployeer = (id) => {
+  if (formData.value.length <= 1) {
+    formData.value[0].firstName = '' 
+    formData.value[0].lastName = '' 
+    formData.value[0].middleName = '' 
+    formData.value[0].phone = '' 
+
+    return
+  }
+
+
   console.log('delEmployeer', id)
   const index = formData.value.findIndex(el => el.id === id)
   console.log('index', index)
