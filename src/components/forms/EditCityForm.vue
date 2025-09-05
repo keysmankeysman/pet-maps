@@ -1,8 +1,12 @@
 <script setup>
-// import { ref, watch } from 'vue'
+import { ref } from 'vue'
 
 const emits = defineEmits(['update'])
 const props = defineProps(['city'])
+
+const formData = ref([])
+
+formData.value = JSON.parse(JSON.stringify(props.city))
 
 // watch(hashColorRegion, (newVal) => {
 //   emits('update', { hex: newVal })
@@ -21,12 +25,12 @@ const delEmployeer = () => {
 <template>
   <v-sheet class="mx-auto" width="600">
     <v-form fast-fail>
-      Город: {{ city.name }}
+      Город: {{ formData.name }}
       <v-text-field
-        v-model="city.name"
+        v-model="formData.name"
         label="Название города"
       ></v-text-field>
-      <v-card v-for="(shop, index) in city.shops" :key="shop.id">
+      <v-card v-for="(shop, index) in formData.shops" :key="shop.id">
         Магазин {{ index + 1 }}
         <v-row>
           <v-text-field

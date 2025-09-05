@@ -47,24 +47,21 @@ const addEmployee = () => {
 
           <div class="tooltip-center__count">
             <span
-              class="tooltip__active-representative"
+              class="tooltip__active-employeer"
               @click="editEmployee(shop)"
             >
               сотрудники:
               {{ shop.countEmployee }}</span
             >
             <span> требуется: {{ shop.neededEmployees }}</span>
-            <div
-              class="tooltip-center__count--circle"
-              :style="{ background: shop.fill }"
-            ></div>
+            <div class="tooltip-employeer-color" :style="{ background: shop.fill }"></div>
           </div>
 
           <div
-            class="tooltip__representative-list"
+            class="tooltip__employeer-list"
           >
             <div
-              class="tooltip__representative-item"
+              class="tooltip__employeer-item"
               v-for="(man, i) in shop.employees"
               :key="`man-${man.id}`"
             >
@@ -212,7 +209,7 @@ const addEmployee = () => {
   padding: 16px 12px 12px 12px;
   font-size: 16px;
   max-width: 350px;
-  min-width: 250px;
+  min-width: 260px;
   max-height: 330px;
   overflow: auto;
 }
@@ -274,7 +271,7 @@ const addEmployee = () => {
   border-radius: 100%;
 }
 
-.tooltip__representative-list {
+.tooltip__employeer-list {
   /* padding-top: 6px; */
   /* width: auto;
     height: auto;
@@ -294,11 +291,11 @@ const addEmployee = () => {
   align-items: center;
 }
 
-.tooltip__representative-item {
+.tooltip__employeer-item {
   margin-bottom: 8px;
 }
 
-.tooltip__active-representative {
+.tooltip__active-employeer {
   color: #004b94;
   text-decoration: underline;
   cursor: pointer;
@@ -316,7 +313,7 @@ const addEmployee = () => {
   margin-right: 8px;
 }
 
-.nonRepresentative {
+.nonemployeer {
   color: #a0a0a0;
 }
 
@@ -326,6 +323,16 @@ const addEmployee = () => {
 
 .container-map {
   padding: 16px;
+}
+
+.tooltip-employeer-color {
+  margin-left: 4px;
+  margin-bottom: 2px;
+  width: 12px;
+  height: 12px;
+  border-radius: 100%;
+  flex: 0 0 auto;
+  background: white;
 }
 
 .v-tab {

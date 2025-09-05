@@ -6,7 +6,8 @@ const props = defineProps(['shop'])
 
 const formData = ref([])
 
-formData.value = [...props.shop.employees]
+// formData.value = [...props.shop.employees]
+formData.value = JSON.parse(JSON.stringify(props.shop.employees))
 console.log('formData.value', formData.value)
 
 const update = (formData) => {
