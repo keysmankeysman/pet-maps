@@ -1,7 +1,7 @@
 <script setup>
 import { ref, watch } from 'vue'
 
-const emits = defineEmits(['update', 'addEmployeer'])
+const emits = defineEmits(['update', 'addEmployee'])
 const props = defineProps(['shop'])
 
 const formData = ref([])
@@ -20,7 +20,7 @@ watch(formData, (newVal) => {
 }, { immediate: true })
 
 
-const addEmployeer = () => {
+const addEmployee = () => {
   formData.value.push({
     id: formData.value.length + 1,
     firstName: '',
@@ -31,7 +31,7 @@ const addEmployeer = () => {
   })
 }
 
-const delEmployeer = (id) => {
+const removeEmployee = (id) => {
   if (formData.value.length <= 1) {
     formData.value[0].firstName = '' 
     formData.value[0].lastName = '' 
@@ -41,14 +41,12 @@ const delEmployeer = (id) => {
     return
   }
 
-
-  console.log('delEmployeer', id)
   const index = formData.value.findIndex(el => el.id === id)
   console.log('index', index)
   formData.value.splice(index, 1)
 }
 
-// const addEmployeer = () => {
+// const addEmployee = () => {
 //   currentShop.value.employees.push({
 //     id: 20,
 //     firstName: '',
@@ -58,6 +56,11 @@ const delEmployeer = (id) => {
 //     shopId: currentShop.value.id,
 //   })
 // }
+
+const phoneRules = [
+  v => !!v || 'Phone number is required',
+  v => /^\+?\d{10,15}$/.test(v.replace(/\D/g, '')) || 'Phone number must be 10-15 digits',
+]
 
 
 </script>
@@ -78,7 +81,7 @@ const delEmployeer = (id) => {
       <div v-for="(employee, empIndex) in formData" :key="employee.id" class="mb-4">
         <v-card outlined class="pa-3">
           <div class="d-flex justify-space-between align-center mb-2">
-            <div><b></br>Сотрудник {{ empIndex + 1 }}</b></div>
+            <div><b>Сотрудник {{ empIndex + 1 }}</b></div>
             <v-btn icon color="red" @click="removeEmployee(shopIndex, empIndex)" :aria-label="'Remove employee ' + (empIndex + 1)">
               <v-icon>mdi-close</v-icon>
             </v-btn>
@@ -86,29 +89,30 @@ const delEmployeer = (id) => {
 
           <v-text-field
             v-model="employee.firstName"
-            label="Имя сотрудника"
+            label="Имя"
             :rules="[v => !!v || 'Введите имя сотрудника']"
             required
           ></v-text-field>
 
           <v-text-field
             v-model="employee.lastName"
-            label="Фамилия сотрудника"
+            label="Фамилия"
             :rules="[v => !!v || 'Введите фамилию сотрудника']"
             required
           ></v-text-field>
 
           <v-text-field
             v-model="employee.middleName"
-            label="Отчество сотрудника"
+            label="Отчество"
             :rules="[v => !!v || 'Введите отчество сотрудника']"
             required
           ></v-text-field>
 
           <v-text-field
             v-model="employee.phone"
-            label="Номер телефона сотрудника"
-            :rules="[v => !!v || 'Введите номер телефона']"
+            label="Номер телефона"
+            :rules="phoneRules"
+            placeholder="+7 (999) 999-99-99"
             required
           ></v-text-field>
 
@@ -116,7 +120,7 @@ const delEmployeer = (id) => {
       </div>
 
       <v-btn color="primary" text @click="addEmployee(shopIndex)">
-        <v-icon left>mdi-plus</v-icon> Add Employee
+        <v-icon left>mdi-plus</v-icon> Добавить сотрудника
       </v-btn>
     </v-card-text>
 
@@ -126,7 +130,7 @@ const delEmployeer = (id) => {
     Нет сотрудников
     <v-btn
       class="ms-auto"
-      @click="addEmployeer"
+      @click="addEmployee"
       text="Добавить"
     ></v-btn>
   </v-container>
@@ -158,7 +162,7 @@ const delEmployeer = (id) => {
           <v-btn
             class="ms-auto"
             color="error"
-            @click="delEmployeer(employeer.id)"
+            @click="removeEmployee(employeer.id)"
             text="удалить"
           ></v-btn>
         </v-row>
@@ -167,7 +171,7 @@ const delEmployeer = (id) => {
       </div>
       <v-btn
         class="ms-auto"
-        @click="addEmployeer"
+        @click="addEmployee"
         text="Добавить"
       ></v-btn>
     </v-form>
@@ -175,7 +179,7 @@ const delEmployeer = (id) => {
       Нет сотрудников
       <v-btn
         class="ms-auto"
-        @click="addEmployeer"
+        @click="addEmployee"
         text="Добавить"
       ></v-btn>
     </div>
