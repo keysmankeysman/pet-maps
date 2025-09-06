@@ -1,5 +1,6 @@
 <script setup>
 import { ref, watch } from 'vue'
+import { mask } from 'vue-the-mask'
 
 const emits = defineEmits(['update', 'addEmployee'])
 const props = defineProps(['shop'])
@@ -46,21 +47,14 @@ const removeEmployee = (id) => {
   formData.value.splice(index, 1)
 }
 
-// const addEmployee = () => {
-//   currentShop.value.employees.push({
-//     id: 20,
-//     firstName: '',
-//     lastName: '',
-//     middleName: '',
-//     phone: '',
-//     shopId: currentShop.value.id,
-//   })
-// }
-
 const phoneRules = [
   v => !!v || 'Phone number is required',
-  v => /^\+?\d{10,15}$/.test(v.replace(/\D/g, '')) || 'Phone number must be 10-15 digits',
+  v => {
+    const digits = v.replace(/\D/g, '')
+    return digits.length === 11 || 'Phone number must be complete'
+  }
 ]
+
 
 
 </script>
@@ -108,13 +102,14 @@ const phoneRules = [
             required
           ></v-text-field>
 
-          <v-text-field
-            v-model="employee.phone"
-            label="Номер телефона"
-            :rules="phoneRules"
-            placeholder="+7 (999) 999-99-99"
-            required
-          ></v-text-field>
+            <v-text-field
+              v-model="employee.phone"
+              label="Phone Number"
+              v-mask="'+7 (###) ###-##-##'"
+              :rules="phoneRules"
+              required
+              placeholder="+7 (___) ___-__-__"
+            ></v-text-field>
 
         </v-card>
       </div>
@@ -134,54 +129,5 @@ const phoneRules = [
       text="Добавить"
     ></v-btn>
   </v-container>
-
-  <!-- <v-sheet class="mx-auto" width="600">
-    <v-form v-if="formData.length" fast-fail @submit.prevent>
-      <div v-for="employeer in formData" :key="employeer.id">
-        <v-row>
-          <v-text-field
-            class="mr-4"
-            v-model="employeer.firstName"
-            label="Имя"
-          ></v-text-field>
-          <v-text-field
-            class="mr-4"
-            v-model="employeer.lastName"
-            label="Фамилия"
-          ></v-text-field>
-          <v-text-field
-            v-model="employeer.middleName"
-            label="Отчество"
-          ></v-text-field>
-        </v-row>
-        <v-row>
-          <v-text-field
-            v-model="employeer.phone"
-            label="Номер телефона"
-          ></v-text-field>
-          <v-btn
-            class="ms-auto"
-            color="error"
-            @click="removeEmployee(employeer.id)"
-            text="удалить"
-          ></v-btn>
-        </v-row>
-
-
-      </div>
-      <v-btn
-        class="ms-auto"
-        @click="addEmployee"
-        text="Добавить"
-      ></v-btn>
-    </v-form>
-    <div v-else>
-      Нет сотрудников
-      <v-btn
-        class="ms-auto"
-        @click="addEmployee"
-        text="Добавить"
-      ></v-btn>
-    </div>
-  </v-sheet> -->
+  
 </template>
