@@ -75,28 +75,43 @@ const delEmployeer = (id) => {
 
       <v-divider class="my-3"></v-divider>
 
-      <div v-for="(employee, empIndex) in shop" :key="employee.id" class="mb-4">
+      <div v-for="(employee, empIndex) in formData" :key="employee.id" class="mb-4">
         <v-card outlined class="pa-3">
           <div class="d-flex justify-space-between align-center mb-2">
-            <div>Employee {{ empIndex + 1 }}</div>
+            <div><b></br>Сотрудник {{ empIndex + 1 }}</b></div>
             <v-btn icon color="red" @click="removeEmployee(shopIndex, empIndex)" :aria-label="'Remove employee ' + (empIndex + 1)">
               <v-icon>mdi-close</v-icon>
             </v-btn>
           </div>
 
           <v-text-field
-            v-model="employee.name"
-            label="Employee Name"
-            :rules="[v => !!v || 'Employee name is required']"
+            v-model="employee.firstName"
+            label="Имя сотрудника"
+            :rules="[v => !!v || 'Введите имя сотрудника']"
             required
           ></v-text-field>
 
           <v-text-field
-            v-model="employee.position"
-            label="Position"
-            :rules="[v => !!v || 'Position is required']"
+            v-model="employee.lastName"
+            label="Фамилия сотрудника"
+            :rules="[v => !!v || 'Введите фамилию сотрудника']"
             required
           ></v-text-field>
+
+          <v-text-field
+            v-model="employee.middleName"
+            label="Отчество сотрудника"
+            :rules="[v => !!v || 'Введите отчество сотрудника']"
+            required
+          ></v-text-field>
+
+          <v-text-field
+            v-model="employee.phone"
+            label="Номер телефона сотрудника"
+            :rules="[v => !!v || 'Введите номер телефона']"
+            required
+          ></v-text-field>
+
         </v-card>
       </div>
 
