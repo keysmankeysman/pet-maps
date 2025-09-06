@@ -148,7 +148,7 @@ function submitForm() {
     form.value.validate()
     return
   }
-  // Here you can handle the form data, e.g. send to API
+
   alert('Form submitted!\n' + JSON.stringify({ cityName: cityName.value, shops }, null, 2))
 }
 </script>
