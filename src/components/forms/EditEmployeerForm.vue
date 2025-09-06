@@ -10,7 +10,6 @@ let shopName = ref('')
 
 shopName = props.shop.name
 formData.value = JSON.parse(JSON.stringify(props.shop.employees))
-console.log('formData.value', formData.value)
 
 const update = (formData) => {
   emits('update', formData)
@@ -76,7 +75,7 @@ const phoneRules = [
         <v-card outlined class="pa-3">
           <div class="d-flex justify-space-between align-center mb-2">
             <div><b>Сотрудник {{ empIndex + 1 }}</b></div>
-            <v-btn icon color="red" @click="removeEmployee(shopIndex, empIndex)" :aria-label="'Remove employee ' + (empIndex + 1)">
+            <v-btn icon color="red" @click="removeEmployee(shopIndex, empIndex)" :aria-label="'Удалить сотрудника ' + (empIndex + 1)">
               <v-icon>mdi-close</v-icon>
             </v-btn>
           </div>
@@ -129,5 +128,5 @@ const phoneRules = [
       text="Добавить"
     ></v-btn>
   </v-container>
-  
+
 </template>

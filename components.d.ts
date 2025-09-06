@@ -18,6 +18,7 @@ declare module 'vue' {
     CreatorMap: typeof import('./src/components/CreatorMap.vue')['default']
     EditCityForm: typeof import('./src/components/forms/EditCityForm.vue')['default']
     EditCityForm2: typeof import('./src/components/forms/EditCityForm2.vue')['default']
+    EditCityForm3: typeof import('./src/components/forms/EditCityForm3.vue')['default']
     EditEmployeerForm: typeof import('./src/components/forms/EditEmployeerForm.vue')['default']
     EditRegionForm: typeof import('./src/components/forms/EditRegionForm.vue')['default']
     MapWrapper: typeof import('./src/components/MapWrapper.vue')['default']
