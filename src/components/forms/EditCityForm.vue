@@ -43,6 +43,14 @@ const addEmployeer = () => {
 
 }
 
+const removeShop = (index) => {
+  formData.value.shops.splice(index, 1)
+}
+
+const removeEmployee = (shopIndex, empIndex) => {
+  formData.value.shops[shopIndex].employees.splice(empIndex, 1)
+}
+
 const phoneRules = [
   v => !!v || 'Phone number is required',
   v => {
