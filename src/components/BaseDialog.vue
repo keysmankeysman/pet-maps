@@ -68,17 +68,21 @@ const updateData = (newData) => {
 
 const save = () => {
   switch (props.nameForm) {
-    case 'EditRegionForm':
-      emits('updateRegions', formData.value )
-    break;
     case 'AddCityForm':
       emits('addCity', formData.value )
     break;
     case 'AddShopForm':
       emits('addShop', formData.value )
+    break;
+    case 'EditRegionForm':
+      emits('updateRegions', formData.value )
+    break;
     case 'EditEmployeerForm':
       emits('updateEmployeer', formData.value )
-    break
+    break;
+    case 'EditCityForm':
+      emits('updateCity', formData.value )
+    break;
   }
 
   closeDialog()

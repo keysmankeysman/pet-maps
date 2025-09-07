@@ -1,18 +1,27 @@
 <script setup>
-import { ref } from 'vue'
+import { ref, watch } from 'vue'
 
 const emits = defineEmits(['update'])
 const props = defineProps(['city'])
 
 const formData = ref([])
-let cityName = ref('')
+// let cityName = ref('')
 
-cityName = props.city.name
+// cityName = props.city.name
 formData.value = JSON.parse(JSON.stringify(props.city))
 
-// watch(hashColorRegion, (newVal) => {
-//   emits('update', { hex: newVal })
-// }, { immediate: true })
+const update = (formData) => {
+  emits('update', formData)
+}
+
+watch(formData, (newVal) => {
+  update(newVal)
+}, { immediate: true })
+
+// watch(() => cityName.value, (newVal) => {
+//   console.log('watch cityName')
+//   formData.value.name = newVal
+// })
 
 function createShop() {
   return {
@@ -35,12 +44,12 @@ function createEmployee() {
   }
 }
 
-function addShop() {
-  shops.push(createShop())
+const addShop = () => {
+  formData.value.shops.push(createShop())
 }
 
-const addEmployeer = () => {
-
+const addEmployee = (shopIndex) => {
+  formData.value.shops[shopIndex].employees.push(createEmployee())
 }
 
 const removeShop = (index) => {
@@ -66,7 +75,7 @@ const phoneRules = [
     <v-form>
       <v-icon>mdi-city</v-icon>
       <v-text-field
-        v-model="cityName"
+        v-model="formData.name"
         label="Город"
         :rules="[v => !!v || 'Введите название города']"
         required

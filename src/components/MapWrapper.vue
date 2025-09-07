@@ -164,6 +164,11 @@ const cancelDefineСoordinates = () => {
   mode.value = 'editRegion'
 }
 
+const updateCity = (formData) => {
+  console.log('updateCity', formData)
+  currentCity.value = formData
+}
+
 const updateEmployeer = (formData) => {
   currentShop.value.employees = formData 
   currentShop.value.countEmployee = formData.length
@@ -219,6 +224,7 @@ const updateRegions = (formData) => {
     :shop="currentShop"
     @updateRegions="updateRegions"
     @updateEmployeer="updateEmployeer"
+    @updateCity="updateCity"
     @addCity="addCity"
     @addShop="addShop"
     @closeDialog="closeDialog"
