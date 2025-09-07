@@ -56,6 +56,7 @@ const phoneRules = [
 <template>
   <v-container class="pa-4" max-width="800">
     <v-form>
+      <v-icon>mdi-city</v-icon>
       <v-text-field
         v-model="cityName"
         label="Город"
@@ -68,7 +69,7 @@ const phoneRules = [
       <div v-for="(shop, shopIndex) in formData.shops" :key="shop.id" class="mb-6">
         <v-card outlined>
           <v-card-title class="d-flex justify-space-between align-center">
-            <div>Магазин {{ shopIndex + 1 }}</div>
+            <div> <v-icon>mdi-store</v-icon> Магазин {{ shopIndex + 1 }}</div>
             <v-btn icon color="red" @click="removeShop(shopIndex)" :aria-label="'Удалить магазин ' + (shopIndex + 1)">
               <v-icon>mdi-close</v-icon>
             </v-btn>
@@ -104,7 +105,7 @@ const phoneRules = [
             <div v-for="(employee, empIndex) in shop.employees" :key="employee.id" class="mb-4">
               <v-card outlined class="pa-3">
                 <div class="d-flex justify-space-between align-center mb-2">
-                  <div><b>Сотрудник {{ empIndex + 1 }}</b></div>
+                  <div><v-icon>mdi-account-tie</v-icon>Сотрудник {{ empIndex + 1 }}</div>
                   <v-btn icon color="red" @click="removeEmployee(shopIndex, empIndex)" :aria-label="'Удалить сотрудника ' + (empIndex + 1)">
                     <v-icon>mdi-close</v-icon>
                   </v-btn>
