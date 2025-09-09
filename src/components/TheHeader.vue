@@ -24,13 +24,12 @@ function disableDefineCoords() {
       class="me-4"
     ></v-img>
 
-    <v-toolbar-title>Мой проект</v-toolbar-title>
+    <v-toolbar-title>Интерактивная svg карта</v-toolbar-title>
 
     <v-spacer></v-spacer>
 
     <v-btn
       color="primary"
-      class="ms-auto"
       text="Добавить новый город"
       @click="enableDefineCoords"
     ></v-btn>

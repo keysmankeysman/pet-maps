@@ -2,9 +2,10 @@
 import { ref, watch } from 'vue'
 
 const emits = defineEmits(['update'])
-const props = defineProps(['x', 'y'])
+const props = defineProps(['x', 'y', 'region'])
 
 let cityName = ref('')
+const regionName = ref(props.region.regionName)
 let x = ref(props.x)
 let y = ref(props.y)
 
@@ -17,6 +18,11 @@ watch(cityName, (newVal) => {
 <template>
   <v-sheet class="mx-auto" width="300">
     <v-form fast-fail @submit.prevent>
+      <v-text-field
+        v-model="regionName"
+        :disabled="true"
+        label="Название региона"
+      ></v-text-field>
       <v-text-field
         v-model="cityName"
         label="Название города"
