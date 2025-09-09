@@ -1,5 +1,7 @@
 <script setup>
 import { ref, reactive } from 'vue'
+import { eventBus } from '../eventBus'
+import { onMounted, onUnmounted } from 'vue'
 
 import CreatorMap from './CreatorMap.vue'
 import Tooltip from './Tooltip.vue'
@@ -8,6 +10,15 @@ import Tooltip from './Tooltip.vue'
 // import MyDialogII from './MyDialogII.vue'
 // import BaseForm from './BaseForm.vue'
 import BaseDialog from './BaseDialog.vue'
+
+onMounted(() => {
+  eventBus.on('enable-define-coords', defineСoordinates)
+  eventBus.on('disable-define-coords', cancelDefineСoordinates)
+})
+onUnmounted(() => {
+  eventBus.off('enable-define-coords', defineСoordinates)
+  eventBus.off('disable-define-coords', cancelDefineСoordinates)
+})
 
 import { localRegions } from '@/localData/regions.js'
 import { useMapClick } from '@/composables/useMapClick.js'
@@ -182,18 +193,7 @@ const updateRegions = (formData) => {
 </script>
 
 <template>
-  <v-btn
-    color="primary"
-    class="ms-auto"
-    text="Добавить новый город"
-    @click="defineСoordinates"
-  ></v-btn>
-  <v-btn
-    class="ms-auto"
-    text="отмена"
-    @click="cancelDefineСoordinates"
-    v-if="mode === 'defineCoords'"
-  ></v-btn>
+
 
   <creator-map
     :regions="regions"

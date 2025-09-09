@@ -14,7 +14,7 @@ declare module 'vue' {
     BaseDialog: typeof import('./src/components/BaseDialog.vue')['default']
     BaseForm: typeof import('./src/components/BaseForm.vue')['default']
     BaseModal: typeof import('./src/components/BaseModal.vue')['default']
-    copy: typeof import('./src/components/forms/EditCityForm copy.vue')['default']
+    copy: typeof import('./src/components/Tooltip copy.vue')['default']
     CreatorMap: typeof import('./src/components/CreatorMap.vue')['default']
     EditCityForm: typeof import('./src/components/forms/EditCityForm.vue')['default']
     EditCityForm2: typeof import('./src/components/forms/EditCityForm2.vue')['default']
@@ -26,6 +26,7 @@ declare module 'vue' {
     MyDialogII: typeof import('./src/components/MyDialogII.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
+    TheHeader: typeof import('./src/components/TheHeader.vue')['default']
     Tooltip: typeof import('./src/components/Tooltip.vue')['default']
   }
 }
