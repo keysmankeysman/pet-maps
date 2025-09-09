@@ -5,11 +5,12 @@ import { onMounted, onUnmounted } from 'vue'
 
 import CreatorMap from './CreatorMap.vue'
 import Tooltip from './Tooltip.vue'
-// import BaseModal from './BaseModal.vue'
-// import MyDialog from './MyDialog.vue'
-// import MyDialogII from './MyDialogII.vue'
-// import BaseForm from './BaseForm.vue'
 import BaseDialog from './BaseDialog.vue'
+
+import { toast } from 'vue3-toastify'
+import 'vue3-toastify/dist/index.css'
+
+defineEmits(['closeModal', 'updateRegions', 'addCity', 'updateEmployeer', 'updateCity'])
 
 onMounted(() => {
   eventBus.on('enable-define-coords', defineСoordinates)
@@ -33,8 +34,6 @@ const forms = [
   { name: 'EditCityForm', translation: 'Редактирование города' },
   { name: 'EditEmployeerForm', translation: 'Редактирование сотрудника' },
 ]
-
-defineEmits(['closeModal', 'updateRegions', 'addCity', 'updateEmployeer'])
 
 let isDialogOpen = ref(false)
 let mode = ref('editRegion')
@@ -130,7 +129,6 @@ const clickRegion = (region, event) => {
   if (isTooltip.value) return
   currentRegionArea.value = region
   if (mode.value === 'defineCoords') {
-    console.log('mode:', mode)
     const svgMap = document.getElementById('svg-map')
     const pt = svgMap.createSVGPoint()
     pt.x = event.clientX
@@ -154,8 +152,10 @@ const cancelDefineСoordinates = () => {
 }
 
 const updateCity = (formData) => {
-  console.log('updateCity', formData)
   currentCity.value = formData
+  toast('Данные города обновлены', {
+    autoClose: 1000,
+  })
 }
 
 const updateEmployeer = (formData) => {

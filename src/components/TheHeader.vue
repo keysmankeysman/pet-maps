@@ -9,8 +9,6 @@ function disableDefineCoords() {
   eventBus.emit('disable-define-coords')
 }
 
-
-
 </script>
 
 
