@@ -15,8 +15,8 @@ const props = defineProps({
     type: Boolean,
     required: true
   },
-  nameForm: {
-    type: String,
+  currentForm: {
+    type: Object,
     required: true
   },
   region: {
@@ -67,7 +67,7 @@ const updateData = (newData) => {
 }
 
 const save = () => {
-  switch (props.nameForm) {
+  switch (props.currentForm.name) {
     case 'AddCityForm':
       emits('addCity', formData.value )
     break;
@@ -103,13 +103,13 @@ const save = () => {
         <v-btn icon dark @click="closeDialog">
           <v-icon>mdi-close</v-icon>
         </v-btn>
-        <v-toolbar-title>{{ nameForm }}</v-toolbar-title>
+        <v-toolbar-title>{{ currentForm.name }}</v-toolbar-title>
       </v-toolbar>
 
 
       <v-card-text>
         <component
-          :is="components[nameForm]"
+          :is="components[currentForm.name]"
           :region="region"
           :x="x"
           :y="y"

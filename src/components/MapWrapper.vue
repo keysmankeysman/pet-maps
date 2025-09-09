@@ -23,14 +23,18 @@ onUnmounted(() => {
 import { localRegions } from '@/localData/regions.js'
 import { useMapClick } from '@/composables/useMapClick.js'
 
-const forms = [ 'EditRegionForm', 'AddCityForm', 'AddShopForm', 'AddEmployeerForm', 'EditCityForm', 'EditEmployeerForm']
+// const forms = [ 'EditRegionForm', 'AddCityForm', 'AddShopForm', 'AddEmployeerForm', 'EditCityForm', 'EditEmployeerForm']
+
+const forms = [
+  { name: 'EditRegionForm', translation: 'Редактировать регион' },
+  { name: 'AddCityForm', translation: 'Добавить город' },
+  { name: 'AddShopForm', translation: 'Добавить магазин' },
+  { name: 'AddEmployeerForm', translation: 'Добавить сотрудника' },
+  { name: 'EditCityForm', translation: 'Редактировать город' },
+  { name: 'EditEmployeerForm', translation: 'Редактировать сотрудника' },
+]
 
 defineEmits(['closeModal', 'updateRegions', 'addCity', 'updateEmployeer'])
-
-// const forms = {
-//   EditRegionForm: 'Контактные данные',
-//   AddCityForm: 'Введите данные адреса'
-// }
 
 let isDialogOpen = ref(false)
 let mode = ref('editRegion')
@@ -47,36 +51,32 @@ let x = ref(0)
 let y = ref(0) 
 
 const currentRegionArea = ref({})
-const currentModal = ref(forms[0])
+const currentForm = ref(forms[0])
 const currentShop = ref({})
 
 const { clickCity, currentRegion, currentCity, isTooltip, tooltipY, tooltipX } = useMapClick()
 
 const handleAddShop = () => {
-  openDialog('AddShopForm')
+  openDialog(forms[2])
 }
 
 const handleEditCity = () => {
-  openDialog('EditCityForm')
+  openDialog(forms[4])
 }
 
 const handleAddEmployee = () => {
-  openDialog('AddEmployeerForm')
+  openDialog(forms[3])
 }
 
 const handleEditEmployee = (shop) => {
   currentShop.value = shop
-  openDialog('EditEmployeerForm')
+  openDialog(forms[5])
 }
 
 const addShop = (formData) => {
   const { name, address, neededEmployees } = formData
-  console.log('addShop', name, address)
   const region = regions.find(region => region.id === currentRegion.value.id)
   const foundCity = region.cities.find(city => city.id === currentCity.value.id)
-  
-  // теперь у найденного города, нужно пробежаться по всем shops и найти кол-во сотрудников
-  console.log('foundCity', foundCity)
   
   let countEmployee = 0
   foundCity.shops.forEach(shop => {
@@ -84,9 +84,6 @@ const addShop = (formData) => {
       countEmployee += shop.employees.length
     }
   })
-  console.log('кол-во представителей: ', countEmployee)
-
-  // const shopInTheCity = region.cities.find(city => city.id === currentCity.value.id)
   foundCity.shops.push(
     {
       id: 23,
@@ -103,9 +100,6 @@ const addShop = (formData) => {
   } else {
     fillCircleCity(foundCity, '#FF0033')
   }
-
-
-
   // red - #FF0033 - в городе нет сотрудников
   // yellow - #FFFF00 - сотрудников не достаточно
   // green - #008000 - сотрудников достаточно
@@ -134,11 +128,6 @@ const addCity = (formData) => {
   mode.value = 'editRegion'
 }
 
-const openDialog = (formName) => {
-  currentModal.value = formName
-  isDialogOpen.value = true
-}
-
 const closeDialog = () => {
   isDialogOpen.value = false
 }
@@ -155,16 +144,11 @@ const clickRegion = (region, event) => {
     const svgP = pt.matrixTransform( svgMap.getScreenCTM().inverse() )
     x.value = Math.round(svgP.x)
     y.value = Math.round(svgP.y)
-    openCreateCityDialog()
+    openDialog(forms[1])
     return 
+  } else {
+    openDialog(forms[0])
   }
-  currentModal.value = forms[0]
-  isDialogOpen.value = true
-}
-
-const openCreateCityDialog = () => {
-  currentModal.value = forms[1]
-  isDialogOpen.value = true
 }
 
 const defineСoordinates = () => {
@@ -186,8 +170,14 @@ const updateEmployeer = (formData) => {
 }
 
 const updateRegions = (formData) => {
+  console.log('updateRegions', formData)
   const { hex } = formData
   currentRegionArea.value.paths.map(p => p.fill = hex)
+}
+
+const openDialog = (formName) => {
+  currentForm.value = formName
+  isDialogOpen.value = true
 }
 
 </script>
@@ -216,7 +206,7 @@ const updateRegions = (formData) => {
 
   <BaseDialog
     :value="isDialogOpen"
-    :nameForm="currentModal"
+    :currentForm="currentForm"
     :x="x"
     :y="y"
     :region="currentRegionArea"
