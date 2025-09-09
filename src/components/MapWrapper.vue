@@ -26,12 +26,12 @@ import { useMapClick } from '@/composables/useMapClick.js'
 // const forms = [ 'EditRegionForm', 'AddCityForm', 'AddShopForm', 'AddEmployeerForm', 'EditCityForm', 'EditEmployeerForm']
 
 const forms = [
-  { name: 'EditRegionForm', translation: 'Редактировать регион' },
-  { name: 'AddCityForm', translation: 'Добавить город' },
-  { name: 'AddShopForm', translation: 'Добавить магазин' },
+  { name: 'EditRegionForm', translation: 'Редактирование регион' },
+  { name: 'AddCityForm', translation: 'Создать город' },
+  { name: 'AddShopForm', translation: 'Новый магазин' },
   { name: 'AddEmployeerForm', translation: 'Добавить сотрудника' },
-  { name: 'EditCityForm', translation: 'Редактировать город' },
-  { name: 'EditEmployeerForm', translation: 'Редактировать сотрудника' },
+  { name: 'EditCityForm', translation: 'Редактирование города' },
+  { name: 'EditEmployeerForm', translation: 'Редактирование сотрудника' },
 ]
 
 defineEmits(['closeModal', 'updateRegions', 'addCity', 'updateEmployeer'])
@@ -39,13 +39,7 @@ defineEmits(['closeModal', 'updateRegions', 'addCity', 'updateEmployeer'])
 let isDialogOpen = ref(false)
 let mode = ref('editRegion')
 
-// editRegion
-// defineCoords
-
-// const cities = reactive(localCities)
 const regions = reactive(localRegions)
-const cities = regions.map(el => el.cities)
-
 
 let x = ref(0) 
 let y = ref(0) 

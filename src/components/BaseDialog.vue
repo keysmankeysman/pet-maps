@@ -103,7 +103,7 @@ const save = () => {
         <v-btn icon dark @click="closeDialog">
           <v-icon>mdi-close</v-icon>
         </v-btn>
-        <v-toolbar-title>{{ currentForm.name }}</v-toolbar-title>
+        <v-toolbar-title>{{ currentForm.translation }}</v-toolbar-title>
       </v-toolbar>
 
 
