@@ -41,10 +41,20 @@ const props = defineProps({
   },
 })
 
+let valid = ref(false)
 let dialog = ref(props.value)
 let formData = ref({})
 
-const emits = defineEmits(['update', 'input', 'closeDialog', 'updateRegions', 'addCity', 'addShop', 'editEmployeer'])
+const emits = defineEmits([
+  'update',
+  'input',
+  'addCity',
+  'addShop',
+  'editEmployeer',
+  'updateEmployeer',
+  'updateRegions',
+  'closeDialog',
+])
 
 watch(
   () => props.value,
@@ -62,8 +72,10 @@ const closeDialog = () => {
   emits('closeDialog')
 }
 
-const updateData = (newData) => {
+const updateData = (newData, valid = false) => {
   formData.value = newData
+  console.log('updateData', valid)
+  // valid.value = valid
 }
 
 const save = () => {
