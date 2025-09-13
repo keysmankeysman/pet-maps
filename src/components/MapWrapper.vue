@@ -96,7 +96,7 @@ const addShop = (formData) => {
   // red - #FF0033 - в городе нет сотрудников
   // yellow - #FFFF00 - сотрудников не достаточно
   // green - #008000 - сотрудников достаточно
-
+  toastView('Магазин добавлен')
 }
 
 const fillCircleCity = (city, color) => {
@@ -119,6 +119,7 @@ const addCity = (formData) => {
   })
   isDialogOpen.value = false
   mode.value = 'editRegion'
+  toastView(`Город ${name} добавлен`)
 }
 
 const closeDialog = () => {
@@ -151,22 +152,27 @@ const cancelDefineСoordinates = () => {
   mode.value = 'editRegion'
 }
 
+const toastView = (text) => {
+  toast(text, {
+    autoClose: 1500,
+  })
+}
+
 const updateCity = (formData) => {
   currentCity.value = formData
-  toast('Данные города обновлены', {
-    autoClose: 1000,
-  })
+
 }
 
 const updateEmployeer = (formData) => {
   currentShop.value.employees = formData 
   currentShop.value.countEmployee = formData.length
+  toastView(`Данные сотрудников магазина ${currentShop.value.name} обновлены`)
 }
 
 const updateRegions = (formData) => {
-  console.log('updateRegions', formData)
   const { hex } = formData
   currentRegionArea.value.paths.map(p => p.fill = hex)
+  toastView(`Регион ${currentRegionArea.value.regionName} обновлен`)
 }
 
 const openDialog = (formName) => {

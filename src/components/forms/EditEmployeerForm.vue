@@ -47,10 +47,10 @@ const removeEmployee = (id) => {
 }
 
 const phoneRules = [
-  v => !!v || 'Phone number is required',
+  v => !!v || 'Номер телефона является обязательным',
   v => {
     const digits = v.replace(/\D/g, '')
-    return digits.length === 11 || 'Phone number must be complete'
+    return digits.length === 11 || 'Номер телефона должен быть корректным'
   }
 ]
 
