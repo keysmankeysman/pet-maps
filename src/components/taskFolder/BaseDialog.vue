@@ -28,9 +28,7 @@ const closeDialog = () => {
 }
 
 const updateData = (newData) => {
-  // console.log('updateData', newData.valid.valid)
   formData.value = newData
-  console.log('updateData 2', newData.valid)
   formValid.value = newData.valid.valid ?? false
 }
 

@@ -27,7 +27,7 @@ import { useMapClick } from '@/composables/useMapClick.js'
 // const forms = [ 'EditRegionForm', 'AddCityForm', 'AddShopForm', 'AddEmployeerForm', 'EditCityForm', 'EditEmployeerForm']
 
 const forms = [
-  { name: 'EditRegionForm', translation: 'Редактирование регион' },
+  { name: 'EditRegionForm', translation: 'Редактировать регион' },
   { name: 'AddCityForm', translation: 'Создать город' },
   { name: 'AddShopForm', translation: 'Новый магазин' },
   { name: 'AddEmployeerForm', translation: 'Добавить сотрудника' },
