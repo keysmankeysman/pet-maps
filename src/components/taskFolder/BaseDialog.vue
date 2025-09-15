@@ -29,11 +29,12 @@ const closeDialog = () => {
 
 const updateData = (newData) => {
   formData.value = newData
+  // console.log('updateData', newData.valid)
   formValid.value = newData.valid ?? false
 }
 
 const save = () => {
-  if (!formValid.value) return // не сохраняем, если форма невалидна
+  if (!formValid.value) return
 
   switch (props.currentForm.name) {
     case 'AddCityForm':

@@ -21,7 +21,7 @@ const phoneRules = [
 ]
 
 watch(formData, () => {
-  const isValid = form.value ? form.value.validate() : false
+  const isValid = form.value ? form.value?.validate() : false
   emits('update', { ...formData.value, valid: isValid })
 }, { deep: true, immediate: true })
 
