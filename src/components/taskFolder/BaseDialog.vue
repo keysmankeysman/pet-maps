@@ -7,83 +7,48 @@ const components = {
 }
 
 const props = defineProps({
-  value: {
-    type: Boolean,
-    required: true
-  },
-  currentForm: {
-    type: Object,
-    required: true
-  },
-  region: {
-    type: Object,
-    required: false
-  },
-  x: {
-    type: Number,
-    required: false
-  },
-  y: {
-    type: Number,
-    required: false
-  },
-  shop: {
-    type: Object,
-    required: false
-  },
+  value: Boolean,
+  currentForm: Object,
+  city: Object,
 })
 
-let valid = ref(false)
+const emits = defineEmits(['addCity', 'editCity', 'closeDialog'])
+
 let dialog = ref(props.value)
 let formData = ref({})
+let formValid = ref(false)
 
-const emits = defineEmits([
-  'addCity',
-  'editCity',
-  'closeDialog'
-])
-
-watch(
-  () => props.value,
-  (newVal) => {
-    dialog.value = newVal
-  }
-)
+watch(() => props.value, (newVal) => {
+  dialog.value = newVal
+})
 
 const closeDialog = () => {
   dialog.value = false
   emits('closeDialog')
 }
 
-const updateData = (newData, valid = false) => {
+const updateData = (newData) => {
   formData.value = newData
-  console.log('updateData', valid)
-  // valid.value = valid
+  formValid.value = newData.valid ?? false
 }
 
 const save = () => {
+  if (!formValid.value) return // не сохраняем, если форма невалидна
+
   switch (props.currentForm.name) {
     case 'AddCityForm':
-      emits('addCity', formData.value )
-    break;
+      emits('addCity', formData.value)
+      break
     case 'EditCityForm':
-      emits('editShop', formData.value )
-    break;
+      emits('editCity', formData.value)
+      break
   }
-
   closeDialog()
 }
-
-
 </script>
 
-
 <template>
-  <v-dialog
-    v-model="dialog"
-    max-width="800"
-    persistent
-  >
+  <v-dialog v-model="dialog" max-width="800" persistent>
     <v-card>
       <v-toolbar dark color="primary">
         <v-btn icon dark @click="closeDialog">
@@ -92,49 +57,19 @@ const save = () => {
         <v-toolbar-title>{{ currentForm.translation }}</v-toolbar-title>
       </v-toolbar>
 
-
       <v-card-text>
         <component
           :is="components[currentForm.name]"
-          :region="region"
-          :x="x"
-          :y="y"
-          :shop="shop"
+          :city="city"
           @update="updateData"
         />
       </v-card-text>
 
       <v-card-actions>
         <v-spacer></v-spacer>
-        <v-btn
-          color="grey"
-          text
-          @click="closeDialog"
-        >
-          Отмена
-        </v-btn>
-        <v-btn
-          color="primary"
-          @click="save"
-        >
-          Сохранить
-        </v-btn>
+        <v-btn color="grey" text @click="closeDialog">Отмена</v-btn>
+        <v-btn color="primary" :disabled="!formValid" @click="save">Сохранить</v-btn>
       </v-card-actions>
     </v-card>
   </v-dialog>
 </template>
-
-<style scoped>
-.fade-enter-active, .fade-leave-active {
-  transition: opacity 0.3s;
-}
-.fade-enter, .fade-leave-to {
-  opacity: 0;
-}
-
-.v-tab {
-  min-width: 120px;
-}
-</style>
-
-
