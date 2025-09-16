@@ -104,10 +104,10 @@ const fillCircleCity = (city, color) => {
 }
 
 const addCity = (formData) => {
-  const { name, x, y } = formData
+  const { cityName, x, y } = formData
   currentRegionArea.value.cities.push({
     id: 111,
-    name,
+    name: cityName,
     x,
     y,
     countryName: 'Russian Federation',
