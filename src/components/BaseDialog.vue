@@ -1,6 +1,8 @@
 <script setup>
 import { ref, watch, defineAsyncComponent } from 'vue'
 
+let formValid = ref(false)
+
 const components = {
   'AddCityForm': defineAsyncComponent(() => import('./forms/AddCityForm.vue')),
   'AddShopForm': defineAsyncComponent(() => import('./forms/AddShopForm.vue')),
@@ -76,6 +78,7 @@ const updateData = (newData, valid = false) => {
   formData.value = newData
   console.log('updateData', newData)
   console.log('updateData', valid)
+  formValid.value = newData.valid.valid ?? false
   // valid.value = valid
 }
 
@@ -141,12 +144,7 @@ const save = () => {
         >
           Отмена
         </v-btn>
-        <v-btn
-          color="primary"
-          @click="save"
-        >
-          Сохранить
-        </v-btn>
+        <v-btn color="primary" :disabled="!formValid" @click="save">Сохранить</v-btn>
       </v-card-actions>
     </v-card>
   </v-dialog>
