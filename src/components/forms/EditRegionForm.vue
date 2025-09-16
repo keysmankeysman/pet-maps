@@ -8,11 +8,9 @@ let formData = ref({ hex: '#ffffff' })
 const form = ref(null)
 let valid = ref(false)
 
-formData.value.hex = props.region.color
+formData.value = JSON.parse(JSON.stringify(props.city))
 
-// watch(formData.value, (newVal) => {
-//   emits('update', { hex: newVal.hex })
-// }, { immediate: true })
+formData.value.hex = props.region.color
 
 watch(formData, () => {
   if (!form.value) {

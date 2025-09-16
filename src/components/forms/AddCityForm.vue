@@ -4,36 +4,53 @@ import { ref, watch } from 'vue'
 const emits = defineEmits(['update'])
 const props = defineProps(['x', 'y', 'region'])
 
-let cityName = ref('')
-const regionName = ref(props.region.regionName)
-let x = ref(props.x)
-let y = ref(props.y)
+let formData = ref({
+  regionName: props.region.regionName,
+  cityName: '',
+  x: props.x,
+  y: props.y
+})
+const form = ref(null)
+let valid = ref(false)
 
-watch(cityName, (newVal) => {
-  emits('update', { name: newVal, x, y })
-}, { immediate: true })
+watch(formData, () => {
+  if (!form.value) {
+    emits('update', { ...formData.value, valid: false })
+    return
+  }
+  form.value.validate().then(isValid => {
+    emits('update', { ...formData.value, valid: isValid })
+  })
+}, { deep: true, immediate: true })
+
+const nameRules = [
+  v => !!v || 'Поле обязательно',
+  v => (v && v.length >= 2) || 'Минимум 2 символа',
+  v => /^[а-яА-Яa-zA-Z]+$/.test(v) || 'Только буквы'
+]
 
 </script>
 
 <template>
   <v-sheet class="mx-auto" width="300">
-    <v-form fast-fail @submit.prevent>
+    <v-form ref="form" v-model="valid" fast-fail @submit.prevent>
       <v-text-field
-        v-model="regionName"
+        v-model="formData.regionName"
         :disabled="true"
         label="Название региона"
       ></v-text-field>
       <v-text-field
-        v-model="cityName"
+        v-model="formData.cityName"
+        :rules="nameRules"
         label="Название города"
       ></v-text-field>
       <v-text-field
-        v-model="x"
+        v-model="formData.x"
         :disabled="true"
         label="Координата X"
       ></v-text-field>
       <v-text-field
-        v-model="y"
+        v-model="formData.y"
         :disabled="true"
         label="Координата Y"
       ></v-text-field>
