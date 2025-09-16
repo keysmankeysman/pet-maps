@@ -5,6 +5,7 @@ import { mask } from 'vue-the-mask'
 const emits = defineEmits(['update', 'addEmployee'])
 const props = defineProps(['shop'])
 
+const form = ref(null)
 const formData = ref([])
 let shopName = ref('')
 let valid = ref(false)
@@ -12,13 +13,15 @@ let valid = ref(false)
 shopName = props.shop.name
 formData.value = JSON.parse(JSON.stringify(props.shop.employees))
 
-const update = (formData) => {
-  emits('update', { formData, valid })
-}
-
-watch(formData, (newVal) => {
-  update(newVal)
-}, { immediate: true })
+watch(formData, () => {
+  if (!form.value) {
+    emits('update', { ...formData.value, valid: false })
+    return
+  }
+  form.value.validate().then(isValid => {
+    emits('update', { ...formData.value, valid: isValid })
+  })
+}, { deep: true, immediate: true })
 
 
 const addEmployee = () => {

@@ -5,23 +5,20 @@ const emits = defineEmits(['update'])
 const props = defineProps(['city'])
 
 const formData = ref([])
-// let cityName = ref('')
+const form = ref(null)
+let valid = ref(false)
 
-// cityName = props.city.name
 formData.value = JSON.parse(JSON.stringify(props.city))
 
-const update = (formData) => {
-  emits('update', formData)
-}
-
-watch(formData, (newVal) => {
-  update(newVal)
-}, { immediate: true })
-
-// watch(() => cityName.value, (newVal) => {
-//   console.log('watch cityName')
-//   formData.value.name = newVal
-// })
+watch(formData, () => {
+  if (!form.value) {
+    emits('update', { ...formData.value, valid: false })
+    return
+  }
+  form.value.validate().then(isValid => {
+    emits('update', { ...formData.value, valid: isValid })
+  })
+}, { deep: true, immediate: true })
 
 function createShop() {
   return {
@@ -72,7 +69,7 @@ const phoneRules = [
 
 <template>
   <v-container class="pa-4" max-width="800">
-    <v-form>
+    <v-form ref="form" v-model="valid">
       <v-icon>mdi-city</v-icon>
       <v-text-field
         v-model="formData.name"

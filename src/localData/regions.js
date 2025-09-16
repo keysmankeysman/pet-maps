@@ -2097,7 +2097,7 @@ export const localRegions = [
                             firstName: 'Иван',
                             lastName: 'Иванов',
                             middleName: 'Иванович',
-                            phone: '89996667722',
+                            phone: '+7 (123) 123-12-31',
                             shopId: 52,
                         },
                         {
@@ -2143,6 +2143,7 @@ export const localRegions = [
                             firstName: 'Иван',
                             lastName: 'Иванов',
                             middleName: 'Иванович',
+                            phone: '89996665544',
                             shopId: 52,
                         },
                         {
@@ -2150,6 +2151,7 @@ export const localRegions = [
                             firstName: 'Максим',
                             lastName: 'Максимов',
                             middleName: 'Максимович',
+                            phone: '83336665544',
                             shopId: 52,
                         },
                         {
@@ -2157,6 +2159,7 @@ export const localRegions = [
                             firstName: 'Игорь',
                             lastName: 'Игорев',
                             middleName: 'Игоревич',
+                            phone: '81116665544',
                             shopId: 52,
                         },
                         {
@@ -2164,6 +2167,7 @@ export const localRegions = [
                             firstName: 'Султан',
                             lastName: 'Султанов',
                             middleName: 'Султанович',
+                            phone: '81116665544',
                             shopId: 52,
                         }
                     ],
