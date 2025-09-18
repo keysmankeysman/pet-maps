@@ -127,10 +127,10 @@ const save = () => {
         <component
           :is="components[currentForm.name]"
           :region="region"
-          :x="x"
-          :y="y"
           :city="city"
           :shop="shop"
+          :x="x"
+          :y="y"
           @update="updateData"
         />
       </v-card-text>

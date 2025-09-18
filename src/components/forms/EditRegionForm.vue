@@ -2,7 +2,7 @@
 import { ref, watch } from 'vue'
 
 const emits = defineEmits(['update'])
-const props = defineProps(['region'])
+const props = defineProps(['region', 'city'])
 
 let formData = ref({ hex: '#ffffff' })
 const form = ref(null)
