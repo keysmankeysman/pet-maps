@@ -74,11 +74,10 @@ const closeDialog = () => {
   emits('closeDialog')
 }
 
-const updateData = (newData, valid) => {
+const updateData = (newData) => {
   formData.value = newData
   console.log('updateData', newData)
-  console.log('updateData', valid)
-  formValid.value = newData.valid.valid ?? false
+  formValid.value = newData.valid ?? false
   // valid.value = valid
 }
 
