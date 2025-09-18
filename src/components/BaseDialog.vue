@@ -52,6 +52,7 @@ const emits = defineEmits([
   'input',
   'addCity',
   'addShop',
+  'updateCity',
   'editEmployeer',
   'updateEmployeer',
   'updateRegions',

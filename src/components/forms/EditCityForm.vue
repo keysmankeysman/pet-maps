@@ -99,7 +99,7 @@ const phoneRules = [
 
             <v-text-field
               v-model="shop.address"
-              label="Название"
+              label="адрес"
               :rules="[v => !!v || 'Введите адрес магазина']"
               required
             ></v-text-field>
