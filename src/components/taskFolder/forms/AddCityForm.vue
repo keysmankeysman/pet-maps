@@ -27,7 +27,7 @@ watch(formData, () => {
   form.value.validate().then(isValid => {
     // console.log('watch formData', isValid)
     console.log('isValid: ', isValid.valid)
-    emits('update', { ...formData.value, valid: isValid })
+    emits('update', { ...formData.value, valid: isValid.valid })
   })
 }, { deep: true, immediate: true })
 

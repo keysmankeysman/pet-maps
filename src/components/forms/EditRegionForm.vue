@@ -33,7 +33,7 @@ const hexRules = [
 </script>
 
 <template>
-  <v-sheet class="mx-auto" width="300">
+  <v-sheet class="mx-auto mt-4" width="300">
     <v-form ref="form" fast-fail v-model="valid" lazy-validation>
       {{ region.regionName }}
       <v-text-field
@@ -41,7 +41,7 @@ const hexRules = [
         label="Цвет региона"
         :rules="hexRules"
       ></v-text-field>
-      <div class="hashView" :style="{ background: formData.hex }">
+      <div class="mt-1 hashView" :style="{ background: formData.hex }">
 
       </div>
     </v-form>

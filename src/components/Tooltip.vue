@@ -40,7 +40,7 @@ const addEmployee = () => {
       >
         <div class="tooltip-header">
           <b>{{ shop.name }}</b> <br />
-          <i>г. {{ currentCity.name }},{{ shop.address }}</i>
+          <i>г.{{ currentCity.name }}, {{ shop.address }}</i>
         </div>
 
         <div class="tooltip-center">

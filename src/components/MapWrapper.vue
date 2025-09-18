@@ -154,13 +154,12 @@ const cancelDefineСoordinates = () => {
 
 const toastView = (text) => {
   toast(text, {
-    autoClose: 1500,
+    autoClose: 2000,
   })
 }
 
 const updateCity = (formData) => {
   currentCity.value = formData
-
 }
 
 const updateEmployeer = (formData) => {

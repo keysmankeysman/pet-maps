@@ -22,7 +22,7 @@ const phoneRules = [
 
 watch(formData, () => {
   const isValid = form.value ? form.value?.validate() : false
-  emits('update', { ...formData.value, valid: isValid })
+  emits('update', { ...formData.value, valid: isValid.valid })
 }, { deep: true, immediate: true })
 
 // ... остальной код (createShop, addShop, removeShop и т.д.)

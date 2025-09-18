@@ -18,7 +18,7 @@ watch(formData, () => {
     return
   }
   form.value.validate().then(isValid => {
-    emits('update', { ...formData.value, valid: isValid })
+    emits('update', { ...formData.value, valid: isValid.valid })
   })
 }, { deep: true, immediate: true })
 
@@ -40,7 +40,7 @@ const countEmployeesRules = [
 </script>
 
 <template>
-  <v-sheet class="mx-auto" width="300">
+  <v-sheet class="mx-auto mt-4" width="300">
     <v-form ref="form" v-model="valid" fast-fail @submit.prevent>
       <v-text-field
         v-model="formData.name"
