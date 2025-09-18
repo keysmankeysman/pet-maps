@@ -35,6 +35,12 @@ const forms = [
   { name: 'EditEmployeerForm', translation: 'Редактирование сотрудника' },
 ]
 
+const employeeStatusColors = {
+  red: '#FF0033', // в городе нет сотрудников
+  yellow: '#FFFF00', // сотрудников не достаточно
+  green: '#008000', // сотрудников достаточно
+}
+
 let isDialogOpen = ref(false)
 let mode = ref('editRegion')
 
@@ -89,9 +95,9 @@ const addShop = (formData) => {
   )
   
   if (countEmployee > 2) {
-    fillCircleCity(foundCity, '#008000')
+    fillCircleCity(foundCity, employeeStatusColors.green)
   } else {
-    fillCircleCity(foundCity, '#FF0033')
+    fillCircleCity(foundCity, employeeStatusColors.red)
   }
   // red - #FF0033 - в городе нет сотрудников
   // yellow - #FFFF00 - сотрудников не достаточно
@@ -163,14 +169,23 @@ const updateCity = (formData) => {
 }
 
 const updateEmployeer = (formData) => {
-  currentShop.value.employees = formData 
-  currentShop.value.countEmployee = formData.length
+  console.log('updateEmployeer')
+  const employees = formData.formData
+  currentShop.value.employees = employees
+  currentShop.value.countEmployee = employees.length
+
+  console.log(regions)
+
+  currentRegionArea.value.color = designations.green
+  // red - #FF0033 - в городе нет сотрудников
+  // yellow - #FFFF00 - сотрудников не достаточно
+  // green - #008000 - сотрудников достаточно
   toastView(`Данные сотрудников магазина ${currentShop.value.name} обновлены`)
 }
 
 const updateRegions = (formData) => {
   const { hex } = formData
-  currentRegionArea.value.paths.map(p => p.fill = hex)
+  currentRegion.value.paths.map(p => p.fill = hex)
   toastView(`Регион ${currentRegionArea.value.regionName} обновлен`)
 }
 

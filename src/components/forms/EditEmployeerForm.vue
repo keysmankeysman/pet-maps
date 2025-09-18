@@ -19,7 +19,8 @@ watch(formData, () => {
     return
   }
   form.value.validate().then(isValid => {
-    emits('update', { ...formData.value, valid: isValid.valid })
+    console.log('edit employeer form formData', formData.value)
+    emits('update', { formData: formData.value, valid: isValid.valid })
   })
 }, { deep: true, immediate: true })
 
