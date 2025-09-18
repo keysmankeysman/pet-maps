@@ -75,11 +75,8 @@ const closeDialog = () => {
 }
 
 const updateData = (newData) => {
-  console.log('updateData', newData)
   formData.value = newData
-  console.log('updateData', newData)
   formValid.value = newData.valid ?? false
-  // valid.value = valid
 }
 
 const save = () => {

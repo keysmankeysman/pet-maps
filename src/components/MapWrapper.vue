@@ -94,20 +94,25 @@ const addShop = (formData) => {
     }
   )
   
-  if (countEmployee > 2) {
-    fillCircleCity(foundCity, employeeStatusColors.green)
-  } else {
-    fillCircleCity(foundCity, employeeStatusColors.red)
-  }
-  // red - #FF0033 - в городе нет сотрудников
-  // yellow - #FFFF00 - сотрудников не достаточно
-  // green - #008000 - сотрудников достаточно
+  fillCircleCity()
   toastView('Магазин добавлен')
 }
 
-const fillCircleCity = (city, color) => {
-  city.fill = color
+const fillCircleCity = () => {
+  if (!currentCity.value) return
+  
+  currentCity.value.shops.forEach(el => {
+
+    if (el.countEmployee === 0) {
+      currentCity.value.fill = employeeStatusColors.red
+    } else if (el.countEmployee < el.neededEmployees) {
+      currentCity.value.fill = employeeStatusColors.yellow
+    } else {
+      currentCity.value.fill = employeeStatusColors.green
+    }
+  })
 }
+
 
 const addCity = (formData) => {
   const { cityName, x, y } = formData
@@ -169,17 +174,11 @@ const updateCity = (formData) => {
 }
 
 const updateEmployeer = (formData) => {
-  console.log('updateEmployeer')
   const employees = formData.formData
   currentShop.value.employees = employees
   currentShop.value.countEmployee = employees.length
 
-  console.log(regions)
-
-  currentRegionArea.value.color = designations.green
-  // red - #FF0033 - в городе нет сотрудников
-  // yellow - #FFFF00 - сотрудников не достаточно
-  // green - #008000 - сотрудников достаточно
+  fillCircleCity()
   toastView(`Данные сотрудников магазина ${currentShop.value.name} обновлены`)
 }
 
