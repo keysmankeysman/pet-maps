@@ -1,7 +1,6 @@
 <template>
   <v-app>
     <v-main>
-      <!-- <Main></Main> -->
       <The-Header></The-Header>
       <router-view />
     </v-main>
@@ -10,6 +9,5 @@
 
 <script setup>
 import TheHeader from './components/TheHeader.vue'
-// import Main from './components/taskFolder/Main.vue'
 
 </script>
