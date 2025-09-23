@@ -11,52 +11,16 @@ function disableDefineCoords() {
 
 </script>
 
-<!-- 
-<v-app-bar app>
-  <div class="d-flex align-center me-4" style="flex: 1 1 auto; min-width: 0;">
-    <v-img
-      src="../assets/logo.svg"
-      alt="Логотип"
-      max-height="40"
-      contain
-      class="me-2"
-      style="flex-shrink: 0;"
-    ></v-img>
-    <v-toolbar-title class="mb-0" style="white-space: normal; overflow: hidden; text-overflow: ellipsis; min-width: 0;">
-      Интерактивная svg карта
-    </v-toolbar-title>
-  </div>
-
-  <v-spacer></v-spacer>
-
-  <v-btn
-    color="primary"
-    text
-    @click="enableDefineCoords"
-  >
-    Добавить новый город
-  </v-btn>
-  <v-btn
-    text
-    @click="disableDefineCoords"
-  >
-    отмена
-  </v-btn>
-</v-app-bar> -->
-
 <template>
   <v-app-bar>
     <div class="d-flex align-center header-left-wrp">
-      <v-img
+      <img
         src="../assets/logo.svg"
         alt="Логотип"
-        max-height="40"
-        contain
-        class="me-2"
-        style="flex-shrink: 0;"
-      ></v-img>
+        class="me-4 ml-4 header-left__img"
+      />
       <v-toolbar-title class="mb-0 header-left__title">
-        Интерактивная svg карта
+        Мониторинг сотрудников
       </v-toolbar-title>
     </div>
 
@@ -79,15 +43,20 @@ function disableDefineCoords() {
 
 <style>
 
+
 .header-left-wrp {
-  flex: 0 0 auto; 
+  flex: 1 0 auto; 
   min-width: 0;
 }
 
+.header-left__img {
+  width: 100%;
+  max-width: 50px;
+}
+
 .header-left__title {
-  /* flex: 1 1 auto !important;  */
+  flex: 1 1 auto;
   white-space: normal; 
-  overflow: hidden; 
   text-overflow: ellipsis; 
   min-width: 0;
 }
