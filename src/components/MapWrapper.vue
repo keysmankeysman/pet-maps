@@ -24,8 +24,6 @@ onUnmounted(() => {
 import { localRegions } from '@/localData/regions.js'
 import { useMapClick } from '@/composables/useMapClick.js'
 
-// const forms = [ 'EditRegionForm', 'AddCityForm', 'AddShopForm', 'AddEmployeerForm', 'EditCityForm', 'EditEmployeerForm']
-
 const forms = [
   { name: 'EditRegionForm', translation: 'Редактировать регион' },
   { name: 'AddCityForm', translation: 'Создать город' },
@@ -49,7 +47,7 @@ const regions = reactive(localRegions)
 let x = ref(0) 
 let y = ref(0) 
 
-const currentRegionArea = ref({})
+// const currentRegion = ref({})
 const currentForm = ref(forms[0])
 const currentShop = ref({})
 
@@ -116,16 +114,16 @@ const fillCircleCity = () => {
 
 const addCity = (formData) => {
   const { cityName, x, y } = formData
-  currentRegionArea.value.cities.push({
+  currentRegion.value.cities.push({
     id: 111,
     name: cityName,
     x,
     y,
     countryName: 'Russian Federation',
-    regionName: currentRegionArea.value.regionName,
+    regionName: currentRegion.value.regionName,
     fill: '#000000',
     hidden: false,
-    countryId: currentRegionArea.value.id,
+    countryId: currentRegion.value.id,
     shops: []
   })
   isDialogOpen.value = false
@@ -139,7 +137,7 @@ const closeDialog = () => {
 
 const clickRegion = (region, event) => {
   if (isTooltip.value) return
-  currentRegionArea.value = region
+  currentRegion.value = region
   if (mode.value === 'defineCoords') {
     const svgMap = document.getElementById('svg-map')
     const pt = svgMap.createSVGPoint()
@@ -183,9 +181,12 @@ const updateEmployeer = (formData) => {
 }
 
 const updateRegions = (formData) => {
-  const { hex } = formData
+  const { hex, region } = formData
+  currentRegion.value = region
   currentRegion.value.paths.map(p => p.fill = hex)
-  toastView(`Регион ${currentRegionArea.value.regionName} обновлен`)
+  currentRegion.value.color = hex
+  console.log(currentRegion.value)
+  toastView(`Регион ${currentRegion.value.regionName} обновлен`)
 }
 
 const openDialog = (formName) => {
@@ -222,7 +223,7 @@ const openDialog = (formName) => {
     :currentForm="currentForm"
     :x="x"
     :y="y"
-    :region="currentRegionArea"
+    :region="currentRegion"
     :city="currentCity"
     :shop="currentShop"
     @updateRegions="updateRegions"

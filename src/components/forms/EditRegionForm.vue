@@ -10,6 +10,7 @@ let valid = ref(false)
 
 formData.value = JSON.parse(JSON.stringify(props.city))
 
+formData.value.region = props.region
 formData.value.hex = props.region.color
 
 watch(formData, () => {
@@ -18,7 +19,6 @@ watch(formData, () => {
     return
   }
   form.value.validate().then(isValid => {
-    console.log('isValid', isValid.valid)
     emits('update', { ...formData.value, valid: isValid.valid })
   })
 }, { deep: true, immediate: true })

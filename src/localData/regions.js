@@ -38,7 +38,7 @@ export const localRegions = [
                             firstName: 'Matt\n',
                             lastName: 'Perry',
                             middleName: 'Meth',
-                            phone: '3213-65-12312',
+                            phone: '81112226633',
                             shopId: 6,
                         },
                         {
@@ -46,7 +46,7 @@ export const localRegions = [
                             firstName: 'Jamess',
                             lastName: 'Blane',
                             middleName: 'Li',
-                            phone: '218u78-236561',
+                            phone: '89998886633',
                             active: false,
                             shopId: 6,
                         }
@@ -877,7 +877,7 @@ export const localRegions = [
                     fill: '#FF0033'
                 }
             ],
-            fill: '#ab1adb',
+            fill: '#FF0033',
             hidden: false
         }
     ],
@@ -1080,7 +1080,7 @@ export const localRegions = [
                     active: false,
                     countryName: 'Russian Federation',
                     countryId: 38,
-                    neededEmployees: 0,
+                    neededEmployees: 2,
                     countEmployee: 0,
                     employees: [],
                     fill: '#FF0033'
@@ -1099,7 +1099,7 @@ export const localRegions = [
                     fill: '#FF0033'
                 }
             ],
-            fill: '#ab1adb',
+            fill: '#FF0033',
             hidden: false
         }
     ],
@@ -1528,7 +1528,7 @@ export const localRegions = [
                     fill: '#008000'
                 }
             ],
-            fill: '#ab1adb',
+            fill: '#FF0033',
             hidden: false
         }
     ],
